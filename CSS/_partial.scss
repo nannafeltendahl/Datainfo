@@ -1,0 +1,89 @@
+/* Variabler*/
+$lightblue: #a9dfe1;
+$darkerBlue: #05A3AB;
+$textColor: #2e2e2e;
+$bg: #fffafa;
+$cta: #84C662;
+$lightblueBackground:#EEF5FF;
+$darkblue: #0E3E86;
+$gold: #C59E54;
+
+
+
+
+
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../font/Open_Sans/OpenSans-Regular.ttf");
+}
+
+
+@mixin p-Mobil {
+color: $darkblue;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 auto;
+
+}
+@mixin p-desktop{
+  color: $darkblue;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+
+}
+
+@mixin heading-mobile {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+
+}
+
+@mixin heading-desktop {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin a-hover {
+  text-decoration: none;
+  cursor: pointer;
+  
+  &:hover {
+    color:$gold;
+    @include a-animation;
+  }
+}
+
+@mixin a-animation {
+  animation: bounce 0.5s  1 alternate;
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
+  }
+}
+
+
+@mixin btn($width:60%, $height:30%) {
+  background-color: $gold;
+  border-radius: 5px;
+  color: $bg;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  border: 0;
+  font-size: 18pt;
+  width: $width;
+  height: $height;
+  box-shadow: 0 2px 10px $textColor;
+}
+

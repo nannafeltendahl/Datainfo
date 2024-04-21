@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="index.js" charset="UTF-8" defer></script>
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <nav class="mobile-nav">
+        <img class="toggle-nav" src="image/burgermenu.png" alt=" trykbar burgermenu ikon">
+        <a href="index.html"><img id="logo" src="image/dataInfoLogo.png" alt="datainfo logo"></a>
+
+    </nav>
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href="index.html"><img class="logo-desktop" src="image/dataInfoLogo.png"
+                                          alt="datainfo logo"></a></li>
+            <li class="nav"><a href="datasikkerhed">Datasikkerhed</a></li>
+            <li class="nav"><a href="guide">Guide</a></li>
+            <li class="nav"><a href="spilleregler">Spilleregler</a></li>
+            <li class="nav"><a href="spillet">Spillet</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="image-wrapper">
+        <img class="font-page-img" src="image/homepageImage.jpg" alt="din datasikkerhed ligger trygt i vores hænder">
+    </div>
+    <p class="home-welcome-text">Velkommen til siden der formidler om Datasikker, med fokus på at sikre dig mod
+        phishing, smishing og spoofing fra kriminelle der ønsker at frarøve dig dine personlige oplysninger gennem
+        falske mails, sms og opkald.
+    </p>
+    <p class="home-welcome-text">
+        Siden er en sjov og overskuelig måde for dig at få repeteret viden om person-datasikkerhed og få konkrete
+        redskaber, såsom viden, guides, certifikat og et spil, alt sammen for at spotte hvornår du er ved at blive
+        snydt.
+    </p>
+
+    <p class="home-welcome-text">
+        Siden foregår som et spil hvor kaptajn krog er ude efter at få dine personlige oplysninger på (phishing) krogen.
+        Du kommer gennem små opgaver hvor du bliver præsenteret for forskellige svar. Inden du spiller spillet, kan du
+        læse om datasikkerhed her på siden, som du finder længere nede på siden og oppe i navigationsbaren.
+    </p>
+    <form class="choose-subject">
+        <label class="visually-hidden" for="region"></label>
+        <select id="region" name="select">
+            <option value="0" selected disabled>Vælg emne</option>
+            <option value="datasikkerhed">Datasikkerhed</option>
+            <option value="guide">Guide</option>
+            <option value="spilleReglerne">Spille regler</option>
+            <option value="spillet">Spillet</option>
+        </select>
+    </form>
+
+    <div class="headings-banner" id="datasikkerhed">
+        <p>Datasikkerhed</p>
+    </div>
+
+
+    <section class="articles">
+        <article class="articles-grid">
+            <img class="articles-image" src="image/3811384.jpg"
+                 alt="phishing logo">
+            <aside>
+                <p class="datasikkerhedText">Phishing: handler om at få tilsendt en mail der prøver at fra narre dig
+                    personlige
+                    oplysninger, såsom bankoplysninger, MIT-ID-oplysninger, adresse og cpr nummer, dette kan også ske
+                    gennem et link i
+                    mailen
+                    hvor man skal indtaste det via en formular eller på en hjemmeside der ligner den rigtige hjemmeside.
+                </p>
+            </aside>
+        </article>
+
+
+        <article class="articles-grid">
+            <img class="articles-image right" src="image/3877618.jpg"
+                 alt="smishing logo">
+            <aside>
+                <p class="datasikkerhedText">Smishing: er samme princip bare over sms. Rigtige virksomheder eller
+                    myndighed anmoder aldrig fortrolige oplysninger gennem en mail eller sms. De vil altid bede dig om
+                    selv at gå ind på deres egen hjemmeside og ændre det og ikke tilsende et link til deres hjemmeside i
+                    mailen.
+                </p>
+            </aside>
+        </article>
+
+        <article class="articles-grid">
+            <img class="articles-image" src="image/police_online_3.jpg"
+                 alt="spoofing logo">
+            <aside>
+                <p class="datasikkerhedText">Spoofing handler om opkald hvor personer prøver at svindle ved at få dig
+                    til at videregive dine personlige oplysninger. Spoofing ombefatter det at svindlere i dag er i stand
+                    til at ændre på nummeret så det matcher med fx din banks , samt udenlandske numre kan fremstå som et
+                    dansk +45 landekode nummer.
+                </p>
+            </aside>
+        </article>
+    </section>
+
+    <div class="headings-banner" id="guide">
+        <p>Guiden</p>
+    </div>
+    <section class="guide-section">
+        <img src="image/DatasikkerhedGuide%201.png" alt="5 trins guide, tjek side med datasikkerhed">
+    </section>
+
+    <div class="headings-banner" id="spilleReglerne">
+        <p>Spilleregler</p>
+    </div>
+    <section class="guide-section">
+        <img src="image/kaptajnKrogSpilletNew%201.png" alt="kaptajn krog spillet">
+    </section>
+
+    <div class="headings-banner" id="spillet">
+        <p>Spillet</p>
+    </div>
+</main>
+
+<footer>
+    <nav class="nav-footer">
+        <aside>
+            <p> Sociale Medier</p>
+
+            <a href="https://www.instagram.dk" target="_blank" rel="nofollow">
+                <img src="image/instagram.png" alt="instagram ikon">
+            </a>
+            <a href="https://www.linkedin.dk://" target="_blank" rel="nofollow">
+                <img src="image/linked.png" alt="linkedin ikon">
+            </a>
+            <a href="https://www.facebook.dk://" target="_blank" rel="nofollow">
+                <img src="image/facebook.png" alt="facebook ikon">
+            </a>
+        </aside>
+
+        <aside>
+            <p> Kontakt os</p>
+            <a href="mailto:dog@blog.com" target="_blank" rel="nofollow"><img src="image/phone.png"
+                                                                              alt="mobil ikon"></a>
+            <a href="tel:+4575838181" target="_blank" rel="nofollow"><img src="image/mail.png" alt="mail ikon"></a>
+
+        </aside>
+
+    </nav>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+</body>
+</html>
