@@ -90,6 +90,7 @@ header {
 
 .choose-subject {
   @include partial.a-hover;
+
   select {
     color: partial.$textColor;
     font-size: 1.2rem;
@@ -98,7 +99,7 @@ header {
     border: 2px solid partial.$gold;
     background-color: white;
     margin: 10px;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -162,7 +163,7 @@ header {
     }
 
 
-    }
+  }
 
 }
 
@@ -186,25 +187,14 @@ header {
 
 .nav-footer {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  height: auto;
-  background-color: partial.$lightblue;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  background-color: partial.$gold;
   color: partial.$textColor;
   bottom: 0;
 
   img {
-    height: 30px;
+    height: 50px;
     margin: 5px;
-  }
-
-  aside:first-of-type {
-    justify-self: left;
-    margin-left: 15px;
-  }
-
-  aside:last-of-type {
-    justify-self: right;
-    margin-right: 15px;
   }
 
   a {
@@ -212,7 +202,7 @@ header {
   }
 
   p {
-    @include partial.p-Mobil;
+    font-size: 5pt;
   }
 
 }
@@ -268,8 +258,8 @@ header {
 
   @media screen and (min-width: 771px) {
 
-    .guide-section{
-      img{
+    .guide-section {
+      img {
         width: 40%;
       }
     }
@@ -306,17 +296,14 @@ header {
       }
     }
 
-
     @media screen and (min-width: 771px) {
+
 
       .nav-footer {
         img {
-          height: 42px;
+          height: 60px;
         }
 
-        p {
-          @include partial.p-desktop;
-        }
       }
     }
   }
