@@ -7,7 +7,6 @@
   font-family: "OpenSans-Regular", serif;
 }
 
-
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -162,10 +161,7 @@ header {
       border-radius: 20px;
       @include partial.a-hover;
     }
-
-
   }
-
 }
 
 .guide-section {
@@ -188,23 +184,20 @@ header {
 
 .nav-footer {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: partial.$gold;
   color: partial.$textColor;
   bottom: 0;
+
+  p {
+    font-size: 5pt;
+  }
 
   img {
     height: 50px;
     margin: 5px;
   }
 
-  a {
-    @include partial.a-hover;
-  }
-
-  p {
-    font-size: 5pt;
-  }
 
 }
 
@@ -301,6 +294,73 @@ header {
 
     @media screen and (min-width: 771px) {
 
+      .set {
+        margin: 10% auto;
+      }
+
+      .game-over {
+        background-color: red;
+        opacity: 0.8;
+      }
+
+      .pressed {
+        box-shadow: 0 3px 4px 0 #DBEDF3;
+        opacity: 0.5;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .drum {
+        border-radius: 20PX;
+        font-size: 18pt;
+        color: white;
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        margin: 10px;
+        background-color:#C59E54;
+      }
+      .accordion {
+        background-color: lightgrey;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 50%;
+        border: 1px solid black;
+        outline: none;
+        text-align: center;
+        font-size: 15pt;
+        transition: 0.5s;
+        display: flex;
+        justify-self: center;
+        margin: 0 auto;
+      }
+      .active, .accordion:hover {
+        background-color: #C59E54;
+      }
+      .accordion:after {
+        content: "\02795";
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+      }
+      .active:after {
+        content: "\2796";
+      }
+
+      .panel {
+        width: 45%;
+        padding: 0 18px;
+        text-align: left;
+        justify-self: center;
+        margin: 0 auto;
+        max-height: 0;
+        transition: max-height 0.2s ease-in-out;
+        overflow: hidden;
+      }
 
       .nav-footer {
         img {

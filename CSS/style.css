@@ -16,6 +16,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   background-color: white;
+  width: 100vw;
 }
 
 header {
@@ -250,48 +251,17 @@ header {
 /* footer styling*/
 .nav-footer {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  height: auto;
-  background-color: #a9dfe1;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #C59E54;
   color: #2e2e2e;
   bottom: 0;
 }
-.nav-footer img {
-  height: 30px;
-  margin: 5px;
-}
-.nav-footer aside:first-of-type {
-  justify-self: left;
-  margin-left: 15px;
-}
-.nav-footer aside:last-of-type {
-  justify-self: right;
-  margin-right: 15px;
-}
-.nav-footer a {
-  text-decoration: none;
-  cursor: pointer;
-}
-.nav-footer a:hover {
-  color: #C59E54;
-  animation: bounce 0.5s 1 alternate;
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(0); /* Ingen vertikal forskydning */
-  }
-  50% {
-    transform: translateY(-5px); /* Bevæger sig 5px op */
-  }
-  100% {
-    transform: translateY(0); /* Tilbage til startpositionen */
-  }
-}
 .nav-footer p {
-  color: #0E3E86;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 0 auto;
+  font-size: 5pt;
+}
+.nav-footer img {
+  height: 50px;
+  margin: 5px;
 }
 
 /*desktop version*/
@@ -299,15 +269,18 @@ header {
   .mobile-nav {
     display: none;
   }
-  body {
+  main {
     max-width: 1500px;
     margin: 0 auto;
     background-color: white;
   }
+  header, footer {
+    width: 100vw;
+  }
   .desktop-nav {
     display: block;
     background-color: #EEF5FF;
-    width: 100%;
+    width: 100vw;
   }
   .desktop-nav ul {
     display: grid;
@@ -405,14 +378,70 @@ header {
   }
 }
 @media screen and (min-width: 771px) and (min-width: 771px) and (min-width: 771px) {
-  .nav-footer img {
-    height: 42px;
+  .set {
+    margin: 10% auto;
   }
-  .nav-footer p {
-    color: #0E3E86;
-    font-size: 1.5rem;
-    line-height: 1.5;
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  .pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
+  .red {
+    color: red;
+  }
+  .drum {
+    border-radius: 20PX;
+    font-size: 18pt;
+    color: white;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+    background-color: #C59E54;
+  }
+  .accordion {
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border: 1px solid black;
+    outline: none;
+    text-align: center;
+    font-size: 15pt;
+    transition: 0.5s;
+    display: flex;
+    justify-self: center;
     margin: 0 auto;
+  }
+  .active, .accordion:hover {
+    background-color: #C59E54;
+  }
+  .accordion:after {
+    content: "➕";
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "➖";
+  }
+  .panel {
+    width: 45%;
+    padding: 0 18px;
+    text-align: left;
+    justify-self: center;
+    margin: 0 auto;
+    max-height: 0;
+    transition: max-height 0.2s ease-in-out;
+    overflow: hidden;
+  }
+  .nav-footer img {
+    height: 60px;
   }
 }
 
