@@ -270,12 +270,12 @@ header {
     display: none;
   }
   main {
-    max-width: 1500px;
+    max-width: 1700px;
     margin: 0 auto;
     background-color: white;
   }
-  header, footer {
-    width: 100vw;
+  header, footer, .headings-banner {
+    width: 100%;
   }
   .desktop-nav {
     display: block;
@@ -403,15 +403,20 @@ header {
     background-color: #C59E54;
   }
   .accordion {
-    background-color: lightgrey;
+    background-color: #EEF5FF;
     color: black;
     cursor: pointer;
     padding: 18px;
-    width: 50%;
-    border: 1px solid black;
+    width: 40%;
+    border: 1px solid #0E3E86;
+    border-radius: 20px;
+    gap: 5px;
     outline: none;
     text-align: center;
-    font-size: 15pt;
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
     transition: 0.5s;
     display: flex;
     justify-self: center;
@@ -422,23 +427,29 @@ header {
   }
   .accordion:after {
     content: "➕";
-    font-size: 13px;
-    color: #777;
-    float: right;
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: #0E3E86;
     margin-left: 5px;
   }
   .active:after {
     content: "➖";
   }
   .panel {
-    width: 45%;
-    padding: 0 18px;
+    width: 40%;
+    padding: 5px;
     text-align: left;
     justify-self: center;
     margin: 0 auto;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
     overflow: hidden;
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
   }
   .nav-footer img {
     height: 60px;
