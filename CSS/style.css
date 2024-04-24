@@ -248,6 +248,141 @@ header {
   }
 }
 
+.set {
+  margin: 0 auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+#game {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
+  margin: 0 auto;
+}
+#game h1 {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  color: #0E3E86;
+  margin: 50px;
+}
+#game .buttons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.questions {
+  display: grid;
+  grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
+  width: 90%;
+  background-color: #0E3E86;
+  border-radius: 20px;
+}
+.questions p {
+  padding: 10px;
+  color: #0E3E86;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+.questions img {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  width: 60%;
+}
+
+.drum {
+  font-size: 18pt;
+  color: #0E3E86;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  color: #0E3E86;
+}
+
+.accordion {
+  background-color: #EEF5FF;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 90%;
+  border: 1px solid #0E3E86;
+  border-radius: 20px;
+  gap: 5px;
+  outline: none;
+  text-align: center;
+  color: #0E3E86;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  transition: 0.5s;
+  display: flex;
+  justify-self: center;
+  margin: 0 auto;
+}
+
+.active, .accordion:hover {
+  background-color: #C59E54;
+}
+
+.accordion:after {
+  content: "➕";
+  color: #0E3E86;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: #0E3E86;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "➖";
+}
+
+.panel {
+  width: 90%;
+  padding: 5px;
+  text-align: left;
+  justify-self: center;
+  margin: 0 auto;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+  overflow: hidden;
+  color: #0E3E86;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
 /* footer styling*/
 .nav-footer {
   display: grid;
@@ -379,7 +514,7 @@ header {
 }
 @media screen and (min-width: 771px) and (min-width: 771px) and (min-width: 771px) {
   .set {
-    margin: 10% auto;
+    margin: 0 auto;
   }
   .game-over {
     background-color: red;
@@ -392,22 +527,70 @@ header {
   .red {
     color: red;
   }
-  .drum {
-    border-radius: 20PX;
-    font-size: 18pt;
+  #game {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    margin: 0 auto;
+  }
+  #game h1 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    color: #0E3E86;
+    margin: 50px;
+  }
+  #game .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .questions {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
+    width: 90%;
+    background-color: #0E3E86;
+    border-radius: 20px;
+  }
+  .questions p {
+    padding: 10px;
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
     color: white;
-    width: 120px;
+  }
+  .questions img {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+  }
+  .drum {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #0E3E86;
+    width: 230px;
     height: 40px;
     text-align: center;
     margin: 10px;
-    background-color: #C59E54;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    color: #0E3E86;
   }
   .accordion {
     background-color: #EEF5FF;
     color: black;
     cursor: pointer;
     padding: 18px;
-    width: 40%;
+    width: auto;
     border: 1px solid #0E3E86;
     border-radius: 20px;
     gap: 5px;
@@ -452,7 +635,7 @@ header {
     margin: 0 auto;
   }
   .nav-footer img {
-    height: 60px;
+    height: 70px;
   }
 }
 

@@ -178,6 +178,128 @@ header {
   }
 }
 
+.set {
+  margin: 0 auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+#game {
+  display: grid;
+  grid-template-rows:  0.1fr 1fr 0.1fr;
+  margin: 0 auto;
+
+
+  h1 {
+    @include partial.heading-mobile;
+    color: partial.$darkblue;
+    margin: 50px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+}
+
+.questions {
+  display: grid;
+  grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
+  width: 90%;
+  background-color: partial.$darkblue;
+  border-radius: 20px;
+
+  p{
+    padding: 10px;
+    @include partial.p-Mobil;
+    color: white;
+    text-align: center;
+  }
+
+  img{
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    width: 60%;
+  }
+}
+
+.drum {
+  font-size: 18pt;
+  color: partial.$darkblue;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: none;
+
+
+}
+h2{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  @include partial.heading-mobile;
+  color: partial.$darkblue;
+
+}
+.accordion {
+  background-color: partial.$lightblueBackground;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 90%;
+  border: 1px solid partial.$darkblue;
+  border-radius: 20px;
+  gap: 5px;
+  outline: none;
+  text-align: center;
+  @include partial.p-desktop;
+  transition: 0.5s;
+  display: flex;
+  justify-self: center;
+  margin: 0 auto;
+}
+.active, .accordion:hover {
+  background-color: #C59E54;
+}
+.accordion:after {
+  content: "\02795";
+  @include partial.p-desktop;
+  color: partial.$darkblue;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796";
+}
+
+.panel {
+  width: 90%;
+  padding: 5px;
+  text-align: left;
+  justify-self: center;
+  margin: 0 auto;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+  overflow: hidden;
+  @include partial.p-desktop;
+}
+
 
 /* footer styling*/
 
@@ -294,7 +416,7 @@ header {
     @media screen and (min-width: 771px) {
 
       .set {
-        margin: 10% auto;
+        margin: 0 auto;
       }
 
       .game-over {
@@ -311,22 +433,72 @@ header {
         color: red;
       }
 
+      #game {
+        display: grid;
+        grid-template-rows:  0.1fr 1fr 0.1fr;
+        margin: 0 auto;
+
+
+        h1 {
+          @include partial.heading-mobile;
+          color: partial.$darkblue;
+          margin: 50px;
+        }
+        .buttons{
+          display: flex;
+          justify-content: center;
+        }
+
+      }
+
+      .questions {
+        display: grid;
+        grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
+        width: 90%;
+        background-color: partial.$darkblue;
+        border-radius: 20px;
+
+        p{
+          padding: 10px;
+          @include partial.p-desktop;
+          color: white;
+        }
+
+        img{
+          display: flex;
+          margin: 0 auto;
+          padding: 10px;
+          width: 50%;
+        }
+      }
+
       .drum {
-        border-radius: 20PX;
-        font-size: 18pt;
-        color: white;
-        width: 120px;
+        font-size: 20pt;
+        font-weight: bold;
+        color: partial.$darkblue;
+        width: 230px;
         height: 40px;
         text-align: center;
         margin: 10px;
-        background-color: #C59E54;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: none;
+
+      }
+      h2{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        @include partial.heading-mobile;
+        color: partial.$darkblue;
+
       }
       .accordion {
         background-color: partial.$lightblueBackground;
         color: black;
         cursor: pointer;
         padding: 18px;
-        width: 40%;
+        width: auto;
         border: 1px solid partial.$darkblue;
         border-radius: 20px;
         gap: 5px;
@@ -365,7 +537,7 @@ header {
 
       .nav-footer {
         img {
-          height: 60px;
+          height: 70px;
         }
 
       }
