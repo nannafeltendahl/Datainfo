@@ -199,18 +199,33 @@ header {
 .red {
   color: red;
 }
+#audioButton{
+  display: flex;
+  justify-self: right;
+  border-radius: 40px;
+  background-color: #EEF5FF;
+  @include partial.a-hover;
+  border: 0;
+  height: 70px;
+  width: 70px;
+  margin: 15px;
+}
 
+#audioButtonImg{
+  height: 60px;
+  display: flex;
+  padding: 10px;
+
+}
 #game {
   display: grid;
   grid-template-rows:  0.1fr 1fr 0.1fr;
   margin: 0 auto;
+  background-color: #0F326A;
+  border-radius: 10px;
+  width: 80%;
 
 
-  h1 {
-    @include partial.heading-mobile;
-    color: partial.$darkblue;
-    margin: 50px;
-  }
   .buttons{
     display: flex;
     justify-content: center;
@@ -223,7 +238,6 @@ header {
   display: grid;
   grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
   width: 90%;
-  background-color: partial.$darkblue;
   border-radius: 20px;
 
   p{
@@ -455,14 +469,11 @@ h2{
         margin: 0 auto;
 
 
-        h1 {
-          @include partial.heading-mobile;
-          color: partial.$darkblue;
-          margin: 50px;
-        }
+
         .buttons{
           display: flex;
           justify-content: center;
+
         }
 
       }

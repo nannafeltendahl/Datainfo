@@ -274,17 +274,47 @@ header {
   color: red;
 }
 
+#audioButton {
+  display: flex;
+  justify-self: right;
+  border-radius: 40px;
+  background-color: #EEF5FF;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  height: 70px;
+  width: 70px;
+  margin: 15px;
+}
+#audioButton:hover {
+  color: #C59E54;
+  animation: bounce 0.5s 1 alternate;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Ingen vertikal forskydning */
+  }
+  50% {
+    transform: translateY(-5px); /* Bevæger sig 5px op */
+  }
+  100% {
+    transform: translateY(0); /* Tilbage til startpositionen */
+  }
+}
+
+#audioButtonImg {
+  height: 60px;
+  display: flex;
+  padding: 10px;
+}
+
 #game {
   display: grid;
   grid-template-rows: 0.1fr 1fr 0.1fr;
   margin: 0 auto;
-}
-#game h1 {
-  font-size: 1.7rem;
-  display: flex;
-  justify-content: center;
-  color: #0E3E86;
-  margin: 50px;
+  background-color: #0F326A;
+  border-radius: 10px;
+  width: 80%;
 }
 #game .buttons {
   display: flex;
@@ -296,7 +326,6 @@ header {
   display: grid;
   grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
   width: 90%;
-  background-color: #0E3E86;
   border-radius: 20px;
 }
 .questions p {
@@ -555,13 +584,6 @@ h2 {
     display: grid;
     grid-template-rows: 0.1fr 1fr 0.1fr;
     margin: 0 auto;
-  }
-  #game h1 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: center;
-    color: #0E3E86;
-    margin: 50px;
   }
   #game .buttons {
     display: flex;
