@@ -145,7 +145,8 @@
     <div class="headings-banner" id="spilleReglerne">
         <p>Spilleregler</p>
     </div>
-    <p id="gameRuleText">Kaptajn krog er ude efter at få dine personlige oplysninger på (phishing) krogen. Du kommer gennem små opgaver
+    <p id="gameRuleText">Kaptajn krog er ude efter at få dine personlige oplysninger på (phishing) krogen. Du kommer
+        gennem små opgaver
         hvor du bliver præsenteret for forskellige svar.
 
         TIP: Det er en god idé at læse om datasikkerhed her på siden, inden du spiller spillet, for at få mest mulig ud
@@ -161,7 +162,14 @@
     </div>
 
     <section id="game">
-        <button id="audioButton"> <img id="audioButtonImg" src="../image/node.png" alt="lys fra og til"></button>
+
+        <audio id="myAudio">
+            <source src="./sounds/pan-filmsilly-25608.mp3" type="audio/mp3">
+        </audio>
+        <button id="audioButton" onclick="toggleAudio()" type="button">
+            <img id="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        </button>
+
         <section class="set questions">
             <div id="imageContainer" style="display: none;">
                 <img id="imageToShow" src=""

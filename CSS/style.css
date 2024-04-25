@@ -278,7 +278,7 @@ header {
   display: flex;
   justify-self: right;
   border-radius: 40px;
-  background-color: #EEF5FF;
+  background-color: white;
   text-decoration: none;
   cursor: pointer;
   border: 0;
@@ -593,7 +593,6 @@ h2 {
     display: grid;
     grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
     width: 90%;
-    background-color: #0E3E86;
     border-radius: 20px;
   }
   .questions p {

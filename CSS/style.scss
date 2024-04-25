@@ -203,7 +203,7 @@ header {
   display: flex;
   justify-self: right;
   border-radius: 40px;
-  background-color: #EEF5FF;
+  background-color: white;
   @include partial.a-hover;
   border: 0;
   height: 70px;
@@ -482,7 +482,6 @@ h2{
         display: grid;
         grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr;
         width: 90%;
-        background-color: partial.$darkblue;
         border-radius: 20px;
 
         p{

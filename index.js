@@ -139,10 +139,10 @@ for (var i = 0; i < numberOfButtons; i++) {
 function makesound(wasCorrect) {
 
     if (wasCorrect) {
-        let audio = new Audio("sounds/correctSound")
+        let audio = new Audio("sounds/correctSound.mp3")
         audio.play();
     } else {
-        let audio = new Audio("sounds/incorrectSound")
+        let audio = new Audio("sounds/incorrectSound.mp3")
         audio.play();
     }
 }
@@ -195,3 +195,32 @@ for (let i = 0; i < acc.length; i++) {
 
     });
 }
+//audio for music button. dosent work
+
+//
+//     const button = document.getElementsByClassName('toggleButton');
+//     const audio = document.getElementById('audioButton');
+//     let isPlaying = false;
+//
+//     button.addEventListener('click', () => {
+//     if (isPlaying) {
+//     audio.pause();
+// } else {
+//     audio.play();
+// }
+//     isPlaying = !isPlaying;
+// });
+
+const audio = document.getElementById("myAudio");
+
+let isPlaying = false;
+
+function toggleAudio() {
+    if (isPlaying) {
+        audio.pause();
+    } else {
+        audio.play();
+    }
+    isPlaying = !isPlaying;
+}
+
