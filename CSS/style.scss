@@ -12,7 +12,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   background-color: white;
-  width: 100vw;
+  width: 100%;
 }
 
 header {
@@ -22,7 +22,7 @@ header {
   z-index: 100000;
 }
 
-@media screen and (min-width: 0px) and (max-width: 770px) {
+@media screen and (min-width: 0px) and (max-width: 950px) {
   .desktop-nav {
     display: none;
     background-color: partial.$lightblueBackground;
@@ -168,14 +168,18 @@ header {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding: 40px 0 30px 0;
 
   img {
-    width: 70%;
+    width: 80%;
     @include partial.a-hover;
 
 
   }
+}
+#gameRuleText {
+  @include partial.p-Mobil;
+  width: 70%;
 }
 
 .set {
@@ -306,24 +310,29 @@ h2{
 .nav-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: partial.$gold;
+  background-color: partial.$lightblueBackground;
   color: partial.$textColor;
   bottom: 0;
 
+
   p {
-    font-size: 5pt;
+    @include partial.p-Mobil;
+    display: flex;
+    justify-content: space-around;
   }
 
   img {
     height: 50px;
-    margin: 5px;
+    display: flex;
+    margin: 0 auto;
+    padding: 5px;
   }
 
 
 }
 
 /*desktop version*/
-@media screen and (min-width: 771px) {
+@media screen and (min-width: 951px) {
   .mobile-nav {
     display: none;
   }
@@ -373,15 +382,20 @@ h2{
     width: 80%;
   }
 
-  @media screen and (min-width: 771px) {
+  @media screen and (min-width: 950px) {
 
     .guide-section {
       img {
         width: 40%;
       }
     }
+    #gameRuleText {
+      @include partial.p-desktop;
+      width: 80%;
+    }
     .articles {
-      gap: 10px;
+      padding: 30px 0 50px 0;
+
 
       .articles-grid {
         grid-template-columns: 1fr 1fr;
@@ -413,7 +427,7 @@ h2{
       }
     }
 
-    @media screen and (min-width: 771px) {
+    @media screen and (min-width: 951px) {
 
       .set {
         margin: 0 auto;
