@@ -318,11 +318,13 @@ h2{
   p {
     @include partial.p-Mobil;
     display: flex;
-    justify-content: space-around;
+    align-content: center;
+    justify-content: center;
+    padding: 5px;
   }
 
   img {
-    height: 50px;
+    height: auto;
     display: flex;
     margin: 0 auto;
     padding: 5px;
@@ -551,7 +553,7 @@ h2{
 
       .nav-footer {
         img {
-          height: 70px;
+          height: auto;
         }
 
       }
