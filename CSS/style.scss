@@ -199,11 +199,22 @@ header {
 .red {
   color: red;
 }
+#captainHeading{
+  @include partial.heading-mobile;
+  color: #806634;
+  margin-bottom: 20px;
+}
+
+.gameText{
+  @include partial.p-Mobil;
+  color: #806634;
+  padding: 15px;
+}
 #audioButton{
   display: flex;
   justify-self: right;
   border-radius: 40px;
-  background-color: white;
+  background-image: url("../image/woodenTexture.jpg");
   @include partial.a-hover;
   border: 0;
   height: 70px;
@@ -217,13 +228,13 @@ header {
   padding: 10px;
 
 }
+
 #game {
   display: grid;
   grid-template-rows:  0.1fr 1fr 0.1fr;
   margin: 0 auto;
-  background-color: #0F326A;
-  border-radius: 10px;
-  width: 80%;
+  padding-top: 50px;
+
 
 
   .buttons{
@@ -255,17 +266,17 @@ header {
   }
 }
 
-.drum {
+.gameButton {
   font-size: 18pt;
-  color: partial.$darkblue;
+  color: partial.$gold;
   width: 50%;
   height: 40px;
   text-align: center;
   margin: 10px;
-  background-color: white;
+  background-image: url("../image/woodenTexture.jpg");
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border: none;
-
+  border: 2px solid partial.$gold;
 
 }
 h2{
@@ -462,6 +473,19 @@ h2{
       .red {
         color: red;
       }
+      #captainHeading{
+        @include partial.heading-desktop;
+        color: #806634;
+        margin-bottom: 20px;
+      }
+
+      .gameText{
+        @include partial.p-desktop;
+        color: #806634;
+        margin: 0 auto;
+        width: 80%;
+        padding: 10px;
+      }
 
       #game {
         display: grid;
@@ -498,17 +522,17 @@ h2{
         }
       }
 
-      .drum {
+      .gameButton {
         font-size: 20pt;
         font-weight: bold;
-        color: partial.$darkblue;
+        color: white;
         width: 230px;
         height: 40px;
         text-align: center;
         margin: 10px;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        border: none;
+        border: 2px solid partial.$gold;
 
       }
       h2{

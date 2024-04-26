@@ -274,11 +274,28 @@ header {
   color: red;
 }
 
+#captainHeading {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  color: #806634;
+  margin-bottom: 20px;
+}
+
+.gameText {
+  color: #0E3E86;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: #806634;
+  padding: 15px;
+}
+
 #audioButton {
   display: flex;
   justify-self: right;
   border-radius: 40px;
-  background-color: white;
+  background-image: url("../image/woodenTexture.jpg");
   text-decoration: none;
   cursor: pointer;
   border: 0;
@@ -312,9 +329,7 @@ header {
   display: grid;
   grid-template-rows: 0.1fr 1fr 0.1fr;
   margin: 0 auto;
-  background-color: #0F326A;
-  border-radius: 10px;
-  width: 80%;
+  padding-top: 50px;
 }
 #game .buttons {
   display: flex;
@@ -344,16 +359,17 @@ header {
   width: 60%;
 }
 
-.drum {
+.gameButton {
   font-size: 18pt;
-  color: #0E3E86;
+  color: #C59E54;
   width: 50%;
   height: 40px;
   text-align: center;
   margin: 10px;
-  background-color: white;
+  background-image: url("../image/woodenTexture.jpg");
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border: none;
+  border: 2px solid #C59E54;
 }
 
 h2 {
@@ -580,6 +596,23 @@ h2 {
   .red {
     color: red;
   }
+  #captainHeading {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    color: #806634;
+    margin-bottom: 20px;
+  }
+  .gameText {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: #806634;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+  }
   #game {
     display: grid;
     grid-template-rows: 0.1fr 1fr 0.1fr;
@@ -609,17 +642,17 @@ h2 {
     padding: 10px;
     width: 50%;
   }
-  .drum {
+  .gameButton {
     font-size: 20pt;
     font-weight: bold;
-    color: #0E3E86;
+    color: white;
     width: 230px;
     height: 40px;
     text-align: center;
     margin: 10px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: none;
+    border: 2px solid #C59E54;
   }
   h2 {
     display: flex;

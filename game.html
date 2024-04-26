@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="common.js" charset="UTF-8" defer></script>
+    <script src="game.js" charset="UTF-8" defer></script>
+</head>
+<body>
+<main>
+    <audio id="myAudio">
+        <source src="./sounds/pan-filmsilly-25608.mp3" type="audio/mp3">
+    </audio>
+    <button id="audioButton" onclick="toggleAudio()" type="button">
+        <img id="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+    </button>
+
+    <div id="startPage" class="gamePage">Start Page
+        <button onclick="startGame()">START</button>
+    </div>
+    <div id="questionPage" class="gamePage">
+
+        <p id="gameQuestion"></p>
+        <p id="gameQuestionOptionA"></p>
+        <p id="gameQuestionOptionB"></p>
+
+        <div class="gameButtons">
+            <button class="a gameButton">A</button>
+            <button class="b gameButton">B</button>
+        </div>
+    </div>
+    <div id="caughtPage" class="gamePage">
+        <img src="image/kaptajnKrog.png"/>
+    </div>
+    <div id="shieldPage" class="gamePage">
+        <img src="image/fishLogo.png"/>
+    </div>
+    <div id="shieldGoldPage" class="gamePage">
+        <img src="image/goldFishLogo.png"/>
+    </div>
+    <div id="gameOverPage" class="gamePage">
+        <img src="image/kaptajnKrog.png"/>
+        Game over svin!!!
+    </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+</body>
+</html>
