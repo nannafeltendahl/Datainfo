@@ -617,21 +617,18 @@ h2 {
   height: 100%;
   max-height: 100%;
   max-width: none;
-  //display: grid;
-  // grid-template-columns: auto;
-  overflow: hidden;
 }
 
 #audioButton {
   position: absolute;
   right: 0;
-  z-index: 1;
+  top: 100px;
+  z-index: 1000;
 }
 
 .gamePage {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   position: absolute;
   max-height: 100%;
   top: 0;
@@ -661,6 +658,12 @@ h2 {
   align-items: center;
 }
 
+@media screen and (min-width: 951px) {
+  #audioButton {
+    top: 130px;
+  }
+}
+
 /*................StartPage styling.............*/
 
 #startPage {
@@ -682,7 +685,7 @@ h2 {
   max-width: 100%;
   max-height: 100%;
   //width: 100%;
-  height: 100%;
+  //height: 100%;
   //aspect-ratio: 1;
   //height: 50px;
   //object-fit: scale-down;

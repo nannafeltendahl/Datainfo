@@ -30,47 +30,46 @@
     <audio id="myAudio">
         <source src="./sounds/pan-filmsilly-25608.mp3" type="audio/mp3">
     </audio>
-    <button id="audioButton" onclick="toggleAudio()" type="button">
-        <img id="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-    </button>
 
-    <div id="startPage" class="gamePage verticalCenter">
-        <img id="startPageBackground" class="verticalCenter2" src="image/tresureMap.png"/>
-        <div class="gamePageOverlay">
-            <div class="verticalCenter fullSize">
-                <button class="startGameButton" onclick="startGame()">START</button>
+    <div>
+        <div id="startPage" class="gamePage verticalCenter">
+            <img id="startPageBackground" class="verticalCenter2" src="image/tresureMap.png"/>
+            <div class="gamePageOverlay">
+                <div class="verticalCenter fullSize">
+                    <button class="startGameButton" onclick="startGame()">START</button>
+                </div>
+            </div>
+            <button id="audioButton" onclick="toggleAudio()" type="button">
+                <img id="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+            </button>
+        </div>
+        <div id="questionPage" class="gamePage verticalCenter">
+
+            <p id="gameQuestion"></p>
+            <p id="gameQuestionOptionA"></p>
+            <p id="gameQuestionOptionB"></p>
+
+            <div class="gameButtons">
+                <button class="a gameButton">A</button>
+                <button class="b gameButton">B</button>
             </div>
         </div>
-    </div>
-    <div id="questionPage" class="gamePage verticalCenter">
-
-        <p id="gameQuestion"></p>
-        <p id="gameQuestionOptionA"></p>
-        <p id="gameQuestionOptionB"></p>
-
-        <div class="gameButtons">
-            <button class="a gameButton">A</button>
-            <button class="b gameButton">B</button>
+        <div id="caughtPage" class="gamePage verticalCenter">
+            <img src="image/kaptajnKrog.png"/>
         </div>
-    </div>
-    <div id="caughtPage" class="gamePage verticalCenter">
-        <img src="image/kaptajnKrog.png"/>
-    </div>
-    <div id="shieldPage" class="gamePage verticalCenter">
-        <img src="image/fishLogo.png"/>
-    </div>
-    <div id="shieldGoldPage" class="gamePage verticalCenter">
-        <img src="image/goldFishLogo.png"/>
-    </div>
-    <div id="gameOverPage" class="gamePage verticalCenter">
-        <img src="image/kaptajnKrog.png"/>
-    </div>
+        <div id="shieldPage" class="gamePage verticalCenter">
+            <img src="image/fishLogo.png"/>
+        </div>
+        <div id="shieldGoldPage" class="gamePage verticalCenter">
+            <img src="image/goldFishLogo.png"/>
+        </div>
+        <div id="gameOverPage" class="gamePage verticalCenter">
+            <img src="image/kaptajnKrog.png"/>
+        </div>
 
-    <!--    <div id="gamePageOverlay">-->
-    <!--        <div class="verticalCenter">-->
-    <!--            <button class="startGameButton" onclick="startGame()">START</button>-->
-    <!--        </div>-->
-    <!--    </div>-->
+
+
+    </div>
 </main>
 <footer>
     ....!....
