@@ -9,7 +9,24 @@
     <script src="game.js" charset="UTF-8" defer></script>
 </head>
 <body>
-<main>
+<header>
+    <nav class="mobile-nav">
+        <img class="toggle-nav" src="image/burgermenu.png" alt=" trykbar burgermenu ikon">
+        <a href="index.html"><img id="logo" src="image/dataInfoLogo.png" alt="datainfo logo"></a>
+
+    </nav>
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href="index.html"><img class="logo-desktop" src="image/dataInfoLogo.png"
+                                          alt="datainfo logo"></a></li>
+            <li class="nav"><a href="datasikkerhed">Datasikkerhed</a></li>
+            <li class="nav"><a href="guide">Guide</a></li>
+            <li class="nav"><a href="spilleregler">Spilleregler</a></li>
+            <li class="nav"><a href="spillet">Spillet</a></li>
+        </ul>
+    </nav>
+</header>
+<main id="gamePageMain">
     <audio id="myAudio">
         <source src="./sounds/pan-filmsilly-25608.mp3" type="audio/mp3">
     </audio>
@@ -17,10 +34,15 @@
         <img id="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
     </button>
 
-    <div id="startPage" class="gamePage">Start Page
-        <button onclick="startGame()">START</button>
+    <div id="startPage" class="gamePage verticalCenter">
+        <img id="startPageBackground" class="verticalCenter2" src="image/tresureMap.png"/>
+        <div class="gamePageOverlay">
+            <div class="verticalCenter fullSize">
+                <button class="startGameButton" onclick="startGame()">START</button>
+            </div>
+        </div>
     </div>
-    <div id="questionPage" class="gamePage">
+    <div id="questionPage" class="gamePage verticalCenter">
 
         <p id="gameQuestion"></p>
         <p id="gameQuestionOptionA"></p>
@@ -31,20 +53,28 @@
             <button class="b gameButton">B</button>
         </div>
     </div>
-    <div id="caughtPage" class="gamePage">
+    <div id="caughtPage" class="gamePage verticalCenter">
         <img src="image/kaptajnKrog.png"/>
     </div>
-    <div id="shieldPage" class="gamePage">
+    <div id="shieldPage" class="gamePage verticalCenter">
         <img src="image/fishLogo.png"/>
     </div>
-    <div id="shieldGoldPage" class="gamePage">
+    <div id="shieldGoldPage" class="gamePage verticalCenter">
         <img src="image/goldFishLogo.png"/>
     </div>
-    <div id="gameOverPage" class="gamePage">
+    <div id="gameOverPage" class="gamePage verticalCenter">
         <img src="image/kaptajnKrog.png"/>
-        Game over svin!!!
     </div>
+
+    <!--    <div id="gamePageOverlay">-->
+    <!--        <div class="verticalCenter">-->
+    <!--            <button class="startGameButton" onclick="startGame()">START</button>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </main>
+<footer>
+    ....!....
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
 </body>

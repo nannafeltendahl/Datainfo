@@ -62,25 +62,26 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
         // start by hiding all
         document.querySelectorAll(".gamePage").forEach(gamePageElement => gamePageElement.style.display = 'none');
 
+        // display only one game page depending on state
         switch (this.state) {
             case "Question":
-                document.getElementById("questionPage").style.display = 'block';
+                document.getElementById("questionPage").style.display = 'grid';
                 break;
             case "Caught":
-                document.getElementById("caughtPage").style.display = 'block';
+                document.getElementById("caughtPage").style.display = 'grid';
                 break;
             case "Shield":
-                document.getElementById("shieldPage").style.display = 'block';
+                document.getElementById("shieldPage").style.display = 'grid';
                 break;
             case "ShieldGold":
-                document.getElementById("shieldGoldPage").style.display = 'block';
+                document.getElementById("shieldGoldPage").style.display = 'grid';
                 break;
             case "GameOver":
-                document.getElementById("gameOverPage").style.display = 'block';
+                document.getElementById("gameOverPage").style.display = 'grid';
                 break;
 
             default:
-                document.getElementById("startPage").style.display = 'block';
+                document.getElementById("startPage").style.display = 'grid';
                 break;
 
         }
@@ -175,29 +176,6 @@ function buttonAnimation(currentKey) {
         }, 100);
     }
 }
-
-// const questionDiv = document.getElementById("question");
-// const btnA = document.getElementById("btnA");
-// const btnB = document.getElementById("btnB");
-//
-// const imageContainer = document.getElementById("imageContainer");
-// const imageToShow = document.getElementById("imageToShow");
-
-
-// Funktion for at vise billedet
-// function showImage(imageSrc) {
-//     // Skift display-stilen for at vise billedet
-//     imageContainer.style.display = "block";
-//     // Opdater billedets kilde
-//     imageToShow.src = imageSrc;
-//     // Skjul spørgsmålet
-//     questionDiv.style.display = "none";
-// }
-//
-// function hideGameImage() {
-//     imageContainer.style.display = "none";
-//     questionDiv.style.display = "block";
-// }
 
 //js for music button for game
 
