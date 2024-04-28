@@ -662,12 +662,12 @@ h2 {
   align-content: center;
   align-items: center;
 }
+
 @media screen and (min-width: 951px) {
   .audioButton {
     top: 150px;
   }
 }
-
 
 
 /*................Specific game pages styling.............*/
@@ -676,17 +676,19 @@ h2 {
   @include partial.btn;
   @include partial.a-hover;
 }
+
 /*.....questionGamePage.......*/
 #questionPage {
   display: none;
 
-  .gameButtons{
+  .gameButtons {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     margin: 50px 0 0 0;
 
   }
+
   .gameButton {
     @include partial.btn;
     @include partial.a-hover;
@@ -723,7 +725,7 @@ h2 {
 @media screen and (min-width: 951px) {
   #gameQuestion {
     width: 80%;
-    padding:  0 15px 15px 15px;
+    padding: 0 15px 15px 15px;
   }
   .questionP {
     @include partial.p-desktop;
@@ -735,22 +737,141 @@ h2 {
 /*....closing bracket for media query desktop........*/
 
 
-/*.....caughtGamePage.......*/
+/*............................caughtGamePage.......*/
 #caughtPage {
   display: none;
+
+
+  .gameImageStyling {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+
 }
 
-/*.....shieldGamePage.......*/
+/*............................shieldGamePage.......*/
 #shieldPage {
   display: none;
+
+  .gameImageStyling {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
-/*.....shieldGoldGamePage.......*/
+/*...........................shieldGoldGamePage.......*/
 #shieldGoldPage {
   display: none;
-}
 
-/*....GameOverPage.......*/
-#gameOverPage {
-  display: none;
+  .gameButton {
+    @include partial.btn;
+    @include partial.a-hover;
+    padding: 5px 10px 10px 10px;
+  }
+
+  /*....Media query for mobile.....*/
+
+  @media screen and (max-width: 950px) {
+
+    .questionP {
+      @include partial.p-Mobil;
+      color: white;
+      width: 80%;
+      padding: 0 30px 30px 60px;
+      text-align: center;
+
+    }
+    .gameImageStyling {
+      width: 30%;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .downloadeButton {
+      display: flex;
+      margin: 0 auto;
+
+
+      img {
+        height: 70px;
+        display: flex;
+        @include partial.a-hover;
+      }
+    }
+  }
+  /*.....Media query for desktop......*/
+  @media screen and (min-width: 951px) {
+    .questionP {
+      @include partial.p-desktop;
+      color: white;
+      padding: 0 30px 30px 60px;
+      text-align: center;
+      width: 60%;
+
+    }
+    .gameImageStyling {
+      width: 30%;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .downloadeButton {
+      display: flex;
+      margin: 0 auto;
+
+
+      img {
+        height: 90px;
+        display: flex;
+        @include partial.a-hover;
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+
+  /*............................GameOverPage................*/
+  #gameOverPage {
+    display: none;
+
+    /*.....Media query for desktop......*/
+    @media screen and (min-width: 951px) {
+      .gameImageStyling {
+        width: 30%;
+        display: flex;
+        margin: 0 auto;
+      }
+      .questionP {
+        @include partial.p-desktop;
+        color: white;
+        padding: 0 30px 30px 60px;
+        text-align: center;
+        width: 60%;
+
+      }
+
+    }
+
+    /*....Media query for mobile.....*/
+
+    @media screen and (max-width: 950px) {
+
+      .questionP {
+        @include partial.p-Mobil;
+        color: white;
+        width: 80%;
+        padding: 0 30px 30px 60px;
+        text-align: center;
+
+      }
+      .gameImageStyling {
+        width: 10%;
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+  }
 }

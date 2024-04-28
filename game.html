@@ -19,10 +19,10 @@
         <ul>
             <li><a href="index.html"><img class="logo-desktop" src="image/dataInfoLogo.png"
                                           alt="datainfo logo"></a></li>
-            <li class="nav"><a href="datasikkerhed">Datasikkerhed</a></li>
-            <li class="nav"><a href="guide">Guide</a></li>
-            <li class="nav"><a href="spilleregler">Spilleregler</a></li>
-            <li class="nav"><a href="spillet">Spillet</a></li>
+            <li class="nav"><a href="index.html#datasikkerhed">Datasikkerhed</a></li>
+            <li class="nav"><a href="index.html#guide">Guide</a></li>
+            <li class="nav"><a href="index.html#spilleReglerne">Spilleregler</a></li>
+            <li class="nav"><a href="index.html#spillet">Spillet</a></li>
         </ul>
     </nav>
 </header>
@@ -64,22 +64,57 @@
         </button>
     </div>
     <div id="caughtPage" class="gamePage verticalCenter">
-        <img src="image/kaptajnKrog.png"/>
+        <img class="gamePageBackground" src="image/gameBackground.png"/>
+        <div class="gamePageOverlay verticalCenter fullSize">
+        <img class="gameImageStyling" src="image/kaptajnKrog.png"/>
+        <p class="questionP">Åh Åh! Du blev Fanget af Kaptajn Krog</p>
+        </div>
+        <button class="audioButton" onclick="toggleAudio()" type="button">
+            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        </button>
     </div>
     <div id="shieldPage" class="gamePage verticalCenter">
-        <img src="image/fishLogo.png"/>
+        <img class="gamePageBackground" src="image/gameBackground.png"/>
+        <div class="gamePageOverlay verticalCenter fullSize">
+            <img class="gameImageStyling" src="image/fishLogo.png"/>
+            <p class="questionP">Godt arbejde!, du fik sikkerhedsskjoldet</p>
+        </div>
+        <button class="audioButton" onclick="toggleAudio()" type="button">
+            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        </button>
+
+
     </div>
     <div id="shieldGoldPage" class="gamePage verticalCenter">
-        <img src="image/goldFishLogo.png"/>
+
+        <img class="gamePageBackground" src="image/gameBackground.png"/>
+
+        <div class="gamePageOverlay verticalCenter fullSize">
+            <img class="gameImageStyling" src="image/goldFishLogo.png"/>
+            <p class="questionP">Jubii!, du fandt skatten og fik dit guldsikkerhedsskjold,
+                med dette kan du åbne (klik) kisten hvor dit certifikat ligger.</p>
+
+            <div class="downloadeButton">
+                <img src="image/goldChest.png" alt="klik for at downloade">
+            </div>
+        </div>
+
+        <button class="audioButton" onclick="toggleAudio()" type="button">
+            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        </button>
     </div>
     <div id="gameOverPage" class="gamePage verticalCenter">
-        <img src="image/kaptajnKrog.png"/>
-    </div>
 
+        <img class="gamePageBackground" src="image/gameBackground.png"/>
+        <div class="gamePageOverlay verticalCenter fullSize">
+            <img class="gameImageStyling" src="image/kaptajnKrog.png"/>
+            <p class="questionP">Åh Åh! Du blev Fanget af Kaptajn Krog</p>
+        </div>
+        <button class="audioButton" onclick="toggleAudio()" type="button">
+            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        </button>
+    </div>
 </main>
-<footer>
-    ....!....
-</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
 </body>

@@ -960,24 +960,191 @@ h2 {
   }
 }
 /*....closing bracket for media query desktop........*/
-/*.....caughtGamePage.......*/
+/*............................caughtGamePage.......*/
 #caughtPage {
   display: none;
 }
+#caughtPage .gameImageStyling {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+}
 
-/*.....shieldGamePage.......*/
+/*............................shieldGamePage.......*/
 #shieldPage {
   display: none;
 }
-
-/*.....shieldGoldGamePage.......*/
-#shieldGoldPage {
-  display: none;
+#shieldPage .gameImageStyling {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
 }
 
-/*....GameOverPage.......*/
-#gameOverPage {
+/*...........................shieldGoldGamePage.......*/
+#shieldGoldPage {
   display: none;
+  /*....Media query for mobile.....*/
+  /*.....Media query for desktop......*/
+  /*............................GameOverPage................*/
+}
+#shieldGoldPage .gameButton {
+  font-size: 20pt;
+  font-weight: normal;
+  color: #C59E54;
+  width: fit-content;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 10px 0 10px;
+  background-image: url("../image/woodBackground.png");
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 3px solid #C59E54;
+  text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px 10px 10px 10px;
+}
+#shieldGoldPage .gameButton:hover {
+  color: #C59E54;
+  animation: bounce 0.5s 1 alternate;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Ingen vertikal forskydning */
+  }
+  50% {
+    transform: translateY(-5px); /* Bevæger sig 5px op */
+  }
+  100% {
+    transform: translateY(0); /* Tilbage til startpositionen */
+  }
+}
+@media screen and (max-width: 950px) {
+  #shieldGoldPage .questionP {
+    color: #0E3E86;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: white;
+    width: 80%;
+    padding: 0 30px 30px 60px;
+    text-align: center;
+  }
+  #shieldGoldPage .gameImageStyling {
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+  }
+  #shieldGoldPage .downloadeButton {
+    display: flex;
+    margin: 0 auto;
+  }
+  #shieldGoldPage .downloadeButton img {
+    height: 70px;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #shieldGoldPage .downloadeButton img:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
+  }
+}
+@media screen and (min-width: 951px) {
+  #shieldGoldPage .questionP {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: white;
+    padding: 0 30px 30px 60px;
+    text-align: center;
+    width: 60%;
+  }
+  #shieldGoldPage .gameImageStyling {
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+  }
+  #shieldGoldPage .downloadeButton {
+    display: flex;
+    margin: 0 auto;
+  }
+  #shieldGoldPage .downloadeButton img {
+    height: 90px;
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+  #shieldGoldPage .downloadeButton img:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
+  }
+}
+#shieldGoldPage #gameOverPage {
+  display: none;
+  /*.....Media query for desktop......*/
+  /*....Media query for mobile.....*/
+}
+@media screen and (min-width: 951px) {
+  #shieldGoldPage #gameOverPage .gameImageStyling {
+    width: 30%;
+    display: flex;
+    margin: 0 auto;
+  }
+  #shieldGoldPage #gameOverPage .questionP {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: white;
+    padding: 0 30px 30px 60px;
+    text-align: center;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 950px) {
+  #shieldGoldPage #gameOverPage .questionP {
+    color: #0E3E86;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: white;
+    width: 80%;
+    padding: 0 30px 30px 60px;
+    text-align: center;
+  }
+  #shieldGoldPage #gameOverPage .gameImageStyling {
+    width: 10%;
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
