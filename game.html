@@ -33,22 +33,25 @@
 
 
     <div id="startPage" class="gamePage verticalCenter">
-        <img class="gamePageBackground" src="image/tresureMap.png"/>
-        <div class="gamePageOverlay verticalCenter fullSize">
-            <button class="startGameButton" onclick="startGame()">Start spillet</button>
-        </div>
         <button class="audioButton" onclick="toggleAudio()" type="button">
             <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
         </button>
+        <img class="gamePageBackground" src="image/tresureMap.png"/>
+
+        <div class="gamePageOverlay verticalCenter fullSize">
+            <button class="startGameButton" onclick="startGame()">Start spillet</button>
+        </div>
+
     </div>
+
     <div id="questionPage" class="gamePage verticalCenter">
 
         <img class="gamePageBackground" src="image/gameBackground.png"/>
 
         <div class="gamePageOverlay verticalCenter fullSize">
-            <p id="gameQuestion"></p>
-            <p id="gameQuestionOptionA"></p>
-            <p id="gameQuestionOptionB"></p>
+            <p class="questionP" id="gameQuestion"></p>
+            <p class="questionP" id="gameQuestionOptionA"></p>
+            <p class="questionP" id="gameQuestionOptionB"></p>
 
             <div class="gameButtons">
                 <button class="a gameButton">A</button>

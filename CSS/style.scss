@@ -591,8 +591,9 @@ h2 {
   }
 }
 
-/*.................Game Page styling............................... */
-/* General*/
+/*............................Game Page styling............................... */
+
+/*..........General...........*/
 #gamePageMain {
   width: 100%;
   height: 100%;
@@ -613,14 +614,13 @@ h2 {
   border-radius: 40px;
   background-image: url("../image/woodBackground.png");
   @include partial.a-hover;
-  border: 0;
-  height: 70px;
-  width: 70px;
+  border: 2px solid partial.$gold;
+  height: fit-content;
+  width: fit-content;
   margin: 15px;
   position: absolute;
-  right: 0;
-  top: 100px;
   z-index: 1000;
+  top: 100px;
 }
 
 .gamePage {
@@ -662,61 +662,95 @@ h2 {
   align-content: center;
   align-items: center;
 }
-
 @media screen and (min-width: 951px) {
   .audioButton {
-    top: 130px;
+    top: 150px;
   }
 }
 
-@media screen and (max-width: 951px) {
+
+
+/*................Specific game pages styling.............*/
+/*.....startGamePage.......*/
+.startGameButton {
+  @include partial.btn;
+  @include partial.a-hover;
+}
+/*.....questionGamePage.......*/
+#questionPage {
+  display: none;
+
+  .gameButtons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 50px 0 0 0;
+
+  }
+  .gameButton {
+    @include partial.btn;
+    @include partial.a-hover;
+    padding: 5px 10px 0 10px;
+
+  }
+}
+
+/*........................Media query for mobile..............*/
+
+@media screen and (max-width: 950px) {
+  #gameQuestion {
+    width: 80%;
+    padding-bottom: 15px;
+    margin: 0 auto;
+  }
+  .questionP {
+    @include partial.p-Mobil;
+    color: white;
+  }
+
   .gamePageBackground {
     background-image: url("../image/tresureMap.png");
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
   }
-}
-
-
-/*................Specific game pages styling.............*/
-
-#startPage {
 
 }
 
-.startGameButton {
-  @include partial.btn;
-  @include partial.a-hover;
-}
+/*....closing bracket for media query mobile........*/
 
-
-#questionPage {
-  display: none;
-
-  p {
+/*........................Media query for desktop..............*/
+@media screen and (min-width: 951px) {
+  #gameQuestion {
+    width: 80%;
+    padding:  0 15px 15px 15px;
+  }
+  .questionP {
     @include partial.p-desktop;
     color: white;
   }
 
-  .gameButton {
-    @include partial.btn;
-    @include partial.a-hover;
-  }
 }
 
+/*....closing bracket for media query desktop........*/
+
+
+/*.....caughtGamePage.......*/
 #caughtPage {
   display: none;
 }
 
+/*.....shieldGamePage.......*/
 #shieldPage {
   display: none;
 }
 
+/*.....shieldGoldGamePage.......*/
 #shieldGoldPage {
   display: none;
 }
 
+/*....GameOverPage.......*/
 #gameOverPage {
   display: none;
 }
