@@ -1,9 +1,6 @@
 /* Variabler*/
-$lightblue: #a9dfe1;
-$darkerBlue: #05A3AB;
 $textColor: #2e2e2e;
 $bg: #fffafa;
-$cta: #84C662;
 $lightblueBackground: #EEF5FF;
 $darkblue: #0E3E86;
 $gold: #C59E54;
@@ -74,12 +71,12 @@ $gold: #C59E54;
   font-size: 20pt;
   font-weight: normal;
   color: $gold;
-  width: 200px;
+  width: fit-content;
   height: 60px;
   text-align: center;
   display: flex;
   margin: 0 auto;
-  padding: 5px 0 0 25px;
+  padding: 5px 10px 0 10px;
   background-image: url("../image/woodBackground.png");
   background-size: cover;
   border-radius: 30px;
