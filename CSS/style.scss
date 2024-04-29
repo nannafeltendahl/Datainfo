@@ -296,7 +296,7 @@ h2 {
   gap: 5px;
   outline: none;
   text-align: center;
-  @include partial.p-desktop;
+  @include partial.p-Mobil;
   transition: 0.5s;
   display: flex;
   justify-self: center;
@@ -309,8 +309,6 @@ h2 {
 
 .accordion:after {
   content: "\02795";
-  @include partial.p-desktop;
-  color: partial.$darkblue;
   margin-left: 5px;
 }
 
@@ -327,7 +325,7 @@ h2 {
   max-height: 0;
   transition: max-height 0.2s ease-in-out;
   overflow: hidden;
-  @include partial.p-desktop;
+  @include partial.p-Mobil;
 }
 
 
@@ -562,8 +560,6 @@ h2 {
       }
       .accordion:after {
         content: "\02795";
-        @include partial.p-desktop;
-        color: partial.$darkblue;
         margin-left: 5px;
       }
       .active:after {
@@ -572,7 +568,7 @@ h2 {
       }
 
       .panel {
-        width: 50%;
+        width: 40%;
         padding: 5px;
         text-align: left;
         justify-self: center;
@@ -748,14 +744,16 @@ h2 {
 @media screen and (min-width: 951px) {
 
   #gameQuestion {
-    width: 70%;
+    @include partial.p-desktop;
+    color: black;
+    width: 100%;
     font-weight: bolder;
     padding: 10px;
   }
   .questionP {
     @include partial.p-desktop;
     color: black;
-    width: 60%;
+    width: 70%;
     padding: 10px;
   }
 

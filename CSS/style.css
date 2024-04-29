@@ -419,7 +419,7 @@ h2 {
   outline: none;
   text-align: center;
   color: #0E3E86;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin: 0 auto;
   transition: 0.5s;
@@ -434,11 +434,6 @@ h2 {
 
 .accordion:after {
   content: "➕";
-  color: #0E3E86;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin: 0 auto;
-  color: #0E3E86;
   margin-left: 5px;
 }
 
@@ -456,7 +451,7 @@ h2 {
   transition: max-height 0.2s ease-in-out;
   overflow: hidden;
   color: #0E3E86;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin: 0 auto;
 }
@@ -738,18 +733,13 @@ h2 {
   }
   .accordion:after {
     content: "➕";
-    color: #0E3E86;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin: 0 auto;
-    color: #0E3E86;
     margin-left: 5px;
   }
   .active:after {
     content: "➖";
   }
   .panel {
-    width: 50%;
+    width: 40%;
     padding: 5px;
     text-align: left;
     justify-self: center;
@@ -980,7 +970,12 @@ h2 {
 /*........................Media query for desktop..............*/
 @media screen and (min-width: 951px) {
   #gameQuestion {
-    width: 70%;
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    width: 100%;
     font-weight: bolder;
     padding: 10px;
   }
@@ -990,7 +985,7 @@ h2 {
     line-height: 1.5;
     margin: 0 auto;
     color: black;
-    width: 60%;
+    width: 70%;
     padding: 10px;
   }
 }

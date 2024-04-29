@@ -35,11 +35,55 @@ const questions = //This a const (unchangeable) variable with variable inside wh
             correctAnswer: "b",
         },
         {
-            questionText: "a is correct",
-            answerA: "",
-            answerB: "",
+            questionText: "Hvad er en sikker måde at opbevare dine adgangskoder på?",
+            answerA: "A: Gemme dem i en tekstfil på din computers skrivebord.",
+            answerB: "Brug af en adgangskodeadministrator til at opbevare og generere sikre adgangskoder.",
+            correctAnswer: "b",
+        },
+        {
+            questionText: "Spørgsmål: Hvad er formålet med smishing?",
+            answerA: "A: At narre folk via SMS-beskeder.",
+            answerB: "B: At narre folk via e-mails.",
             correctAnswer: "a",
         },
+        {
+            questionText: "Spørgsmål: Hvad er en typisk metode, som spoofing bruger til at narre folk?",
+            answerA: "A:  At forfalske afsenderadressen for at ligne en ægte afsender.",
+            answerB: "B: At vise en ægte afsenderadresse i e-mailen.",
+            correctAnswer: "a",
+        },
+
+        {
+            questionText: "Du modtager en besked fra et nært familiemedlem, der spørger om at overføre penge via tilsendt nummer.",
+            answerA: "A:  Man kan stole på beskeden når både nummer og navn stemmer oven ens",
+            answerB: "B: Man kontakter familiemedlemmet på anden vis, og overføre ingen penge",
+            correctAnswer: "b",
+        },
+        {
+            questionText: "Du modtager en mail med et link, linket ser helt troværdigt ud, uden stavefejl eller mærkelige tegn.",
+            answerA: "A:  Tast selv URLen ind i browseren, uden at klikke på linket",
+            answerB: "B: Du kan stole på link, hvis det ser helt troværdigt ud ",
+            correctAnswer: "a",
+        },
+        {
+            questionText: "Du modtager en notifikation om at din bank app skal opdateres",
+            answerA: "A:  Du undlader at opdatere, da opdatering kan indeholde skadelige virusser",
+            answerB: "B:  Du opdatere appen, som indeholder de nyeste og sikreste opdateringer",
+            correctAnswer: "b",
+        },
+        {
+            questionText: "Du modtager post i din e-boks, du logger ind og i brevet står om du vil deltage i en undersøgelse, deltage via link",
+            answerA: "A:  Du klikker på linket, e-boks er helt sikkert og krypteret",
+            answerB: "B:  Du er påpasselig med links fra ukendte kilder, selv på e-boks",
+            correctAnswer: "b",
+        },
+        {
+            questionText: "Hvilken adgangskode er stærkest?",
+            answerA: "A:  Jeg#ElskerAtLøbeITræskoven!",
+            answerB: "B:  Lars#1990#3689!",
+            correctAnswer: "a",
+        },
+
     ]
 
 // ---------------------- Game State -----------------------
