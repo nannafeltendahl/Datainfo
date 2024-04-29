@@ -180,6 +180,11 @@ main {
   }
 }
 
+.guideText {
+  @include partial.p-Mobil;
+  padding: 10px;
+}
+
 .guide-section {
   display: flex;
   justify-content: center;
@@ -189,9 +194,6 @@ main {
 
   img {
     width: 80%;
-    @include partial.a-hover;
-
-
   }
 }
 
@@ -410,10 +412,15 @@ h2 {
   }
 
   @media screen and (min-width: 950px) {
-
+    .guideText {
+      @include partial.p-desktop;
+      width: 80%;
+      padding: 10px;
+    }
     .guide-section {
       img {
         width: 40%;
+        @include partial.a-hover;
       }
     }
     #gameRuleText {
@@ -435,7 +442,6 @@ h2 {
           min-width: 70%;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           border-radius: 20px;
-          @include partial.a-hover;
         }
 
         .right {
@@ -665,7 +671,7 @@ h2 {
 /*................Specific game pages styling.............*/
 /*......................startGamePage.......*/
 
-#startPage{
+#startPage {
 
   /*........................Media query for desktop..............*/
   @media screen and (min-width: 951px) {
@@ -680,9 +686,9 @@ h2 {
 
 
   .startGameButton {
-     @include partial.btn;
-     @include partial.a-hover;
-   }
+    @include partial.btn;
+    @include partial.a-hover;
+  }
 }
 
 .gamePageBackground {
@@ -774,7 +780,8 @@ h2 {
     margin: 0 auto;
     padding: 10px;
   }
-  .questionP{
+
+  .questionP {
     @include partial.p-desktop;
     color: black;
     margin: 0 auto;
@@ -793,7 +800,8 @@ h2 {
     margin: 0 auto;
     padding: 10px;
   }
-  .questionP{
+
+  .questionP {
     @include partial.p-desktop;
     color: black;
     display: flex;
