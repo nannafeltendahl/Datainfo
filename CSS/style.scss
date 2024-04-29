@@ -70,6 +70,7 @@ main {
       justify-self: left;
       padding: 30px 5px 0 15px;
       width: 70px;
+      @include partial.a-hover;
 
     }
 
@@ -429,7 +430,7 @@ h2 {
         grid-template-columns: 1fr 1fr;
         margin: 0 auto;
         width: 100%;
-        max-height: 750px;
+        max-height: 800px;
 
 
         .articles-image {
@@ -445,7 +446,7 @@ h2 {
 
         .datasikkerhedText {
           @include partial.p-desktop;
-          width: 90%;
+          width: 100%;
           display: flex;
           justify-content: center;
           align-content: center;
@@ -544,7 +545,7 @@ h2 {
         color: black;
         cursor: pointer;
         padding: 18px;
-        width: auto;
+        width: 40%;
         border: 1px solid partial.$darkblue;
         border-radius: 20px;
         gap: 5px;
@@ -567,10 +568,11 @@ h2 {
       }
       .active:after {
         content: "\2796";
+
       }
 
       .panel {
-        width: 40%;
+        width: 50%;
         padding: 5px;
         text-align: left;
         justify-self: center;
@@ -631,7 +633,7 @@ h2 {
   top: 0;
   padding: 120px 20px 20px 20px;
   margin: 0 auto;
-  background-color: black;
+  background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
   overflow: hidden;
 }
 
@@ -646,12 +648,6 @@ h2 {
   margin: 0 auto;
 }
 
-.gamePageBackground {
-  background-image: url("../image/tresureMap.png");
-  background-size: cover;
-  max-width: 75%;
-  max-height: 100%;
-}
 
 .verticalCenter {
   display: grid;
@@ -671,13 +667,36 @@ h2 {
 
 
 /*................Specific game pages styling.............*/
-/*.....startGamePage.......*/
-.startGameButton {
-  @include partial.btn;
-  @include partial.a-hover;
+/*......................startGamePage.......*/
+
+#startPage{
+
+  /*........................Media query for desktop..............*/
+  @media screen and (min-width: 951px) {
+    .gamePageBackground {
+      background-image: url("../image/tresureMap.png");
+      background-size: cover;
+      max-width: 70%;
+      max-height: 100%;
+    }
+
+  }
+
+
+  .startGameButton {
+     @include partial.btn;
+     @include partial.a-hover;
+   }
 }
 
-/*.....questionGamePage.......*/
+.gamePageBackground {
+  background-image: url("../image/tresureMap.png");
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*........................questionGamePage.......*/
 #questionPage {
   display: none;
 
@@ -700,37 +719,46 @@ h2 {
 /*........................Media query for mobile..............*/
 
 @media screen and (max-width: 950px) {
-  #gameQuestion {
-    width: 80%;
-    padding-bottom: 15px;
-    margin: 0 auto;
-  }
-  .questionP {
-    @include partial.p-Mobil;
-    color: white;
-  }
+  #questionPage {
+    #gameQuestion {
+      @include partial.p-Mobil;
+      color: black;
+      font-weight: bolder;
+      width: 100%;
+      padding: 10px;
+      margin: 0 auto;
+    }
 
-  .gamePageBackground {
-    background-image: url("../image/tresureMap.png");
-    background-size: cover;
-    max-width: 100%;
-    max-height: 100%;
-  }
+    .questionP {
+      @include partial.p-Mobil;
+      color: black;
+      padding: 10px;
+      width: 100%;
+    }
 
+    .gamePage {
+      background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
+    }
+
+  }
 }
 
-/*....closing bracket for media query mobile........*/
 
 /*........................Media query for desktop..............*/
 @media screen and (min-width: 951px) {
+
   #gameQuestion {
-    width: 80%;
-    padding: 0 15px 15px 15px;
+    width: 70%;
+    font-weight: bolder;
+    padding: 10px;
   }
   .questionP {
     @include partial.p-desktop;
-    color: white;
+    color: black;
+    width: 60%;
+    padding: 10px;
   }
+
 
 }
 
@@ -746,6 +774,12 @@ h2 {
     width: 70%;
     display: flex;
     margin: 0 auto;
+    padding: 10px;
+  }
+  .questionP{
+    @include partial.p-desktop;
+    color: black;
+    margin: 0 auto;
   }
 
 
@@ -756,9 +790,17 @@ h2 {
   display: none;
 
   .gameImageStyling {
-    width: 70%;
+    width: 60%;
     display: flex;
     margin: 0 auto;
+    padding: 10px;
+  }
+  .questionP{
+    @include partial.p-desktop;
+    color: black;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -778,16 +820,16 @@ h2 {
 
     .questionP {
       @include partial.p-Mobil;
-      color: white;
+      color: black;
       width: 80%;
       padding: 0 30px 30px 60px;
-      text-align: center;
 
     }
     .gameImageStyling {
       width: 30%;
       display: flex;
       margin: 0 auto;
+      padding: 10px;
     }
 
     .downloadeButton {
@@ -806,16 +848,16 @@ h2 {
   @media screen and (min-width: 951px) {
     .questionP {
       @include partial.p-desktop;
-      color: white;
-      padding: 0 30px 30px 60px;
+      color: black;
+      padding: 10px;
       text-align: center;
-      width: 60%;
 
     }
     .gameImageStyling {
       width: 30%;
       display: flex;
       margin: 0 auto;
+      padding: 20px;
     }
 
     .downloadeButton {
@@ -830,48 +872,52 @@ h2 {
         margin-bottom: 40px;
       }
     }
+  }
+}
+
+/*..........................game over page styling..............*/
+#gameOverPage {
+  display: none;
+
+  /*....Media query for mobile.....*/
+
+  @media screen and (max-width: 950px) {
+    .gameImageStyling {
+      width: 70%;
+    }
+
+    .questionP {
+      @include partial.p-Mobil;
+      color: black;
+      width: 100%;
+      padding: 20px 10px 30px 10px;
+    }
+    .gameButton {
+      @include partial.btn;
+      @include partial.a-hover;
+    }
 
   }
 
-  /*............................GameOverPage................*/
-  #gameOverPage {
-    display: none;
 
-    /*.....Media query for desktop......*/
-    @media screen and (min-width: 951px) {
-      .gameImageStyling {
-        width: 30%;
-        display: flex;
-        margin: 0 auto;
-      }
-      .questionP {
-        @include partial.p-desktop;
-        color: white;
-        padding: 0 30px 30px 60px;
-        text-align: center;
-        width: 60%;
+  /*...............Media query for desktop......*/
+  @media screen and (min-width: 951px) {
 
-      }
-
+    .gameImageStyling {
+      width: 80%;
     }
 
-    /*....Media query for mobile.....*/
+    .questionP {
+      @include partial.p-desktop;
+      color: black;
+      width: 90%;
+      padding: 10px 0 30px 0;
+    }
 
-    @media screen and (max-width: 950px) {
-
-      .questionP {
-        @include partial.p-Mobil;
-        color: white;
-        width: 80%;
-        padding: 0 30px 30px 60px;
-        text-align: center;
-
-      }
-      .gameImageStyling {
-        width: 10%;
-        display: flex;
-        margin: 0 auto;
-      }
+    .gameButton {
+      @include partial.btn;
+      @include partial.a-hover;
     }
   }
 }
+

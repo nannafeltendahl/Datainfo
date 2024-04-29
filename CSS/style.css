@@ -88,6 +88,23 @@ main {
     justify-self: left;
     padding: 30px 5px 0 15px;
     width: 70px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mobile-nav img:first-of-type:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
   }
   .mobile-nav #logo {
     justify-self: center;
@@ -550,7 +567,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     width: 100%;
-    max-height: 750px;
+    max-height: 800px;
   }
   .articles .articles-grid .articles-image {
     min-width: 70%;
@@ -582,7 +599,7 @@ h2 {
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -701,7 +718,7 @@ h2 {
     color: black;
     cursor: pointer;
     padding: 18px;
-    width: auto;
+    width: 40%;
     border: 1px solid #0E3E86;
     border-radius: 20px;
     gap: 5px;
@@ -732,7 +749,7 @@ h2 {
     content: "➖";
   }
   .panel {
-    width: 40%;
+    width: 50%;
     padding: 5px;
     text-align: left;
     justify-self: center;
@@ -803,7 +820,7 @@ h2 {
   top: 0;
   padding: 120px 20px 20px 20px;
   margin: 0 auto;
-  background-color: black;
+  background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
   overflow: hidden;
 }
 
@@ -816,13 +833,6 @@ h2 {
   top: 0;
   padding: 120px 20px 20px 20px;
   margin: 0 auto;
-}
-
-.gamePageBackground {
-  background-image: url("../image/tresureMap.png");
-  background-size: cover;
-  max-width: 75%;
-  max-height: 100%;
 }
 
 .verticalCenter {
@@ -841,8 +851,19 @@ h2 {
   }
 }
 /*................Specific game pages styling.............*/
-/*.....startGamePage.......*/
-.startGameButton {
+/*......................startGamePage.......*/
+#startPage {
+  /*........................Media query for desktop..............*/
+}
+@media screen and (min-width: 951px) {
+  #startPage .gamePageBackground {
+    background-image: url("../image/tresureMap.png");
+    background-size: cover;
+    max-width: 70%;
+    max-height: 100%;
+  }
+}
+#startPage .startGameButton {
   font-size: 20pt;
   font-weight: normal;
   color: #C59E54;
@@ -861,7 +882,7 @@ h2 {
   text-decoration: none;
   cursor: pointer;
 }
-.startGameButton:hover {
+#startPage .startGameButton:hover {
   color: #C59E54;
   animation: bounce 0.5s 1 alternate;
 }
@@ -877,7 +898,14 @@ h2 {
   }
 }
 
-/*.....questionGamePage.......*/
+.gamePageBackground {
+  background-image: url("../image/tresureMap.png");
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*........................questionGamePage.......*/
 #questionPage {
   display: none;
 }
@@ -925,38 +953,45 @@ h2 {
 
 /*........................Media query for mobile..............*/
 @media screen and (max-width: 950px) {
-  #gameQuestion {
-    width: 80%;
-    padding-bottom: 15px;
-    margin: 0 auto;
-  }
-  .questionP {
+  #questionPage #gameQuestion {
     color: #0E3E86;
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 0 auto;
-    color: white;
+    color: black;
+    font-weight: bolder;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
   }
-  .gamePageBackground {
-    background-image: url("../image/tresureMap.png");
-    background-size: cover;
-    max-width: 100%;
-    max-height: 100%;
+  #questionPage .questionP {
+    color: #0E3E86;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    padding: 10px;
+    width: 100%;
+  }
+  #questionPage .gamePage {
+    background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
   }
 }
-/*....closing bracket for media query mobile........*/
 /*........................Media query for desktop..............*/
 @media screen and (min-width: 951px) {
   #gameQuestion {
-    width: 80%;
-    padding: 0 15px 15px 15px;
+    width: 70%;
+    font-weight: bolder;
+    padding: 10px;
   }
   .questionP {
     color: #0E3E86;
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0 auto;
-    color: white;
+    color: black;
+    width: 60%;
+    padding: 10px;
   }
 }
 /*....closing bracket for media query desktop........*/
@@ -968,6 +1003,15 @@ h2 {
   width: 70%;
   display: flex;
   margin: 0 auto;
+  padding: 10px;
+}
+#caughtPage .questionP {
+  color: #0E3E86;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: black;
+  margin: 0 auto;
 }
 
 /*............................shieldGamePage.......*/
@@ -975,9 +1019,20 @@ h2 {
   display: none;
 }
 #shieldPage .gameImageStyling {
-  width: 70%;
+  width: 60%;
   display: flex;
   margin: 0 auto;
+  padding: 10px;
+}
+#shieldPage .questionP {
+  color: #0E3E86;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: black;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /*...........................shieldGoldGamePage.......*/
@@ -985,7 +1040,6 @@ h2 {
   display: none;
   /*....Media query for mobile.....*/
   /*.....Media query for desktop......*/
-  /*............................GameOverPage................*/
 }
 #shieldGoldPage .gameButton {
   font-size: 20pt;
@@ -1028,15 +1082,15 @@ h2 {
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 0 auto;
-    color: white;
+    color: black;
     width: 80%;
     padding: 0 30px 30px 60px;
-    text-align: center;
   }
   #shieldGoldPage .gameImageStyling {
     width: 30%;
     display: flex;
     margin: 0 auto;
+    padding: 10px;
   }
   #shieldGoldPage .downloadeButton {
     display: flex;
@@ -1070,15 +1124,15 @@ h2 {
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0 auto;
-    color: white;
-    padding: 0 30px 30px 60px;
+    color: black;
+    padding: 10px;
     text-align: center;
-    width: 60%;
   }
   #shieldGoldPage .gameImageStyling {
     width: 30%;
     display: flex;
     margin: 0 auto;
+    padding: 20px;
   }
   #shieldGoldPage .downloadeButton {
     display: flex;
@@ -1107,43 +1161,107 @@ h2 {
     }
   }
 }
-#shieldGoldPage #gameOverPage {
+
+/*..........................game over page styling..............*/
+#gameOverPage {
   display: none;
-  /*.....Media query for desktop......*/
   /*....Media query for mobile.....*/
-}
-@media screen and (min-width: 951px) {
-  #shieldGoldPage #gameOverPage .gameImageStyling {
-    width: 30%;
-    display: flex;
-    margin: 0 auto;
-  }
-  #shieldGoldPage #gameOverPage .questionP {
-    color: #0E3E86;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin: 0 auto;
-    color: white;
-    padding: 0 30px 30px 60px;
-    text-align: center;
-    width: 60%;
-  }
+  /*...............Media query for desktop......*/
 }
 @media screen and (max-width: 950px) {
-  #shieldGoldPage #gameOverPage .questionP {
+  #gameOverPage .gameImageStyling {
+    width: 70%;
+  }
+  #gameOverPage .questionP {
     color: #0E3E86;
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 0 auto;
-    color: white;
-    width: 80%;
-    padding: 0 30px 30px 60px;
-    text-align: center;
+    color: black;
+    width: 100%;
+    padding: 20px 10px 30px 10px;
   }
-  #shieldGoldPage #gameOverPage .gameImageStyling {
-    width: 10%;
+  #gameOverPage .gameButton {
+    font-size: 20pt;
+    font-weight: normal;
+    color: #C59E54;
+    width: fit-content;
+    height: 60px;
+    text-align: center;
     display: flex;
     margin: 0 auto;
+    padding: 5px 10px 0 10px;
+    background-image: url("../image/woodBackground.png");
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid #C59E54;
+    text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #gameOverPage .gameButton:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
+  }
+}
+@media screen and (min-width: 951px) {
+  #gameOverPage .gameImageStyling {
+    width: 80%;
+  }
+  #gameOverPage .questionP {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    width: 90%;
+    padding: 10px 0 30px 0;
+  }
+  #gameOverPage .gameButton {
+    font-size: 20pt;
+    font-weight: normal;
+    color: #C59E54;
+    width: fit-content;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    padding: 5px 10px 0 10px;
+    background-image: url("../image/woodBackground.png");
+    background-size: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid #C59E54;
+    text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #gameOverPage .gameButton:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
   }
 }
 

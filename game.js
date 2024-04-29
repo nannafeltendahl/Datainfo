@@ -23,15 +23,15 @@ const states = {
 const questions = //This a const (unchangeable) variable with variable inside which have a value that is a string
     [
         {
-            questionText: "Hvilken URL tror du er falsk og hvilken er troværdig?",
+            questionText: "Hvilken URL tror du er troværdig?",
             answerA: "A: https://www.borger.dk",
-            answerB: "B: http://www_borger.dk",
+            answerB: "B: http://www.borger.dk",
             correctAnswer: "a",
         },
         {
-            questionText: "b is correct",
-            answerA: "",
-            answerB: "",
+            questionText: "Hvad er en sikker måde at identificere en legitim hjemmeside, når du indtaster følsomme oplysninger?",
+            answerA: "A: Tilgå en hjemmeside gennem et link eller en sponsorede annonce",
+            answerB: "B: Kontrollér, om webadressen starter med https: og viser en hængelåsikon i adressefeltet.",
             correctAnswer: "b",
         },
         {
@@ -196,3 +196,15 @@ function toggleAudio() {
 function startGame() {
     gameState.setState(states.Question);
 }
+
+/* function that makes it possible to downloade the pdf file, when the chest image is clicked*/
+document.getElementById('downloadImage').addEventListener('click', function () {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = '../image/certifikatDataSikkerhed.pdf';
+    downloadLink.download = 'certifikatDataSikkerhed.pdf';
+    document.body.appendChild(downloadLink);
+    // Klik på linket for at starte download
+    downloadLink.click();
+    // Fjern linket fra dokumentet
+    document.body.removeChild(downloadLink);
+});
