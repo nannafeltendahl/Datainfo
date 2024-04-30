@@ -952,6 +952,7 @@ h2 {
     width: 100%;
     padding: 10px;
     margin: 0 auto;
+    text-align: center;
   }
   #questionPage .questionP {
     color: #0E3E86;
@@ -961,6 +962,7 @@ h2 {
     color: black;
     padding: 10px;
     width: 100%;
+    text-align: center;
   }
   #questionPage .gamePage {
     background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
@@ -977,6 +979,7 @@ h2 {
     width: 100%;
     font-weight: bolder;
     padding: 10px;
+    text-align: center;
   }
   .questionP {
     color: #0E3E86;
@@ -986,6 +989,7 @@ h2 {
     color: black;
     width: 70%;
     padding: 10px;
+    text-align: center;
   }
 }
 /*....closing bracket for media query desktop........*/
@@ -993,40 +997,70 @@ h2 {
 #caughtPage {
   display: none;
 }
-#caughtPage .gameImageStyling {
-  width: 70%;
-  display: flex;
-  margin: 0 auto;
-  padding: 10px;
+@media screen and (min-width: 951px) {
+  #caughtPage .gameImageStyling {
+    width: 30%;
+  }
+  #caughtPage .questionP {
+    color: #0E3E86;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
-#caughtPage .questionP {
-  color: #0E3E86;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin: 0 auto;
-  color: black;
-  margin: 0 auto;
+@media screen and (max-width: 950px) {
+  #caughtPage .gameImageStyling {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  #caughtPage .questionP {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 /*............................shieldGamePage.......*/
 #shieldPage {
   display: none;
 }
-#shieldPage .gameImageStyling {
-  width: 60%;
-  display: flex;
-  margin: 0 auto;
-  padding: 10px;
+@media screen and (max-width: 950px) {
+  #shieldPage .gameImageStyling {
+    width: 50%;
+    padding: 10px;
+  }
+  #shieldPage .questionP {
+    color: #0E3E86;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    width: 100%;
+    text-align: center;
+  }
 }
-#shieldPage .questionP {
-  color: #0E3E86;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin: 0 auto;
-  color: black;
-  display: flex;
-  margin: 0 auto;
-  width: 100%;
+@media screen and (min-width: 951px) {
+  #shieldPage .questionP {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    width: 100%;
+  }
+  #shieldPage .gameImageStyling {
+    width: 70%;
+    padding: 10px;
+  }
 }
 
 /*...........................shieldGoldGamePage.......*/
@@ -1034,41 +1068,6 @@ h2 {
   display: none;
   /*....Media query for mobile.....*/
   /*.....Media query for desktop......*/
-}
-#shieldGoldPage .gameButton {
-  font-size: 20pt;
-  font-weight: normal;
-  color: #C59E54;
-  width: fit-content;
-  height: 60px;
-  text-align: center;
-  display: flex;
-  margin: 0 auto;
-  padding: 5px 10px 0 10px;
-  background-image: url("../image/woodBackground.png");
-  background-size: cover;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border: 3px solid #C59E54;
-  text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 5px 10px 10px 10px;
-}
-#shieldGoldPage .gameButton:hover {
-  color: #C59E54;
-  animation: bounce 0.5s 1 alternate;
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(0); /* Ingen vertikal forskydning */
-  }
-  50% {
-    transform: translateY(-5px); /* Bevæger sig 5px op */
-  }
-  100% {
-    transform: translateY(0); /* Tilbage til startpositionen */
-  }
 }
 @media screen and (max-width: 950px) {
   #shieldGoldPage .questionP {
@@ -1081,7 +1080,7 @@ h2 {
     padding: 0 30px 30px 60px;
   }
   #shieldGoldPage .gameImageStyling {
-    width: 30%;
+    width: 40%;
     display: flex;
     margin: 0 auto;
     padding: 10px;
@@ -1123,7 +1122,7 @@ h2 {
     text-align: center;
   }
   #shieldGoldPage .gameImageStyling {
-    width: 30%;
+    width: 40%;
     display: flex;
     margin: 0 auto;
     padding: 20px;
@@ -1160,11 +1159,10 @@ h2 {
 #gameOverPage {
   display: none;
   /*....Media query for mobile.....*/
-  /*...............Media query for desktop......*/
 }
 @media screen and (max-width: 950px) {
   #gameOverPage .gameImageStyling {
-    width: 70%;
+    width: 50%;
   }
   #gameOverPage .questionP {
     color: #0E3E86;
@@ -1174,6 +1172,7 @@ h2 {
     color: black;
     width: 100%;
     padding: 20px 10px 30px 10px;
+    text-align: center;
   }
   #gameOverPage .gameButton {
     font-size: 20pt;
@@ -1210,6 +1209,11 @@ h2 {
     }
   }
 }
+
+/*...............Media query for desktop......*/
+#gameOverPage {
+  display: none;
+}
 @media screen and (min-width: 951px) {
   #gameOverPage .gameImageStyling {
     width: 80%;
@@ -1222,6 +1226,7 @@ h2 {
     color: black;
     width: 90%;
     padding: 10px 0 30px 0;
+    text-align: center;
   }
   #gameOverPage .gameButton {
     font-size: 20pt;

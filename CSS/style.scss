@@ -729,6 +729,7 @@ h2 {
       width: 100%;
       padding: 10px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .questionP {
@@ -736,6 +737,7 @@ h2 {
       color: black;
       padding: 10px;
       width: 100%;
+      text-align: center;
     }
 
     .gamePage {
@@ -755,12 +757,14 @@ h2 {
     width: 100%;
     font-weight: bolder;
     padding: 10px;
+    text-align: center;
   }
   .questionP {
     @include partial.p-desktop;
     color: black;
     width: 70%;
     padding: 10px;
+    text-align: center;
   }
 
 
@@ -773,157 +777,186 @@ h2 {
 #caughtPage {
   display: none;
 
+  @media screen and (min-width: 951px) {
 
-  .gameImageStyling {
-    width: 70%;
-    display: flex;
-    margin: 0 auto;
-    padding: 10px;
-  }
-
-  .questionP {
-    @include partial.p-desktop;
-    color: black;
-    margin: 0 auto;
-  }
-
-
-}
-
-/*............................shieldGamePage.......*/
-#shieldPage {
-  display: none;
-
-  .gameImageStyling {
-    width: 60%;
-    display: flex;
-    margin: 0 auto;
-    padding: 10px;
-  }
-
-  .questionP {
-    @include partial.p-desktop;
-    color: black;
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-  }
-}
-
-/*...........................shieldGoldGamePage.......*/
-#shieldGoldPage {
-  display: none;
-
-  .gameButton {
-    @include partial.btn;
-    @include partial.a-hover;
-    padding: 5px 10px 10px 10px;
-  }
-
-  /*....Media query for mobile.....*/
-
-  @media screen and (max-width: 950px) {
-
+    .gameImageStyling {
+      width: 30%;
+    }
     .questionP {
       @include partial.p-Mobil;
       color: black;
-      width: 80%;
-      padding: 0 30px 30px 60px;
-
-    }
-    .gameImageStyling {
-      width: 30%;
-      display: flex;
       margin: 0 auto;
-      padding: 10px;
-    }
-
-    .downloadeButton {
-      display: flex;
-      margin: 0 auto;
-
-
-      img {
-        height: 70px;
-        display: flex;
-        @include partial.a-hover;
-      }
-    }
-  }
-  /*.....Media query for desktop......*/
-  @media screen and (min-width: 951px) {
-    .questionP {
-      @include partial.p-desktop;
-      color: black;
-      padding: 10px;
       text-align: center;
-
-    }
-    .gameImageStyling {
-      width: 30%;
-      display: flex;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .downloadeButton {
-      display: flex;
-      margin: 0 auto;
-
-
-      img {
-        height: 90px;
-        display: flex;
-        @include partial.a-hover;
-        margin-bottom: 40px;
-      }
     }
   }
-}
-
-/*..........................game over page styling..............*/
-#gameOverPage {
-  display: none;
-
-  /*....Media query for mobile.....*/
 
   @media screen and (max-width: 950px) {
     .gameImageStyling {
       width: 70%;
+      display: flex;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .questionP {
+        @include partial.p-desktop;
+        color: black;
+        margin: 0 auto;
+        text-align: center;
+      }
+  }
+
+}
+
+
+
+/*............................shieldGamePage.......*/
+#shieldPage {
+  display: none;
+  @media screen and (max-width: 950px) {
+
+    .gameImageStyling {
+      width: 50%;
+      padding: 10px;
     }
 
     .questionP {
       @include partial.p-Mobil;
       color: black;
       width: 100%;
-      padding: 20px 10px 30px 10px;
+      text-align: center;
     }
-    .gameButton {
-      @include partial.btn;
-      @include partial.a-hover;
-    }
-
   }
 
-
-  /*...............Media query for desktop......*/
   @media screen and (min-width: 951px) {
-
-    .gameImageStyling {
-      width: 80%;
-    }
 
     .questionP {
       @include partial.p-desktop;
       color: black;
-      width: 90%;
-      padding: 10px 0 30px 0;
-    }
+      width: 100%;
 
-    .gameButton {
-      @include partial.btn;
-      @include partial.a-hover;
+    }
+    .gameImageStyling {
+      width: 70%;
+      padding: 10px;
     }
   }
 }
+
+  /*...........................shieldGoldGamePage.......*/
+  #shieldGoldPage {
+    display: none;
+
+    /*....Media query for mobile.....*/
+    @media screen and (max-width: 950px) {
+
+      .questionP {
+        @include partial.p-Mobil;
+        color: black;
+        width: 80%;
+        padding: 0 30px 30px 60px;
+
+      }
+      .gameImageStyling {
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .downloadeButton {
+        display: flex;
+        margin: 0 auto;
+
+
+        img {
+          height: 70px;
+          display: flex;
+          @include partial.a-hover;
+        }
+      }
+    }
+
+  /*.....Media query for desktop......*/
+    @media screen and (min-width: 951px) {
+
+      .questionP {
+        @include partial.p-desktop;
+        color: black;
+        padding: 10px;
+        text-align: center;
+      }
+      .gameImageStyling {
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .downloadeButton {
+        display: flex;
+        margin: 0 auto;
+
+
+        img {
+          height: 90px;
+          display: flex;
+          @include partial.a-hover;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+
+  /*..........................game over page styling..............*/
+  #gameOverPage {
+    display: none;
+
+    /*....Media query for mobile.....*/
+
+    @media screen and (max-width: 950px) {
+      .gameImageStyling {
+        width: 50%;
+      }
+
+      .questionP {
+        @include partial.p-Mobil;
+        color: black;
+        width: 100%;
+        padding: 20px 10px 30px 10px;
+        text-align: center;
+      }
+      .gameButton {
+        @include partial.btn;
+        @include partial.a-hover;
+      }
+
+    }
+  }
+
+  /*...............Media query for desktop......*/
+
+  #gameOverPage {
+    display: none;
+    @media screen and (min-width: 951px) {
+
+      .gameImageStyling {
+        width: 80%;
+      }
+
+      .questionP {
+        @include partial.p-desktop;
+        color: black;
+        width: 90%;
+        padding: 10px 0 30px 0;
+        text-align: center;
+      }
+
+      .gameButton {
+        @include partial.btn;
+        @include partial.a-hover;
+      }
+    }
+  }
+
 

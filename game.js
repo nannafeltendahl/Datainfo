@@ -37,7 +37,7 @@ const questions = //This a const (unchangeable) variable with variable inside wh
         {
             questionText: "Hvad er en sikker måde at opbevare dine adgangskoder på?",
             answerA: "A: Gemme dem i en tekstfil på din computers skrivebord.",
-            answerB: "Brug af en adgangskodeadministrator til at opbevare og generere sikre adgangskoder.",
+            answerB: "B: Brug af en adgangskodeadministrator til at opbevare og generere sikre adgangskoder.",
             correctAnswer: "b",
         },
         {
