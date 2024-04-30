@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //detecting keyboard press
 document.addEventListener("keydown", function (event) {
-    if(gameState && gameState.state === "Question")
-    {
-        switch (event.key){
+    if (gameState && gameState.state === "Question") {
+        switch (event.key) {
             case 'a':
             case 'b':
                 gameState.checkAnswer(event.key);
@@ -35,35 +34,36 @@ const questions = //This a const (unchangeable) variable with variable inside wh
             answerA: "A: https://www.borger.dk",
             answerB: "B: http://www.borger.dk",
             correctAnswer: "a",
-            explanation: "Der mangler et s i https...",
+            explanation: " Konsekvensen ved et URL uden s (secure) kan forårsage at din data i form af personlige oplysninger ikke bliver beskyttet, og kan blive misbrugt.",
         },
         {
             questionText: "Hvad er en sikker måde at identificere en legitim hjemmeside, når du indtaster følsomme oplysninger?",
             answerA: "A: Tilgå en hjemmeside gennem et link eller en sponsorede annonce",
             answerB: "B: Kontrollér, om webadressen starter med https: og viser en hængelåsikon i adressefeltet.",
             correctAnswer: "b",
-            explanation: "2",
+            explanation: " Konsekvensen ved at klikke på en annonce eller et link, kan bl.a. være skadeligt software og virusinfektioner.",
         },
         {
             questionText: "Hvad er en sikker måde at opbevare dine adgangskoder på?",
-            answerA: "A: Gemme dem i en tekstfil på din computers skrivebord.",
-            answerB: "B: Brug af en adgangskodeadministrator til at opbevare og generere sikre adgangskoder.",
+            answerA: "A: Gemme dem i en tekstfil på din computer.",
+            answerB: "B: Brug af en adgangskodeadministrator til at opbevare og generere adgangskoder.",
             correctAnswer: "b",
-            explanation: "3",
+            explanation: " Konsekvensen ved adgangskoder på PCen, kan være manglende kryptering og nem synlighed, i tilfælde af hacking.",
         },
         {
             questionText: "Spørgsmål: Hvad er formålet med smishing?",
             answerA: "A: At narre folk via SMS-beskeder.",
             answerB: "B: At narre folk via e-mails.",
             correctAnswer: "a",
-            explanation: "4",
+            explanation: " Konsekvensen ved smishing (sms) angreb kan bla, være identitetstyveri og hacking af eks. billeder mm.",
         },
         {
             questionText: "Spørgsmål: Hvad er en typisk metode, som spoofing bruger til at narre folk?",
             answerA: "A:  At forfalske afsenderadressen for at ligne en ægte afsender.",
             answerB: "B: At vise en ægte afsenderadresse i e-mailen.",
             correctAnswer: "a",
-            explanation: "...",
+            explanation: "Konsekvensen ved en forfalsket afsenderadresse kan lede til mistillid" +
+                " og kan have negative personlig, økonomiske og sikkerhedsmæssige påvirkninger.",
         },
 
         {
@@ -71,35 +71,41 @@ const questions = //This a const (unchangeable) variable with variable inside wh
             answerA: "A:  Man kan stole på beskeden når både nummer og navn stemmer oven ens",
             answerB: "B: Man kontakter familiemedlemmet på anden vis, og overføre ingen penge",
             correctAnswer: "b",
-            explanation: "...",
+            explanation: "Det er muligt at forfalske både navn og nummer overfor modtagerne, " +
+                " hvilket kan føre til mistillid og kan have negative personlig, økonomiske og sikkerhedsmæssige påvirkninger.  ",
         },
         {
             questionText: "Du modtager en mail med et link, linket ser helt troværdigt ud, uden stavefejl eller mærkelige tegn.",
             answerA: "A:  Tast selv URLen ind i browseren, uden at klikke på linket",
             answerB: "B: Du kan stole på link, hvis det ser helt troværdigt ud ",
             correctAnswer: "a",
-            explanation: "...",
+            explanation: "Det er muligt at ændre et link så det fremstår helt troværdigt, " +
+                " hvilket kan forårsage at din data i form af personlige oplysninger ikke bliver beskyttet, og kan blive misbrugt. ",
         },
         {
             questionText: "Du modtager en notifikation om at din bank app skal opdateres",
             answerA: "A:  Du undlader at opdatere, da opdatering kan indeholde skadelige virusser",
             answerB: "B:  Du opdatere appen, som indeholder de nyeste og sikreste opdateringer",
             correctAnswer: "b",
-            explanation: "...",
+            explanation: "Opdateringer indeholder den nyeste og sikreste opdatering. " +
+                "Konsekvensen ved ikke at opdatere, kan være forældelse af datasikring " +
+                " og dermed gøre det lettere for de kriminelle at hacke dig. ",
         },
         {
             questionText: "Du modtager post i din e-boks, du logger ind og i brevet står om du vil deltage i en undersøgelse, deltage via link",
             answerA: "A:  Du klikker på linket, e-boks er helt sikkert og krypteret",
             answerB: "B:  Du er påpasselig med links fra ukendte kilder, selv på e-boks",
             correctAnswer: "b",
-            explanation: "...",
+            explanation: "E-boks er en krypteret kommunikationsform, men vær altid påpasselig overfor links fra ukendte kilder," +
+                " Links kan indeholde skadeligt software og kan forårsage hacking af personlig data, ",
         },
         {
             questionText: "Hvilken adgangskode er stærkest?",
             answerA: "A:  Jeg#ElskerAtLøbeITræskoven!",
             answerB: "B:  Lars#1990#3689!",
             correctAnswer: "a",
-            explanation: "...",
+            explanation: "Brug aldrig personlig data i en adgangskode, konsekvensen kan være hacking af adgangskoden, " +
+                " som tilmed afgiver yderligere personlige oplysninger.",
         },
 
     ]
@@ -199,7 +205,7 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
             }, 2000);
         } else {
             this.setState(states.Caught);
-            document.getElementById("caughtExplanation").innerHTML = `Forklaring: <p>${this.currentQuestion.explanation}</p>`;
+            document.getElementById("caughtExplanation").innerHTML = `<p>${this.currentQuestion.explanation}</p>`;
         }
 
 

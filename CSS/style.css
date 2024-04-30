@@ -1069,20 +1069,6 @@ h2 {
     transform: translateY(0); /* Tilbage til startpositionen */
   }
 }
-@media screen and (min-width: 951px) {
-  #caughtPage .gameImageStyling {
-    width: 80%;
-  }
-  #caughtPage .questionP {
-    color: #0E3E86;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin: 0 auto;
-    color: black;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
 @media screen and (max-width: 950px) {
   #caughtPage .gameImageStyling {
     width: 50%;
@@ -1098,6 +1084,29 @@ h2 {
     color: black;
     margin: 0 auto;
     text-align: center;
+    padding: 10px;
+  }
+  #caughtPage .explanationCaughtPage {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 951px) {
+  #caughtPage .gameImageStyling {
+    width: 30%;
+  }
+  #caughtPage .explanationCaughtPage {
+    text-align: left;
+    width: 60%;
+  }
+  #caughtPage .questionP {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
   }
 }
 
