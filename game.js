@@ -8,7 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //detecting keyboard press
 document.addEventListener("keydown", function (event) {
-    gameState.checkAnswer(event.key);
+    if(gameState && gameState.state === "Question")
+    {
+        switch (event.key){
+            case 'a':
+            case 'b':
+                gameState.checkAnswer(event.key);
+                break;
+        }
+    }
 });
 
 const states = {
@@ -215,7 +223,8 @@ function makesound(wasCorrect) {
         let audio = new Audio("sounds/correctSound.mp3")
         audio.play();
     } else {
-        let audio = new Audio("sounds/incorrectSound.mp3")
+        // let audio = new Audio("sounds/incorrectSound.mp3")
+        let audio = new Audio("sounds/arrr.mp3")
         audio.play();
     }
 }

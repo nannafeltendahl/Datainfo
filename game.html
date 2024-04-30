@@ -27,7 +27,7 @@
     </nav>
 </header>
 <main id="gamePageMain">
-    <audio id="myAudio">
+    <audio loop id="myAudio">
         <source src="./sounds/pan-filmsilly-25608.mp3" type="audio/mp3">
     </audio>
 
@@ -36,6 +36,10 @@
         <p id="scoreNumber"></p>
     </div>
 
+    <button class="audioButton" onclick="toggleAudio()" type="button">
+        <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+    </button>
+
     <div id="startPage" class="gamePage verticalCenter">
         <img class="gamePageBackground" src="image/tresureMap.png"/>
 
@@ -43,9 +47,6 @@
             <button class="startGameButton" onclick="startGame()">Start spillet</button>
         </div>
 
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
     </div>
 
     <div id="questionPage" class="gamePage verticalCenter">
@@ -60,9 +61,6 @@
             </div>
         </div>
 
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
     </div>
     <div id="caughtPage" class="gamePage verticalCenter">
         <div class="gamePageOverlay verticalCenter fullSize">
@@ -72,18 +70,12 @@
             <p id="caughtExplanation" class="questionP"></p>
             <button class="gameButton" onclick="goToNextQuestion()">Gå videre</button>
         </div>
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
     </div>
     <div id="shieldPage" class="gamePage verticalCenter">
         <div class="gamePageOverlay verticalCenter fullSize">
             <img class="gameImageStyling" src="image/fishLogo.png" alt="fisk rundt om et skjold"/>
             <p class="questionP">Godt arbejde, du fik sikkerhedsskjoldet</p>
         </div>
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
 
 
     </div>
@@ -103,9 +95,6 @@
             </a>
         </div>
 
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
     </div>
     <div id="gameOverPage" class="gamePage verticalCenter">
         <div class="gamePageOverlay verticalCenter fullSize">
@@ -113,9 +102,7 @@
             <p class="questionP">Game over, bedre held næste gang</p>
             <a href="index.html#spillet" class="gameButton">Prøv igen</a>
         </div>
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
+
     </div>
 </main>
 

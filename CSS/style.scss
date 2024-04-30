@@ -634,17 +634,17 @@ h2 {
 
 .audioButton {
   display: flex;
-  justify-self: right;
   border-radius: 40px;
   background-image: url("../image/woodBackground.png");
   @include partial.a-hover;
   border: 2px solid partial.$gold;
-  height: fit-content;
-  width: fit-content;
+  //height: fit-content;
+  //width: fit-content;
   margin: 15px;
   position: absolute;
   z-index: 1000;
   top: 100px;
+  right: 0;
 }
 
 .gamePage {
