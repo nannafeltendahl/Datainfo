@@ -62,10 +62,8 @@
     </div>
     <div id="caughtPage" class="gamePage verticalCenter">
         <div class="gamePageOverlay verticalCenter fullSize">
-            <img class="gameImageStyling" src="image/kaptajnKrog.png"/>
+            <img class="gameImageStyling" src="image/kaptajnKrog.png" alt="kaptajn krog"/>
             <p class="questionP">Åh Åh! Du blev Fanget af Kaptajn Krog</p>
-            <p class="questionP"> Pas på, linket kan indeholde skadeligt software, der kan ødelægge
-            data, give fjernadgang til din enhed og stjæle dine personlige oplysninger</p>
         </div>
         <button class="audioButton" onclick="toggleAudio()" type="button">
             <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
@@ -73,7 +71,7 @@
     </div>
     <div id="shieldPage" class="gamePage verticalCenter">
         <div class="gamePageOverlay verticalCenter fullSize">
-            <img class="gameImageStyling" src="image/fishLogo.png"/>
+            <img class="gameImageStyling" src="image/fishLogo.png" alt="fisk rundt om et skjold"/>
             <p class="questionP">Godt arbejde, du fik sikkerhedsskjoldet</p>
         </div>
         <button class="audioButton" onclick="toggleAudio()" type="button">
@@ -87,11 +85,14 @@
         <div class="gamePageOverlay verticalCenter fullSize">
             <img class="gameImageStyling" src="image/goldFishLogo.png" alt="guld sikkerhedsskjoldet"/>
             <p class="questionP">Jubii du fandt skatten og fik dit guldsikkerhedsskjold,
-                med dette kan du åbne (klik) kisten hvor dit certifikat ligger.</p>
+                med dette kan du åbne (klik på) kisten hvor dit certifikat ligger.</p>
+                <p class="questionP">
+                Når du klikker vil der blive åbnet et nyt vindue med en PDF fil, som du kan downloade.
+                Siden her har et https, der indikerer at siden er sikker, hvilket der altid bør være inden du trykker på et link.</p>
 
-            <div class="downloadeButton">
-                <img id="downloadImage" src="image/goldChest.png" alt="klik for at downloade">
-            </div>
+            <a href="./image/certifikatDataSikkerhed.pdf" class="downloadeButton" target="_blank">
+                <img id="downloadImage" src="./image/goldChest.png" alt="klik for at downloade">
+            </a>
         </div>
 
         <button class="audioButton" onclick="toggleAudio()" type="button">

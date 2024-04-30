@@ -1003,12 +1003,13 @@ h2 {
   }
   #caughtPage .questionP {
     color: #0E3E86;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin: 0 auto;
     color: black;
     margin: 0 auto;
     text-align: center;
+    font-weight: bolder;
   }
 }
 @media screen and (max-width: 950px) {
@@ -1020,7 +1021,7 @@ h2 {
   }
   #caughtPage .questionP {
     color: #0E3E86;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin: 0 auto;
     color: black;
@@ -1068,6 +1069,15 @@ h2 {
   display: none;
   /*....Media query for mobile.....*/
   /*.....Media query for desktop......*/
+}
+#shieldGoldPage .downloadeButton::after {
+  content: attr(href);
+  position: absolute;
+  display: none;
+  color: black;
+}
+#shieldGoldPage .downloadeButton:hover::after {
+  display: block;
 }
 @media screen and (max-width: 950px) {
   #shieldGoldPage .questionP {
@@ -1122,7 +1132,7 @@ h2 {
     text-align: center;
   }
   #shieldGoldPage .gameImageStyling {
-    width: 40%;
+    width: 30%;
     display: flex;
     margin: 0 auto;
     padding: 20px;

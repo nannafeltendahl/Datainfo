@@ -783,10 +783,11 @@ h2 {
       width: 30%;
     }
     .questionP {
-      @include partial.p-Mobil;
+      @include partial.p-desktop;
       color: black;
       margin: 0 auto;
       text-align: center;
+      font-weight: bolder;
     }
   }
 
@@ -798,10 +799,11 @@ h2 {
       padding: 10px;
     }
     .questionP {
-        @include partial.p-desktop;
+        @include partial.p-Mobil;
         color: black;
         margin: 0 auto;
         text-align: center;
+
       }
   }
 
@@ -846,6 +848,18 @@ h2 {
   #shieldGoldPage {
     display: none;
 
+
+    .downloadeButton::after {
+      content: attr(href);
+      position: absolute;
+      display: none;
+      color: black;
+    }
+
+    .downloadeButton:hover::after {
+      display: block;
+    }
+
     /*....Media query for mobile.....*/
     @media screen and (max-width: 950px) {
 
@@ -886,7 +900,7 @@ h2 {
         text-align: center;
       }
       .gameImageStyling {
-        width: 40%;
+        width: 30%;
         display: flex;
         margin: 0 auto;
         padding: 20px;
@@ -906,6 +920,7 @@ h2 {
       }
     }
   }
+
 
 
   /*..........................game over page styling..............*/

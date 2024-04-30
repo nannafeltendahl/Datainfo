@@ -244,7 +244,7 @@ function startGame() {
 /* function that makes it possible to downloade the pdf file, when the chest image is clicked*/
 document.getElementById('downloadImage').addEventListener('click', function () {
     const downloadLink = document.createElement('a');
-    downloadLink.href = '../image/certifikatDataSikkerhed.pdf';
+    downloadLink.href = './image/certifikatDataSikkerhed.pdf';
     downloadLink.download = 'certifikatDataSikkerhed.pdf';
     document.body.appendChild(downloadLink);
     // Klik på linket for at starte download
