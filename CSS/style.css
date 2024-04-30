@@ -982,7 +982,7 @@ h2 {
 }
 @media screen and (min-width: 951px) {
   #caughtPage .gameImageStyling {
-    width: 30%;
+    width: 80%;
   }
   #caughtPage .questionP {
     color: #0E3E86;
@@ -992,12 +992,11 @@ h2 {
     color: black;
     margin: 0 auto;
     text-align: center;
-    font-weight: bolder;
   }
 }
 @media screen and (max-width: 950px) {
   #caughtPage .gameImageStyling {
-    width: 70%;
+    width: 50%;
     display: flex;
     margin: 0 auto;
     padding: 10px;
