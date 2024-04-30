@@ -604,6 +604,28 @@ h2 {
   max-width: none;
 }
 
+@media screen and (min-width: 951px) {
+  #scoreLogo {
+    width: 100px;
+    height: 100px;
+  }
+  #scoreNumber {
+    @include partial.p-desktop;
+    color: black;
+  }
+}
+@media screen and (max-width: 950px) {
+  #scoreLogo {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+  }
+  #scoreNumber {
+    @include partial.p-Mobil;
+    color: black;
+  }
+}
+
 #score {
   @include partial.gamePageOffset;
   z-index: 1000;
@@ -613,17 +635,11 @@ h2 {
   justify-items: start;
   align-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
 }
 
-#scoreNumber {
 
-}
 
-#scoreLogo {
-  width: 32px;
-  height: 32px;
-}
 
 .audioButtonImg {
   height: 60px;
@@ -638,9 +654,7 @@ h2 {
   background-image: url("../image/woodBackground.png");
   @include partial.a-hover;
   border: 2px solid partial.$gold;
-  //height: fit-content;
-  //width: fit-content;
-  margin: 15px;
+  margin: 15px 15px 20px 25px;
   position: absolute;
   z-index: 1000;
   top: 100px;
@@ -792,6 +806,11 @@ h2 {
 /*............................caughtGamePage.......*/
 #caughtPage {
   display: none;
+  .gameButton{
+    @include partial.btn;
+    @include partial.a-hover;
+    margin-top: 20px;
+  }
 
   @media screen and (min-width: 951px) {
 

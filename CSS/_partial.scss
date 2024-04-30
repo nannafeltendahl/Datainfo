@@ -91,9 +91,9 @@ $gamePageOffsetDesktop: 160px;
 @mixin gamePageOffset() {
   position: absolute;
   top: 0;
-  padding: $gamePageOffsetMobile 20px 20px 20px;
+  padding: $gamePageOffsetMobile 20px 20px 10px;
 
   @media screen and (min-width: 951px) {
-    padding: $gamePageOffsetDesktop 20px 20px 20px;
+    padding: $gamePageOffsetDesktop 20px 20px 10px;
   }
 }
