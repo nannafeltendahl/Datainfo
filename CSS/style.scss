@@ -604,6 +604,27 @@ h2 {
   max-width: none;
 }
 
+#score {
+  @include partial.gamePageOffset;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  justify-items: start;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#scoreNumber {
+
+}
+
+#scoreLogo {
+  width: 32px;
+  height: 32px;
+}
+
 .audioButtonImg {
   height: 60px;
   display: flex;
@@ -627,25 +648,21 @@ h2 {
 }
 
 .gamePage {
+  @include partial.gamePageOffset;
   width: 100%;
   height: 100%;
-  position: absolute;
   max-height: 100%;
-  top: 0;
-  padding: 120px 20px 20px 20px;
   margin: 0 auto;
   background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
   overflow: hidden;
 }
 
 .gamePageOverlay {
+  @include partial.gamePageOffset;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
   max-height: 100%;
-  top: 0;
-  padding: 120px 20px 20px 20px;
   margin: 0 auto;
 }
 

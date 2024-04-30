@@ -4,6 +4,8 @@ $bg: #fffafa;
 $lightblueBackground: #EEF5FF;
 $darkblue: #0E3E86;
 $gold: #C59E54;
+$gamePageOffsetMobile: 120px;
+$gamePageOffsetDesktop: 160px;
 
 
 @font-face {
@@ -83,4 +85,15 @@ $gold: #C59E54;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border: 3px solid $gold;
   text-decoration: none;
+}
+
+
+@mixin gamePageOffset() {
+  position: absolute;
+  top: 0;
+  padding: $gamePageOffsetMobile 20px 20px 20px;
+
+  @media screen and (min-width: 951px) {
+    padding: $gamePageOffsetDesktop 20px 20px 20px;
+  }
 }

@@ -34,25 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //     });
 // });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Venter på, at dokumentet er klar
-
-    var regionSelect = document.getElementById('region');
-
-    regionSelect.addEventListener('change', function () {
-
-        var selectedValue = this.value;
-
-        var selectedSection = document.getElementById(selectedValue);
-        if (selectedSection) {
-            var selectedSectionTop = selectedSection.offsetTop;
-            window.scrollTo({
-                top: selectedSectionTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
 // ------------------------------ logging ------------------------
 function log(message) {
     if (console && console.log) {

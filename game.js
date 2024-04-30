@@ -27,30 +27,35 @@ const questions = //This a const (unchangeable) variable with variable inside wh
             answerA: "A: https://www.borger.dk",
             answerB: "B: http://www.borger.dk",
             correctAnswer: "a",
+            explanation: "Der mangler et s i https...",
         },
         {
             questionText: "Hvad er en sikker måde at identificere en legitim hjemmeside, når du indtaster følsomme oplysninger?",
             answerA: "A: Tilgå en hjemmeside gennem et link eller en sponsorede annonce",
             answerB: "B: Kontrollér, om webadressen starter med https: og viser en hængelåsikon i adressefeltet.",
             correctAnswer: "b",
+            explanation: "2",
         },
         {
             questionText: "Hvad er en sikker måde at opbevare dine adgangskoder på?",
             answerA: "A: Gemme dem i en tekstfil på din computers skrivebord.",
             answerB: "B: Brug af en adgangskodeadministrator til at opbevare og generere sikre adgangskoder.",
             correctAnswer: "b",
+            explanation: "3",
         },
         {
             questionText: "Spørgsmål: Hvad er formålet med smishing?",
             answerA: "A: At narre folk via SMS-beskeder.",
             answerB: "B: At narre folk via e-mails.",
             correctAnswer: "a",
+            explanation: "4",
         },
         {
             questionText: "Spørgsmål: Hvad er en typisk metode, som spoofing bruger til at narre folk?",
             answerA: "A:  At forfalske afsenderadressen for at ligne en ægte afsender.",
             answerB: "B: At vise en ægte afsenderadresse i e-mailen.",
             correctAnswer: "a",
+            explanation: "...",
         },
 
         {
@@ -58,30 +63,35 @@ const questions = //This a const (unchangeable) variable with variable inside wh
             answerA: "A:  Man kan stole på beskeden når både nummer og navn stemmer oven ens",
             answerB: "B: Man kontakter familiemedlemmet på anden vis, og overføre ingen penge",
             correctAnswer: "b",
+            explanation: "...",
         },
         {
             questionText: "Du modtager en mail med et link, linket ser helt troværdigt ud, uden stavefejl eller mærkelige tegn.",
             answerA: "A:  Tast selv URLen ind i browseren, uden at klikke på linket",
             answerB: "B: Du kan stole på link, hvis det ser helt troværdigt ud ",
             correctAnswer: "a",
+            explanation: "...",
         },
         {
             questionText: "Du modtager en notifikation om at din bank app skal opdateres",
             answerA: "A:  Du undlader at opdatere, da opdatering kan indeholde skadelige virusser",
             answerB: "B:  Du opdatere appen, som indeholder de nyeste og sikreste opdateringer",
             correctAnswer: "b",
+            explanation: "...",
         },
         {
             questionText: "Du modtager post i din e-boks, du logger ind og i brevet står om du vil deltage i en undersøgelse, deltage via link",
             answerA: "A:  Du klikker på linket, e-boks er helt sikkert og krypteret",
             answerB: "B:  Du er påpasselig med links fra ukendte kilder, selv på e-boks",
             correctAnswer: "b",
+            explanation: "...",
         },
         {
             questionText: "Hvilken adgangskode er stærkest?",
             answerA: "A:  Jeg#ElskerAtLøbeITræskoven!",
             answerB: "B:  Lars#1990#3689!",
             correctAnswer: "a",
+            explanation: "...",
         },
 
     ]
@@ -92,6 +102,7 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
     currentQuestionIndex: 0, //variable with a value
     currentQuestion: null, //variable with a value of null
     state: states.Start,
+    score: 0,
 
     setState: function (state) {
         this.state = state;
@@ -99,10 +110,17 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
     },
     resetGame: function () { //this is a function called resetGame, that takes og calls for the variables from gameState through a this.
         this.setGameQuestion(0);
+        this.score = 0;
         this.results = Array(questions.length).fill(false)
         this.setState(states.Start);
     },
     updateGamePagesShown: function () {
+        // Update score
+        let scoreElement = document.getElementById("score")
+        let scoreNumberElement = document.getElementById("scoreNumber")
+        scoreElement.style.display = 'grid';
+        scoreNumberElement.innerHTML = `Sikkerhedsskjold: ${this.score}/${questions.length}`;
+
         // start by hiding all
         document.querySelectorAll(".gamePage").forEach(gamePageElement => gamePageElement.style.display = 'none');
 
@@ -116,6 +134,7 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
                 break;
             case "Shield":
                 document.getElementById("shieldPage").style.display = 'grid';
+                this.score += 1;
                 break;
             case "ShieldGold":
                 document.getElementById("shieldGoldPage").style.display = 'grid';
@@ -126,6 +145,7 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
 
             default:
                 document.getElementById("startPage").style.display = 'grid';
+                scoreElement.style.display = 'none';
                 break;
 
         }
@@ -142,15 +162,8 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
     setNextQuestion: function () {
         if (this.currentQuestionIndex + 1 >= questions.length) { // if currentQuestionIndex + 1 is equal or even with  question then change inner html to yaay plus show a image.
             // it looks for the end of question with the .length
-            // TODO: show game completed...
-            let score = 0;
-            for (let i = 0; i < this.results.length; i++) {
-                if (this.results[i] === true) {
-                    score++;
-                }
-            }
-            log("The final score was: " + score);
-            if (score === this.results.length) {
+            log("The final score was: " + this.score);
+            if (this.score === this.results.length) {
                 // let questionDivElement = document.getElementById("question");
                 // questionDivElement.innerHTML = "YAAAY!<img src='image/goldFishLogo.png' />";
                 this.setState(states.ShieldGold);
@@ -170,33 +183,31 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
         buttonAnimation(answerGiven);
 
         if (wasCorrect) {
-            // showImage("../image/fishLogo.png");
             this.setState(states.Shield);
             this.results[this.currentQuestionIndex] = true;
+
+            setTimeout(function () {
+                gameState.setNextQuestion();
+            }, 2000);
         } else {
             this.setState(states.Caught);
-            // showImage("../image/kaptajnKrog.png");
+            document.getElementById("caughtExplanation").innerHTML = `Forklaring: <p>${this.currentQuestion.explanation}</p>`;
         }
 
-        setTimeout(function () {
-            // hideGameImage();
-            gameState.setNextQuestion();
-            console.log('callback')
-        }, 3000);
+
     }
 }
 
-const numberOfButtons = document.querySelectorAll(".gameButton").length;
-
-for (var i = 0; i < numberOfButtons; i++) {
-
-    document.querySelectorAll(".gameButton")[i].addEventListener("click", function () {
-
-        // The button have either A or B as inner html
-        let clickedKey = this.innerHTML.toLowerCase();
-        gameState.checkAnswer(clickedKey);
-    });
+function goToNextQuestion() {
+    gameState.setNextQuestion()
 }
+
+document.getElementById("questionPageButtonA").addEventListener("click", function () {
+    gameState.checkAnswer('a');
+})
+document.getElementById("questionPageButtonB").addEventListener("click", function () {
+    gameState.checkAnswer('b');
+})
 
 function makesound(wasCorrect) {
 

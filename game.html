@@ -31,17 +31,21 @@
         <source src="./sounds/pan-filmsilly-25608.mp3" type="audio/mp3">
     </audio>
 
+    <div id="score">
+        <img id="scoreLogo" src="image/fishLogo.png">
+        <p id="scoreNumber"></p>
+    </div>
 
     <div id="startPage" class="gamePage verticalCenter">
-        <button class="audioButton" onclick="toggleAudio()" type="button">
-            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
-        </button>
         <img class="gamePageBackground" src="image/tresureMap.png"/>
 
         <div class="gamePageOverlay verticalCenter fullSize">
             <button class="startGameButton" onclick="startGame()">Start spillet</button>
         </div>
 
+        <button class="audioButton" onclick="toggleAudio()" type="button">
+            <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        </button>
     </div>
 
     <div id="questionPage" class="gamePage verticalCenter">
@@ -51,8 +55,8 @@
             <p class="questionP" id="gameQuestionOptionB"></p>
 
             <div class="gameButtons">
-                <button class="a gameButton">A</button>
-                <button class="b gameButton">B</button>
+                <button id="questionPageButtonA" class="a gameButton">A</button>
+                <button id="questionPageButtonB" class="b gameButton">B</button>
             </div>
         </div>
 
@@ -64,6 +68,9 @@
         <div class="gamePageOverlay verticalCenter fullSize">
             <img class="gameImageStyling" src="image/kaptajnKrog.png" alt="kaptajn krog"/>
             <p class="questionP">Åh Åh! Du blev Fanget af Kaptajn Krog</p>
+
+            <p id="caughtExplanation" class="questionP"></p>
+            <button class="gameButton" onclick="goToNextQuestion()">Gå videre</button>
         </div>
         <button class="audioButton" onclick="toggleAudio()" type="button">
             <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
@@ -86,9 +93,10 @@
             <img class="gameImageStyling" src="image/goldFishLogo.png" alt="guld sikkerhedsskjoldet"/>
             <p class="questionP">Jubii du fandt skatten og fik dit guldsikkerhedsskjold,
                 med dette kan du åbne (klik på) kisten hvor dit certifikat ligger.</p>
-                <p class="questionP">
+            <p class="questionP">
                 Når du klikker vil der blive åbnet et nyt vindue med en PDF fil, som du kan downloade.
-                Siden her har et https, der indikerer at siden er sikker, hvilket der altid bør være inden du trykker på et link.</p>
+                Siden her har et https, der indikerer at siden er sikker, hvilket der altid bør være inden du trykker på
+                et link.</p>
 
             <a href="./image/certifikatDataSikkerhed.pdf" class="downloadeButton" target="_blank">
                 <img id="downloadImage" src="./image/goldChest.png" alt="klik for at downloade">
