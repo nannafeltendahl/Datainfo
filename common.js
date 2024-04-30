@@ -53,20 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-
-/* function that makes it possible to downloade the pdf file, when the guide image is clicked*/
-document.getElementById('downloadImageGuide').addEventListener('click', function () {
-    const downloadLink = document.createElement('a');
-    downloadLink.href = '../image/DatasikkerhedGuide.pdf';
-    downloadLink.download = 'DatasikkerhedGuide.pdf';
-    document.body.appendChild(downloadLink);
-    // Klik på linket for at starte download
-    downloadLink.click();
-    // Fjern linket fra dokumentet
-    document.body.removeChild(downloadLink);
-});
-
 // ------------------------------ logging ------------------------
 function log(message) {
     if (console && console.log) {

@@ -420,7 +420,6 @@ h2 {
     .guide-section {
       img {
         width: 40%;
-        @include partial.a-hover;
       }
     }
     #gameRuleText {

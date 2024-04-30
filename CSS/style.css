@@ -546,23 +546,6 @@ h2 {
   }
   .guide-section img {
     width: 40%;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .guide-section img:hover {
-    color: #C59E54;
-    animation: bounce 0.5s 1 alternate;
-  }
-  @keyframes bounce {
-    0% {
-      transform: translateY(0); /* Ingen vertikal forskydning */
-    }
-    50% {
-      transform: translateY(-5px); /* Bevæger sig 5px op */
-    }
-    100% {
-      transform: translateY(0); /* Tilbage til startpositionen */
-    }
   }
   #gameRuleText {
     color: #0E3E86;
