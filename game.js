@@ -1,4 +1,5 @@
 // ------------------------ Event Registration --------------------
+// noinspection HttpUrlsUsage
 
 // on page load
 document.addEventListener('DOMContentLoaded', function () {
@@ -39,7 +40,7 @@ const questions =
         {
             questionText: "Hvad er en sikker måde at identificere en legitim hjemmeside, når du indtaster følsomme oplysninger?",
             answerA: "A: Tilgå en hjemmeside gennem et link eller en sponsorede annonce",
-            answerB: "B: Kontrollér, om webadressen starter med https: og viser en hængelåsikon i adressefeltet.",
+            answerB: "B: Kontrollér, om webadressen starter med https: og viser en hængelås ikon i adressefeltet.",
             correctAnswer: "b",
             explanation: " Konsekvensen ved at klikke på en annonce eller et link, kan bl.a. være skadeligt software og virusinfektioner.",
         },
@@ -192,7 +193,7 @@ let gameState = {
     checkAnswer: function (answerGiven) {
         let wasCorrect = this.currentQuestion.correctAnswer === answerGiven;
 
-        makesound(wasCorrect);
+        makeSound(wasCorrect);
         buttonAnimation(answerGiven);
 
         if (wasCorrect) {
@@ -223,20 +224,19 @@ document.getElementById("questionPageButtonB").addEventListener("click", functio
 })
 
 //makes a sound for correct and incorrect answer
-function makesound(wasCorrect) {
+function makeSound(wasCorrect) {
 
     if (wasCorrect) {
         let audio = new Audio("sounds/correctSound.mp3")
-        audio.play();
+        audio.play().then();
     } else {
-        // let audio = new Audio("sounds/incorrectSound.mp3")
         let audio = new Audio("sounds/arrr.mp3")
-        audio.play();
+        audio.play().then();
     }
 }
 
 function buttonAnimation(currentKey) {
-    var activeButton = document.querySelector("." + currentKey);
+    let activeButton = document.querySelector("." + currentKey);
 
     if (activeButton) {
         activeButton.classList.add("pressed");
