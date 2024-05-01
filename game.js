@@ -19,6 +19,10 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+const buttonDelay = 200;
+const buttonAnimationDelay = 100;
+const checkAnswerDelay = 500;
+
 const states = {
     Start: "Start",
     Question: "Question",
@@ -190,37 +194,40 @@ let gameState = {
             this.setState(states.Question);
         }
     },
-    checkAnswer: function (answerGiven) {
+    checkAnswer: function (button, answerGiven) {
         let wasCorrect = this.currentQuestion.correctAnswer === answerGiven;
 
-        makeSound(wasCorrect);
-        buttonAnimation(answerGiven);
+        buttonAnimation(button);
 
         if (wasCorrect) {
-            this.setState(states.Shield);
-            this.results[this.currentQuestionIndex] = true;
-
             setTimeout(function () {
+                makeSound(true);
+                gameState.setState(states.Shield);
+                gameState.results[gameState.currentQuestionIndex] = true;
                 gameState.setNextQuestion();
-            }, 2000);
+            }, checkAnswerDelay);
         } else {
-            this.setState(states.Caught);
-            document.getElementById("caughtExplanation").innerHTML = `<p>${this.currentQuestion.explanation}</p>`;
+            setTimeout(function () {
+                makeSound(false);
+                gameState.setState(states.Caught);
+                document.getElementById("caughtExplanation").innerHTML = `<p>${gameState.currentQuestion.explanation}</p>`;
+            }, checkAnswerDelay);
         }
-
-
     }
 }
 
-function goToNextQuestion() {
-    gameState.setNextQuestion()
+function goToNextQuestion(button) {
+    buttonAnimation(button);
+    setTimeout(function () {
+        gameState.setNextQuestion();
+    }, buttonDelay);
 }
 
 document.getElementById("questionPageButtonA").addEventListener("click", function () {
-    gameState.checkAnswer('a');
+    gameState.checkAnswer(this, 'a');
 })
 document.getElementById("questionPageButtonB").addEventListener("click", function () {
-    gameState.checkAnswer('b');
+    gameState.checkAnswer(this, 'b');
 })
 
 //makes a sound for correct and incorrect answer
@@ -235,15 +242,14 @@ function makeSound(wasCorrect) {
     }
 }
 
-function buttonAnimation(currentKey) {
-    let activeButton = document.querySelector("." + currentKey);
+function buttonAnimation(button) {
 
-    if (activeButton) {
-        activeButton.classList.add("pressed");
+    if (button) {
+        button.classList.add("pressed");
 
         setTimeout(function () {
-            activeButton.classList.remove("pressed");
-        }, 100);
+            button.classList.remove("pressed");
+        }, buttonAnimationDelay);
     }
 }
 
@@ -253,7 +259,8 @@ const audio = document.getElementById("myAudio");
 
 let isPlaying = false;
 
-function toggleAudio() {
+function toggleAudio(button) {
+    buttonAnimation(button);
     if (isPlaying) {
         audio.pause();
     } else {
@@ -263,8 +270,12 @@ function toggleAudio() {
 }
 
 
-function startGame() {
-    gameState.setState(states.Question);
+function startGame(button) {
+    buttonAnimation(button);
+    setTimeout(function () {
+        gameState.setState(states.Question);
+    }, buttonDelay);
+
 }
 
 /* function that makes it possible to downloade the pdf file, when the chest image is clicked*/

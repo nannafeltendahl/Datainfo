@@ -32,19 +32,19 @@
     </audio>
 
     <div id="score">
-        <img id="scoreLogo" src="image/fishLogo.png">
+        <img id="scoreLogo" src="image/fishLogo.png" alt="Blåt Skjold med Fisk">
         <p id="scoreNumber"></p>
     </div>
 
-    <button class="audioButton" onclick="toggleAudio()" type="button">
+    <button class="audioButton" onclick="toggleAudio(this)" type="button">
         <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
     </button>
 
     <div id="startPage" class="gamePage verticalCenter">
-        <img class="gamePageBackground" src="image/tresureMap.png"/>
+        <img class="gamePageBackground" src="image/tresureMap.png" alt="Skattekort"/>
 
         <div class="gamePageOverlay verticalCenter fullSize">
-            <button class="startGameButton" onclick="startGame()">Start spillet</button>
+            <button class="startGameButton" onclick="startGame(this)">Start spillet</button>
         </div>
 
     </div>
@@ -68,12 +68,12 @@
             <p class="questionP">Åh Åh! Du blev Fanget af Kaptajn Krog</p>
 
             <p id="caughtExplanation" class="questionP explanationCaughtPage"></p>
-            <button class="gameButton" onclick="goToNextQuestion()">Gå videre</button>
+            <button class="gameButton" onclick="goToNextQuestion(this)">Gå videre</button>
         </div>
     </div>
     <div id="shieldPage" class="gamePage verticalCenter">
         <div class="gamePageOverlay verticalCenter fullSize">
-            <img class="gameImageStyling" src="image/fishLogo.png" alt="fisk rundt om et skjold"/>
+            <img class="gameImageStyling" src="image/fishLogo.png" alt="Guld Skjold med Fisk"/>
             <p class="questionP">Godt arbejde, du fik et sikkerhedsskjold</p>
         </div>
 
