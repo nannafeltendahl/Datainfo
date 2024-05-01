@@ -29,8 +29,7 @@ header {
 }
 
 .fullSize {
-  width: 100%;
-  height: 100%;
+  @include partial.fullSize;
 }
 
 .initiallyHidden {
@@ -145,6 +144,7 @@ header {
   display: grid;
   grid-template-rows: 1fr;
   gap: 10px;
+  height: fit-content;
 
 
   a {
@@ -155,19 +155,17 @@ header {
 
   .articles-grid {
     display: grid;
-    grid-template-rows: 0.5fr 0.5fr;
-    margin: 0 auto;
-    width: 100%;
-    padding: 20px 15px 20px 20px;
-    gap: 20px;
+    grid-template-rows: 0.5fr;
+    padding: 20px 15px 10px 20px;
+    gap: 50px;
     max-height: 1000px;
 
 
     .datasikkerhedText {
       @include partial.p-Mobil;
+      @include partial.fullSize;
       background-color: partial.$lightblueBackground;
       border-radius: 20px;
-      width: 100%;
       margin: 0 auto;
       padding: 10px;
       box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
@@ -205,17 +203,32 @@ header {
   @include partial.p-Mobil;
   width: 70%;
 }
+#spillet{
+  background-color: partial.$buttonBackground;
+
+  p{
+    color: partial.$gold;
+  }
+}
+#gameBackgroundColor{
+  //background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
+  padding-bottom: 100px;
+}
 
 #captainHeading {
   @include partial.heading-mobile;
-  color: #806634;
+  color: partial.$textGoldColor;
   margin-bottom: 20px;
 }
 
 .gameText {
   @include partial.p-Mobil;
-  color: #806634;
+  color: partial.$textGoldColor;
   padding: 15px;
+
+  a{
+    color: partial.$textGoldColor;
+  }
 }
 
 .space {
@@ -290,7 +303,6 @@ h2 {
   background-color: partial.$lightblueBackground;
   color: partial.$textColor;
   bottom: 0;
-  margin-top: 100px;
 
 
   p {
@@ -377,7 +389,8 @@ h2 {
       width: 80%;
     }
     .articles {
-      padding: 30px 0 50px 0;
+      padding: 10px;
+      margin: 0 auto;
 
 
       .articles-grid {
@@ -387,6 +400,8 @@ h2 {
         max-height: 800px;
 
 
+
+
         .articles-image {
           min-width: 70%;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -394,12 +409,12 @@ h2 {
         }
 
         .right {
-          order: 2;
+          //order: 2;
         }
 
         .datasikkerhedText {
           @include partial.p-desktop;
-          width: 100%;
+          @include partial.fullSize;
           display: flex;
           justify-content: center;
           align-content: center;
@@ -413,13 +428,13 @@ h2 {
 
       #captainHeading {
         @include partial.heading-desktop;
-        color: #806634;
+        color: partial.$textGoldColor;
         margin-bottom: 20px;
       }
 
       .gameText {
         @include partial.p-desktop;
-        color: #806634;
+        color: partial.$textGoldColor;
         width: 80%;
         padding: 10px;
       }
@@ -507,14 +522,14 @@ h2 {
 .audioButtonImg {
   height: 60px;
   display: flex;
-  padding: 10px;
+  padding: 12px;
 
 }
 
 .audioButton {
   display: flex;
   border-radius: 40px;
-  background-image: url("../image/woodBackground.png");
+  background-color: partial.$buttonBackground;
   @include partial.a-hover;
   border: 2px solid partial.$gold;
   margin: 15px 15px 20px 25px;
@@ -620,7 +635,7 @@ h2 {
       color: black;
       font-weight: bolder;
       width: 100%;
-      padding: 10px;
+      padding: 50px 10px 10px 10px;
       margin: 0 auto;
       text-align: center;
     }
@@ -681,13 +696,13 @@ h2 {
       width: 50%;
       display: flex;
       margin: 0 auto;
-      padding: 10px;
+      padding:50px 10px 5px 10px;
     }
     .questionP {
       @include partial.p-Mobil;
       color: black;
       margin: 0 auto;
-      text-align: center;
+      text-align: left;
       padding: 10px;
 
     }

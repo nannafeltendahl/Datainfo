@@ -61,7 +61,7 @@ const questions =
             answerA: "A: At narre folk via SMS-beskeder.",
             answerB: "B: At narre folk via e-mails.",
             correctAnswer: "a",
-            explanation: " Konsekvensen ved smishing (sms) angreb kan bla, være identitetstyveri og hacking af eks. billeder mm.",
+            explanation: " Konsekvensen ved smishing (sms) angreb kan bl.a, være identitetstyveri og hacking af eks. billeder mm.",
         },
         {
             questionText: "Spørgsmål: Hvad er en typisk metode, som spoofing bruger til at narre folk?",
@@ -106,8 +106,8 @@ const questions =
                 " Links kan indeholde skadeligt software og kan forårsage hacking af personlig data, ",
         },
         {
-            questionText: "Hvilken adgangskode er stærkest?",
-            answerA: "A:  Jeg#ElskerAtLøbeITræskoven!",
+            questionText: "Hvilken adgangskode er stærkest af disse to?",
+            answerA: "A:  Jeg#ElskerAtLøbe#123ITræskoven!",
             answerB: "B:  Lars#1990#3689!",
             correctAnswer: "a",
             explanation: "Brug aldrig personlig data i en adgangskode, konsekvensen kan være hacking af adgangskoden, " +
