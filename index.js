@@ -1,3 +1,4 @@
+//FAQ on homepage//
 const acc = document.getElementsByClassName("accordion");
 for (let i = 0; i < acc.length; i++) {
     acc [i].addEventListener("click", function () {
@@ -12,16 +13,17 @@ for (let i = 0; i < acc.length; i++) {
     });
 }
 
+//drop down navigation on homepage//
 document.addEventListener('DOMContentLoaded', function () {
     // Venter på, at dokumentet er klar
 
-    var regionSelect = document.getElementById('region');
+    const regionSelect = document.getElementById('region');
 
     regionSelect.addEventListener('change', function () {
 
-        var selectedValue = this.value;
+        let selectedValue = this.value;
 
-        var selectedSection = document.getElementById(selectedValue);
+        const selectedSection = document.getElementById(selectedValue);
         if (selectedSection) {
             var selectedSectionTop = selectedSection.offsetTop;
             window.scrollTo({

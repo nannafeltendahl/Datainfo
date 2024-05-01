@@ -27,7 +27,7 @@ const states = {
     GameOver: "GameOver",
 }
 
-const questions = //This a const (unchangeable) variable with variable inside which have a value that is a string
+const questions =
     [
         {
             questionText: "Hvilken URL tror du er troværdig?",
@@ -111,10 +111,10 @@ const questions = //This a const (unchangeable) variable with variable inside wh
     ]
 
 // ---------------------- Game State -----------------------
-let gameState = { // dette er en variable med navnet gameState, som indeholder nogle forskellige variable med en værdi og nogle funktioner
+let gameState = {
     results: null,
-    currentQuestionIndex: 0, //variable with a value
-    currentQuestion: null, //variable with a value of null
+    currentQuestionIndex: 0,
+    currentQuestion: null,
     state: states.Start,
     score: 0,
 
@@ -122,7 +122,7 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
         this.state = state;
         this.updateGamePagesShown();
     },
-    resetGame: function () { //this is a function called resetGame, that takes og calls for the variables from gameState through a this.
+    resetGame: function () {
         this.setGameQuestion(0);
         this.score = 0;
         this.results = Array(questions.length).fill(false)
@@ -164,29 +164,28 @@ let gameState = { // dette er en variable med navnet gameState, som indeholder n
 
         }
     },
-    setGameQuestion: function (questionIndex) { //dette er en function med navnet setGameQuestion, med variablen questionIndex
+    setGameQuestion: function (questionIndex) {
         // set question with given index
         this.currentQuestionIndex = questionIndex; //
-        this.currentQuestion = questions[this.currentQuestionIndex] //current question is equal to questions with the input from questionIndex above
+        this.currentQuestion = questions[this.currentQuestionIndex]
 
         document.getElementById("gameQuestion").innerHTML = this.currentQuestion.questionText;
         document.getElementById("gameQuestionOptionA").innerHTML = this.currentQuestion.answerA;
         document.getElementById("gameQuestionOptionB").innerHTML = this.currentQuestion.answerB;
     },
     setNextQuestion: function () {
-        if (this.currentQuestionIndex + 1 >= questions.length) { // if currentQuestionIndex + 1 is equal or even with  question then change inner html to yaay plus show a image.
-            // it looks for the end of question with the .length
+        if (this.currentQuestionIndex + 1 >= questions.length) {
+
             log("The final score was: " + this.score);
             if (this.score === this.results.length) {
-                // let questionDivElement = document.getElementById("question");
-                // questionDivElement.innerHTML = "YAAAY!<img src='image/goldFishLogo.png' />";
+
                 this.setState(states.ShieldGold);
             } else {
                 // TODO: you got this many out of x correct, try again / restart game
                 this.setState(states.GameOver);
             }
         } else {
-            this.setGameQuestion(this.currentQuestionIndex + 1); // if not the above is the case, then set the + 1 to the currentQuestionIndex
+            this.setGameQuestion(this.currentQuestionIndex + 1);
             this.setState(states.Question);
         }
     },
@@ -223,6 +222,7 @@ document.getElementById("questionPageButtonB").addEventListener("click", functio
     gameState.checkAnswer('b');
 })
 
+//makes a sound for correct and incorrect answer
 function makesound(wasCorrect) {
 
     if (wasCorrect) {
