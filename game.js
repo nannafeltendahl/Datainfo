@@ -22,6 +22,7 @@ document.addEventListener("keydown", function (event) {
 const buttonDelay = 200;
 const buttonAnimationDelay = 100;
 const checkAnswerDelay = 500;
+const nextQuestionDelay = 1600;
 
 const states = {
     Start: "Start",
@@ -204,7 +205,11 @@ let gameState = {
                 makeSound(true);
                 gameState.setState(states.Shield);
                 gameState.results[gameState.currentQuestionIndex] = true;
-                gameState.setNextQuestion();
+
+                setTimeout(function () {
+                    gameState.setNextQuestion();
+                }, nextQuestionDelay);
+
             }, checkAnswerDelay);
         } else {
             setTimeout(function () {
