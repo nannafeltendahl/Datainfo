@@ -283,8 +283,3 @@ function startGame(button) {
     }, buttonDelay);
 
 }
-
-function win()
-{
-
-}

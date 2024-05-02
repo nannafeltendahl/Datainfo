@@ -74,10 +74,6 @@ $gamePageOffsetDesktop: 160px;
     }
   }
 }
-@mixin hover-text {
-
-}
-
 
 @mixin btn() {
   font-size: 20pt;
@@ -90,7 +86,6 @@ $gamePageOffsetDesktop: 160px;
   margin: 0 auto;
   padding: 5px 10px 0 10px;
   background-color: $buttonBackground;
-  //background-image: url("../image/woodBackground.png");
   background-size: auto;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
