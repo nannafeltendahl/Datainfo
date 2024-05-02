@@ -31,6 +31,7 @@ const states = {
     Shield: "Shield",
     ShieldGold: "ShieldGold",
     GameOver: "GameOver",
+    DefaultState: "ShieldGold",
 }
 
 const questions =
@@ -40,35 +41,35 @@ const questions =
             answerA: "A: https://www.borger.dk",
             answerB: "B: http://www.borger.dk",
             correctAnswer: "a",
-            explanation: " Konsekvensen ved et URL uden s (secure) kan forårsage at din data i form af personlige oplysninger ikke bliver beskyttet, og kan blive misbrugt.",
+            explanation: " Konsekvensen ved et URL http: uden s (secure) kan forårsage at din data i form af personlige oplysninger ikke bliver beskyttet, og kan blive misbrugt.",
         },
         {
             questionText: "Hvad er en sikker måde at identificere en legitim hjemmeside, når du indtaster følsomme oplysninger?",
             answerA: "A: Tilgå en hjemmeside gennem et link eller en sponsorede annonce",
-            answerB: "B: Kontrollér, om webadressen starter med https: og viser en hængelås ikon i adressefeltet.",
+            answerB: "B: Kontrollér, om webadressen starter med https: og viser et hængelås ikon i adressefeltet.",
             correctAnswer: "b",
-            explanation: " Konsekvensen ved at klikke på en annonce eller et link, kan bl.a. være skadeligt software og virusinfektioner.",
+            explanation: " Konsekvensen ved at klikke på en annonce eller et link, kan bl.a. være software med skadeligt indhold og virusser.",
         },
         {
             questionText: "Hvad er en sikker måde at opbevare dine adgangskoder på?",
             answerA: "A: Gemme dem i en tekstfil på din computer.",
             answerB: "B: Brug af en adgangskodeadministrator til at opbevare og generere adgangskoder.",
             correctAnswer: "b",
-            explanation: " Konsekvensen ved adgangskoder på PCen, kan være manglende kryptering og nem synlighed, i tilfælde af hacking.",
+            explanation: " Konsekvensen ved adgangskoder i en tekstfil på PCen, kan være manglende kryptering og nem tilgængelighed, i tilfælde af hacking.",
         },
         {
             questionText: "Spørgsmål: Hvad er formålet med smishing?",
             answerA: "A: At narre folk via SMS-beskeder.",
             answerB: "B: At narre folk via e-mails.",
             correctAnswer: "a",
-            explanation: " Konsekvensen ved smishing (sms) angreb kan bl.a, være identitetstyveri og hacking af eks. billeder mm.",
+            explanation: " Konsekvensen ved smishing (SMS) angreb kan være identitetstyveri og hacking af eks. billeder og adgangskoder",
         },
         {
-            questionText: "Spørgsmål: Hvad er en typisk metode, som spoofing bruger til at narre folk?",
-            answerA: "A:  At forfalske afsenderadressen for at ligne en ægte afsender.",
+            questionText: "Spørgsmål: Hvad er en typisk metode, som spoofing begrebet er kendt for at narre folk med?",
+            answerA: "A:  At forfalske afsender adressen for at ligne en ægte.",
             answerB: "B: At vise en ægte afsenderadresse i e-mailen.",
             correctAnswer: "a",
-            explanation: "Konsekvensen ved en forfalsket afsenderadresse kan lede til mistillid" +
+            explanation: "Konsekvensen ved en forfalsket afsender adresse kan lede til mistillid" +
                 " og kan have negative personlig, økonomiske og sikkerhedsmæssige påvirkninger.",
         },
 
@@ -82,33 +83,33 @@ const questions =
         },
         {
             questionText: "Du modtager en mail med et link, linket ser helt troværdigt ud, uden stavefejl eller mærkelige tegn.",
-            answerA: "A:  Tast selv URLen ind i browseren, uden at klikke på linket",
-            answerB: "B: Du kan stole på link, hvis det ser helt troværdigt ud ",
+            answerA: "A: Du taster selv URLen ind i browseren, uden at klikke på linket",
+            answerB: "B: Du kan stole på et link, hvis det ser helt troværdigt ud ",
             correctAnswer: "a",
             explanation: "Det er muligt at ændre et link så det fremstår helt troværdigt, " +
-                " hvilket kan forårsage at din data i form af personlige oplysninger ikke bliver beskyttet, og kan blive misbrugt. ",
+                " hvilket kan forårsage at din data, i form af personlige oplysninger, ikke bliver beskyttet og kan blive misbrugt. ",
         },
         {
             questionText: "Du modtager en notifikation om at din bank app skal opdateres",
-            answerA: "A:  Du undlader at opdatere, da opdatering kan indeholde skadelige virusser",
+            answerA: "A:  Du undlader at opdatere, da opdateringen kan indeholde skadelige virusser",
             answerB: "B:  Du opdatere appen, som indeholder de nyeste og sikreste opdateringer",
             correctAnswer: "b",
-            explanation: "Opdateringer indeholder den nyeste og sikreste opdatering. " +
+            explanation: "Opdateringer indeholder den nyeste og sikreste opdateringer. " +
                 "Konsekvensen ved ikke at opdatere, kan være forældelse af datasikring " +
                 " og dermed gøre det lettere for de kriminelle at hacke dig. ",
         },
         {
-            questionText: "Du modtager post i din e-boks, du logger ind og i brevet står om du vil deltage i en undersøgelse, deltage via link",
+            questionText: "Du modtager post i din e-boks, du logger ind og i brevet står om du vil deltage i en undersøgelse, deltagelse via link",
             answerA: "A:  Du klikker på linket, e-boks er helt sikkert og krypteret",
             answerB: "B:  Du er påpasselig med links fra ukendte kilder, selv på e-boks",
             correctAnswer: "b",
-            explanation: "E-boks er en krypteret kommunikationsform, men vær altid påpasselig overfor links fra ukendte kilder," +
+            explanation: "E-boks er en krypteret kommunikations enhed, men vær altid påpasselig overfor links fra ukendte kilder," +
                 " Links kan indeholde skadeligt software og kan forårsage hacking af personlig data, ",
         },
         {
             questionText: "Hvilken adgangskode er stærkest af disse to?",
-            answerA: "A:  Jeg#ElskerAtLøbe#123ITræskoven!",
-            answerB: "B:  Lars#1990#3689!",
+            answerA: "A:  Kolde#Luse#Arbejder#Under#Sol#01",
+            answerB: "B:  Peter#1995#Arbejder#Under#Sol#01",
             correctAnswer: "a",
             explanation: "Brug aldrig personlig data i en adgangskode, konsekvensen kan være hacking af adgangskoden, " +
                 " som tilmed afgiver yderligere personlige oplysninger.",
@@ -132,7 +133,7 @@ let gameState = {
         this.setGameQuestion(0);
         this.score = 0;
         this.results = Array(questions.length).fill(false)
-        this.setState(states.Start);
+        this.setState(states.DefaultState);
     },
     updateGamePagesShown: function () {
         // Update score
@@ -283,14 +284,7 @@ function startGame(button) {
 
 }
 
-/* function that makes it possible to downloade the pdf file, when the chest image is clicked*/
-document.getElementById('downloadImage').addEventListener('click', function () {
-    const downloadLink = document.createElement('a');
-    downloadLink.href = './image/certifikatDataSikkerhed.pdf';
-    downloadLink.download = 'certifikatDataSikkerhed.pdf';
-    document.body.appendChild(downloadLink);
-    // Klik på linket for at starte download
-    downloadLink.click();
-    // Fjern linket fra dokumentet
-    document.body.removeChild(downloadLink);
-});
+function win()
+{
+
+}

@@ -47,7 +47,7 @@ header {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   .desktop-nav {
     display: none;
     background-color: #EEF5FF;
@@ -265,6 +265,9 @@ header {
   margin: 0 auto;
   padding: 10px;
 }
+.guideText a {
+  color: #0E3E86;
+}
 
 .guide-section {
   display: flex;
@@ -277,6 +280,24 @@ header {
   width: 80%;
 }
 
+@media screen and (min-width: 700px) and (max-width: 1450px) {
+  .accordion {
+    max-width: 50%;
+  }
+  .panel {
+    max-width: 50%;
+  }
+  .articles .articles-grid .articles-image {
+    max-width: 50%;
+  }
+  .datasikkerhedText {
+    max-width: 50%;
+    padding: 40px;
+  }
+  .guide-section img {
+    width: 50%;
+  }
+}
 #gameRuleText {
   color: #0E3E86;
   font-size: 1.2rem;
@@ -286,21 +307,17 @@ header {
 }
 
 #spillet {
-  background-color: #552E10;
+  background-color: #0E3E86;
 }
 #spillet p {
-  color: #C59E54;
-}
-
-#gameBackgroundColor {
-  padding-bottom: 100px;
+  color: white;
 }
 
 #captainHeading {
   font-size: 1.7rem;
   display: flex;
   justify-content: center;
-  color: #806634;
+  color: #0E3E86;
   margin-bottom: 20px;
 }
 
@@ -309,11 +326,11 @@ header {
   font-size: 1.2rem;
   line-height: 1.5;
   margin: 0 auto;
-  color: #806634;
+  color: #0E3E86;
   padding: 15px;
 }
 .gameText a {
-  color: #806634;
+  color: #0E3E86;
 }
 
 .space {
@@ -422,6 +439,7 @@ h2 {
   background-color: #EEF5FF;
   color: #2e2e2e;
   bottom: 0;
+  margin-top: 70px;
 }
 .nav-footer p {
   color: #0E3E86;
@@ -441,7 +459,7 @@ h2 {
 }
 
 /*desktop version*/
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   .mobile-nav {
     display: none;
   }
@@ -502,7 +520,7 @@ h2 {
     width: 80%;
   }
 }
-@media screen and (min-width: 951px) and (min-width: 950px) {
+@media screen and (min-width: 1451px) and (min-width: 1451px) {
   .guideText {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -510,6 +528,9 @@ h2 {
     margin: 0 auto;
     width: 80%;
     padding: 10px;
+  }
+  .guideText a {
+    color: #0E3E86;
   }
   .guide-section img {
     width: 40%;
@@ -549,12 +570,12 @@ h2 {
     padding: 50px;
   }
 }
-@media screen and (min-width: 951px) and (min-width: 950px) and (min-width: 951px) {
+@media screen and (min-width: 1451px) and (min-width: 1451px) and (min-width: 1451px) {
   #captainHeading {
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
-    color: #806634;
+    color: #0E3E86;
     margin-bottom: 20px;
   }
   .gameText {
@@ -562,7 +583,7 @@ h2 {
     font-size: 1.5rem;
     line-height: 1.5;
     margin: 0 auto;
-    color: #806634;
+    color: #0E3E86;
     width: 80%;
     padding: 10px;
   }
@@ -637,7 +658,7 @@ h2 {
   max-width: none;
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1450px) {
   #scoreLogo {
     width: 100px;
     height: 100px;
@@ -650,7 +671,7 @@ h2 {
     color: black;
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1451px) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -761,7 +782,7 @@ h2 {
   align-items: center;
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   .audioButton {
     top: 150px;
   }
@@ -771,7 +792,7 @@ h2 {
 #startPage {
   /*........................Media query for desktop..............*/
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   #startPage .gamePageBackground {
     background-image: url("../image/tresureMap.png");
     background-size: cover;
@@ -868,7 +889,7 @@ h2 {
 }
 
 /*........................Media query for mobile..............*/
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   #questionPage #gameQuestion {
     color: #0E3E86;
     font-size: 1.2rem;
@@ -896,7 +917,7 @@ h2 {
   }
 }
 /*........................Media query for desktop..............*/
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   #gameQuestion {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -959,7 +980,7 @@ h2 {
     transform: translateY(0); /* Tilbage til startpositionen */
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   #caughtPage .gameImageStyling {
     width: 50%;
     display: flex;
@@ -980,7 +1001,7 @@ h2 {
     text-align: left;
   }
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   #caughtPage .gameImageStyling {
     width: 30%;
   }
@@ -1004,7 +1025,7 @@ h2 {
 #shieldPage {
   display: none;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   #shieldPage .gameImageStyling {
     width: 50%;
     padding: 10px;
@@ -1019,7 +1040,7 @@ h2 {
     text-align: center;
   }
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   #shieldPage .questionP {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -1040,16 +1061,11 @@ h2 {
   /*....Media query for mobile.....*/
   /*.....Media query for desktop......*/
 }
-#shieldGoldPage .downloadeButton::after {
-  content: attr(href);
-  position: absolute;
-  display: none;
+#shieldGoldPage a {
   color: black;
+  font-weight: bolder;
 }
-#shieldGoldPage .downloadeButton:hover::after {
-  display: block;
-}
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   #shieldGoldPage .questionP {
     color: #0E3E86;
     font-size: 1.2rem;
@@ -1091,7 +1107,7 @@ h2 {
     }
   }
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   #shieldGoldPage .questionP {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -1140,7 +1156,7 @@ h2 {
   display: none;
   /*....Media query for mobile.....*/
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   #gameOverPage .gameImageStyling {
     width: 50%;
   }
@@ -1194,7 +1210,7 @@ h2 {
 #gameOverPage {
   display: none;
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   #gameOverPage .gameImageStyling {
     width: 80%;
   }

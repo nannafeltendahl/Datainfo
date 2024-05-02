@@ -14,6 +14,7 @@ html {
 main {
   overflow-x: hidden;
 }
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -41,7 +42,7 @@ header {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   .desktop-nav {
     display: none;
     background-color: partial.$lightblueBackground;
@@ -185,6 +186,9 @@ header {
 .guideText {
   @include partial.p-Mobil;
   padding: 10px;
+  a{
+    color: partial.$darkblue;
+  }
 }
 
 .guide-section {
@@ -199,35 +203,62 @@ header {
   }
 }
 
+@media screen and (min-width: 700px) and (max-width: 1450px) {
+  .accordion{
+    max-width: 50%;
+  }
+  .panel{
+    max-width: 50%;
+  }
+  .articles {
+    .articles-grid {
+
+      .articles-image {
+        max-width: 50%;
+      }
+    }
+  }
+
+  .datasikkerhedText{
+    max-width: 50%;
+    padding: 40px;
+  }
+
+  .guide-section {
+
+    img {
+      width: 50%;
+    }
+  }
+
+}
+
 #gameRuleText {
   @include partial.p-Mobil;
   width: 70%;
 }
-#spillet{
-  background-color: partial.$buttonBackground;
 
-  p{
-    color: partial.$gold;
+#spillet {
+  background-color: partial.$darkblue;
+
+  p {
+    color: white;
   }
-}
-#gameBackgroundColor{
-  //background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
-  padding-bottom: 100px;
 }
 
 #captainHeading {
   @include partial.heading-mobile;
-  color: partial.$textGoldColor;
+  color: partial.$darkblue;
   margin-bottom: 20px;
 }
 
 .gameText {
   @include partial.p-Mobil;
-  color: partial.$textGoldColor;
+  color: partial.$darkblue;
   padding: 15px;
 
-  a{
-    color: partial.$textGoldColor;
+  a {
+    color: partial.$darkblue;
   }
 }
 
@@ -238,7 +269,6 @@ header {
 .goToGameButton {
   @include partial.btn;
   @include partial.a-hover;
-
 }
 
 h2 {
@@ -249,6 +279,7 @@ h2 {
   color: partial.$darkblue;
 
 }
+
 /* FAQ styling*/
 
 .accordion {
@@ -303,6 +334,7 @@ h2 {
   background-color: partial.$lightblueBackground;
   color: partial.$textColor;
   bottom: 0;
+  margin-top: 70px;
 
 
   p {
@@ -324,7 +356,7 @@ h2 {
 }
 
 /*desktop version*/
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   .mobile-nav {
     display: none;
   }
@@ -373,11 +405,14 @@ h2 {
     width: 80%;
   }
 
-  @media screen and (min-width: 950px) {
+  @media screen and (min-width: 1451px) {
     .guideText {
       @include partial.p-desktop;
       width: 80%;
       padding: 10px;
+      a{
+        color: partial.$darkblue;
+      }
     }
     .guide-section {
       img {
@@ -398,8 +433,6 @@ h2 {
         margin: 0 auto;
         width: 100%;
         max-height: 800px;
-
-
 
 
         .articles-image {
@@ -424,17 +457,17 @@ h2 {
       }
     }
 
-    @media screen and (min-width: 951px) {
+    @media screen and (min-width: 1451px) {
 
       #captainHeading {
         @include partial.heading-desktop;
-        color: partial.$textGoldColor;
+        color: partial.$darkblue;
         margin-bottom: 20px;
       }
 
       .gameText {
         @include partial.p-desktop;
-        color: partial.$textGoldColor;
+        color: partial.$darkblue;
         width: 80%;
         padding: 10px;
       }
@@ -483,7 +516,7 @@ h2 {
   max-width: none;
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1450px) {
   #scoreLogo {
     width: 100px;
     height: 100px;
@@ -494,7 +527,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1451px) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -569,7 +602,7 @@ h2 {
   align-items: center;
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
   .audioButton {
     top: 150px;
   }
@@ -582,7 +615,7 @@ h2 {
 #startPage {
 
   /*........................Media query for desktop..............*/
-  @media screen and (min-width: 951px) {
+  @media screen and (min-width: 1451px) {
     .gamePageBackground {
       background-image: url("../image/tresureMap.png");
       background-size: cover;
@@ -628,7 +661,7 @@ h2 {
 
 /*........................Media query for mobile..............*/
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
   #questionPage {
     #gameQuestion {
       @include partial.p-Mobil;
@@ -657,7 +690,7 @@ h2 {
 
 
 /*........................Media query for desktop..............*/
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1451px) {
 
   #gameQuestion {
     @include partial.p-desktop;
@@ -691,12 +724,13 @@ h2 {
     @include partial.a-hover;
     margin-top: 20px;
   }
-  @media screen and (max-width: 950px) {
+
+  @media screen and (max-width: 1450px) {
     .gameImageStyling {
       width: 50%;
       display: flex;
       margin: 0 auto;
-      padding:50px 10px 5px 10px;
+      padding: 50px 10px 5px 10px;
     }
     .questionP {
       @include partial.p-Mobil;
@@ -706,16 +740,16 @@ h2 {
       padding: 10px;
 
     }
-    .explanationCaughtPage{
+    .explanationCaughtPage {
       text-align: left;
     }
   }
-  @media screen and (min-width: 951px) {
+  @media screen and (min-width: 1451px) {
 
     .gameImageStyling {
       width: 30%;
     }
-    .explanationCaughtPage{
+    .explanationCaughtPage {
       text-align: left;
       width: 60%;
     }
@@ -729,14 +763,13 @@ h2 {
   }
 
 
-
 }
 
 
 /*............................shieldGamePage.......*/
 #shieldPage {
   display: none;
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1450px) {
 
     .gameImageStyling {
       width: 50%;
@@ -751,7 +784,7 @@ h2 {
     }
   }
 
-  @media screen and (min-width: 951px) {
+  @media screen and (min-width: 1451px) {
 
     .questionP {
       @include partial.p-desktop;
@@ -770,20 +803,14 @@ h2 {
 #shieldGoldPage {
   display: none;
 
-
-  .downloadeButton::after {
-    content: attr(href);
-    position: absolute;
-    display: none;
+  a {
     color: black;
-  }
+    font-weight: bolder;
 
-  .downloadeButton:hover::after {
-    display: block;
   }
 
   /*....Media query for mobile.....*/
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1450px) {
 
     .questionP {
       @include partial.p-Mobil;
@@ -813,7 +840,7 @@ h2 {
   }
 
   /*.....Media query for desktop......*/
-  @media screen and (min-width: 951px) {
+  @media screen and (min-width: 1451px) {
 
     .questionP {
       @include partial.p-desktop;
@@ -850,7 +877,7 @@ h2 {
 
   /*....Media query for mobile.....*/
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1450px) {
     .gameImageStyling {
       width: 50%;
     }
@@ -874,7 +901,7 @@ h2 {
 
 #gameOverPage {
   display: none;
-  @media screen and (min-width: 951px) {
+  @media screen and (min-width: 1451px) {
 
     .gameImageStyling {
       width: 80%;
