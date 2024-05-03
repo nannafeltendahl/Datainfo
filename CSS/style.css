@@ -302,7 +302,7 @@ header {
   }
   .desktop-nav img {
     padding: 5px 0 5px 0;
-    width: 70px;
+    width: 100px;
   }
   .desktop-nav a {
     font-size: 1.5rem;
@@ -702,19 +702,6 @@ h2 {
   max-width: none;
 }
 
-@media screen and (min-width: 750px) {
-  #scoreLogo {
-    width: 100px;
-    height: 100px;
-  }
-  #scoreNumber {
-    color: #0E3E86;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin: 0 auto;
-    color: black;
-  }
-}
 @media screen and (max-width: 751px) {
   #scoreLogo {
     width: 50px;
@@ -727,6 +714,83 @@ h2 {
     line-height: 1.5;
     margin: 0 auto;
     color: black;
+  }
+  .audioButtonImg {
+    height: 50px;
+    display: flex;
+  }
+  #audioButton {
+    background-color: transparent;
+    display: flex;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    margin: 15px 15px 20px 25px;
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    right: 0;
+  }
+  #audioButton:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
+  }
+}
+@media screen and (min-width: 750px) {
+  #scoreLogo {
+    width: 100px;
+    height: 100px;
+  }
+  #scoreNumber {
+    color: #0E3E86;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: black;
+  }
+  .audioButtonImg {
+    height: 85px;
+    display: flex;
+  }
+  #audioButton {
+    background-color: transparent;
+    display: flex;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    margin: 15px 15px 20px 25px;
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    right: 0;
+  }
+  #audioButton:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
   }
 }
 #score {
@@ -745,41 +809,6 @@ h2 {
 @media screen and (min-width: 951px) {
   #score {
     padding: 160px 20px 20px 10px;
-  }
-}
-
-.audioButtonImg {
-  height: 60px;
-  display: flex;
-  padding: 12px;
-}
-
-#audioButton {
-  display: flex;
-  border-radius: 40px;
-  background-color: #552E10;
-  text-decoration: none;
-  cursor: pointer;
-  border: 2px solid #C59E54;
-  margin: 15px 15px 20px 25px;
-  position: absolute;
-  z-index: 1000;
-  top: 100px;
-  right: 0;
-}
-#audioButton:hover {
-  color: #C59E54;
-  animation: bounce 0.5s 1 alternate;
-}
-@keyframes bounce {
-  0% {
-    transform: translateY(0); /* Ingen vertikal forskydning */
-  }
-  50% {
-    transform: translateY(-5px); /* Bevæger sig 5px op */
-  }
-  100% {
-    transform: translateY(0); /* Tilbage til startpositionen */
   }
 }
 

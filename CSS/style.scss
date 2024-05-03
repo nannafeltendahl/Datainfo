@@ -229,7 +229,7 @@ header {
 
     img {
       padding: 5px 0 5px 0;
-      width: 70px;
+      width: 100px;
 
     }
 
@@ -550,18 +550,6 @@ h2 {
   max-height: 100%;
   max-width: none;
 }
-
-@media screen and (min-width: 750px) {
-  #scoreLogo {
-    width: 100px;
-    height: 100px;
-  }
-  #scoreNumber {
-    @include partial.p-desktop;
-    color: black;
-  }
-}
-
 @media screen and (max-width: 751px) {
   #scoreLogo {
     width: 50px;
@@ -572,7 +560,55 @@ h2 {
     @include partial.p-Mobil;
     color: black;
   }
+  .audioButtonImg {
+    height: 50px;
+    display: flex;
+  }
+
+  #audioButton {
+    background-color: transparent;
+    display: flex;
+    border-radius: 100px;
+    @include partial.a-hover;
+    border:none;
+    margin: 15px 15px 20px 25px;
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    right: 0;
+  }
 }
+
+@media screen and (min-width: 750px) {
+  #scoreLogo {
+    width: 100px;
+    height: 100px;
+  }
+  #scoreNumber {
+    @include partial.p-desktop;
+    color: black;
+  }
+  .audioButtonImg {
+    height: 85px;
+    display: flex;
+  }
+
+  #audioButton {
+    background-color: transparent;
+    display: flex;
+    border-radius: 100px;
+    @include partial.a-hover;
+    border:none;
+    margin: 15px 15px 20px 25px;
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    right: 0;
+  }
+
+}
+
+
 
 #score {
   @include partial.gamePageOffset;
@@ -587,24 +623,6 @@ h2 {
 }
 
 
-.audioButtonImg {
-  height: 60px;
-  display: flex;
-  padding: 12px;
-}
-
-#audioButton {
-  display: flex;
-  border-radius: 40px;
-  background-color: partial.$buttonBackground;
-  @include partial.a-hover;
-  border: 2px solid partial.$gold;
-  margin: 15px 15px 20px 25px;
-  position: absolute;
-  z-index: 1000;
-  top: 100px;
-  right: 0;
-}
 
 .gamePage {
   @include partial.gamePageOffset;
