@@ -8,11 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //detecting keyboard press
 document.addEventListener("keydown", function (event) {
-    if (gameState && gameState.state === "Question") {
+    if (gameState && gameState.state === states.Question) {
         switch (event.key) {
             case 'a':
+                const buttonElementA = document.getElementById("questionPageButtonA");
+                gameState.checkAnswer(buttonElementA, event.key);
+                break;
             case 'b':
-                gameState.checkAnswer(event.key);
+                const buttonElementB = document.getElementById("questionPageButtonB")
+                gameState.checkAnswer(buttonElementB, event.key);
                 break;
         }
     }
