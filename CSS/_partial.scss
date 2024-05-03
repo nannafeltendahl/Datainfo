@@ -5,12 +5,11 @@ $lightblueBackground: #EEF5FF;
 $darkblue: #0E3E86;
 $gold: #C59E54;
 $textGoldColor: #806634;
-$buttonBackground:#552E10;
+$buttonBackground: #552E10;
 $gamePageOffsetMobile: 120px;
 $gamePageOffsetDesktop: 160px;
 $mediaQueryWidthMobile: 750px;
-$mediaQueryWidthMobile: 1450px;
-
+$mediaQueryWidthDesktop: 1450px;
 
 @font-face {
   font-family: "OpenSans-Regular";
@@ -94,13 +93,12 @@ $mediaQueryWidthMobile: 1450px;
   text-decoration: none;
 }
 
-
 @mixin gamePageOffset() {
   position: absolute;
   top: 0;
   padding: $gamePageOffsetMobile 20px 20px 10px;
 
-  @media screen and (min-width: 951px) {
+  @media screen and (min-width: $mediaQueryWidthMobile+1) {
     padding: $gamePageOffsetDesktop 20px 20px 10px;
   }
 }

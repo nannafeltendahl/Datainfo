@@ -702,7 +702,7 @@ h2 {
   max-width: none;
 }
 
-@media screen and (max-width: 751px) {
+@media screen and (max-width: 750px) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -748,7 +748,7 @@ h2 {
     }
   }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 751px) {
   #scoreLogo {
     width: 100px;
     height: 100px;
@@ -806,7 +806,7 @@ h2 {
   align-items: center;
   gap: 5px;
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 751px) {
   #score {
     padding: 160px 20px 20px 10px;
   }
@@ -823,7 +823,7 @@ h2 {
   background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
   overflow: hidden;
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 751px) {
   .gamePage {
     padding: 160px 20px 20px 10px;
   }
@@ -839,7 +839,7 @@ h2 {
   max-height: 100%;
   margin: 0 auto;
 }
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 751px) {
   .gamePageOverlay {
     padding: 160px 20px 20px 10px;
   }

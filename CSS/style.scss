@@ -42,7 +42,7 @@ header {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: partial.$mediaQueryWidthMobile) {
   .desktop-nav {
     display: none;
     background-color: partial.$lightblueBackground;
@@ -204,7 +204,7 @@ header {
   }
 }
 
-@media screen and (min-width: 751px) and (max-width: 1450px) {
+@media screen and (min-width: partial.$mediaQueryWidthMobile+1) and (max-width: partial.$mediaQueryWidthDesktop) {
   .mobile-nav {
     display: none;
   }
@@ -394,7 +394,7 @@ h2 {
 }
 
 /*desktop version*/
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: partial.$mediaQueryWidthDesktop+1) {
   .mobile-nav {
     display: none;
   }
@@ -443,7 +443,7 @@ h2 {
     width: 80%;
   }
 
-  @media screen and (min-width: 1451px) {
+  @media screen and (min-width: partial.$mediaQueryWidthDesktop+1) {
     .guideText {
       @include partial.p-desktop;
       width: 80%;
@@ -492,7 +492,7 @@ h2 {
       }
     }
 
-    @media screen and (min-width: 1451px) {
+    @media screen and (min-width: partial.$mediaQueryWidthDesktop+1) {
 
       #captainHeading {
         @include partial.heading-desktop;
@@ -550,7 +550,7 @@ h2 {
   max-height: 100%;
   max-width: none;
 }
-@media screen and (max-width: 751px) {
+@media screen and (max-width: partial.$mediaQueryWidthMobile) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -579,7 +579,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
   #scoreLogo {
     width: 100px;
     height: 100px;
@@ -654,7 +654,7 @@ h2 {
   align-items: center;
 }
 
-@media screen and (min-width: 751px) {
+@media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
   #audioButton {
     top: 150px;
   }
@@ -666,7 +666,7 @@ h2 {
 #startPage {
 
   /*........................Media query for desktop..............*/
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
     .gamePageBackground {
       background-image: url("../image/tresureMap.png");
       background-size: cover;
@@ -712,7 +712,7 @@ h2 {
 
 /*........................Media query for mobile..............*/
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: partial.$mediaQueryWidthMobile) {
   #questionPage {
     #gameQuestion {
       @include partial.p-Mobil;
@@ -741,7 +741,7 @@ h2 {
 
 
 /*........................Media query for desktop..............*/
-@media screen and (min-width: 751px) {
+@media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
 
   #gameQuestion {
     @include partial.p-desktop;
@@ -774,7 +774,7 @@ h2 {
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: partial.$mediaQueryWidthMobile) {
     .gameImageStyling {
       width: 50%;
       display: flex;
@@ -793,7 +793,7 @@ h2 {
       text-align: left;
     }
   }
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
 
     .gameImageStyling {
       width: 30%;
@@ -818,7 +818,7 @@ h2 {
 /*............................shieldGamePage.......*/
 #shieldPage {
   display: none;
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: partial.$mediaQueryWidthMobile) {
 
     .gameImageStyling {
       width: 50%;
@@ -833,7 +833,7 @@ h2 {
     }
   }
 
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
 
     .questionP {
       @include partial.p-desktop;
@@ -859,7 +859,7 @@ h2 {
   }
 
   /*....Media query for mobile.....*/
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: partial.$mediaQueryWidthMobile) {
 
     .questionP {
       @include partial.p-Mobil;
@@ -889,7 +889,7 @@ h2 {
   }
 
   /*.....Media query for desktop......*/
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
 
     .questionP {
       @include partial.p-desktop;
@@ -926,7 +926,7 @@ h2 {
 
   /*....Media query for mobile.....*/
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: partial.$mediaQueryWidthMobile) {
     .gameImageStyling {
       width: 50%;
     }
@@ -950,7 +950,7 @@ h2 {
 
 #gameOverPage {
   display: none;
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: partial.$mediaQueryWidthMobile+1) {
 
     .gameImageStyling {
       width: 80%;
