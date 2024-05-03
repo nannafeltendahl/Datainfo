@@ -754,7 +754,7 @@ h2 {
   padding: 12px;
 }
 
-.audioButton {
+#audioButton {
   display: flex;
   border-radius: 40px;
   background-color: #552E10;
@@ -767,7 +767,7 @@ h2 {
   top: 100px;
   right: 0;
 }
-.audioButton:hover {
+#audioButton:hover {
   color: #C59E54;
   animation: bounce 0.5s 1 alternate;
 }

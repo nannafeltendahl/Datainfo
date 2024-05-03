@@ -3,7 +3,6 @@
 
 // on page load
 document.addEventListener('DOMContentLoaded', function () {
-    log("Page loaded")
     gameState.resetGame();
 });
 
@@ -18,6 +17,12 @@ document.addEventListener("keydown", function (event) {
         }
     }
 });
+
+const backgroundAudioElement = document.getElementById("myAudio");
+const scoreElement = document.getElementById("score")
+const scoreNumberElement = document.getElementById("scoreNumber")
+const audioButtonElement = document.getElementById("audioButton");
+const gamePageElements = document.querySelectorAll(".gamePage")
 
 const buttonDelay = 200;
 const buttonAnimationDelay = 100;
@@ -127,7 +132,7 @@ let gameState = {
 
     setState: function (state) {
         this.state = state;
-        this.updateGamePagesShown();
+        this.updateVisibleElements();
     },
     resetGame: function () {
         this.setGameQuestion(0);
@@ -135,38 +140,44 @@ let gameState = {
         this.results = Array(questions.length).fill(false)
         this.setState(states.DefaultState);
     },
-    updateGamePagesShown: function () {
-        // Update score
-        let scoreElement = document.getElementById("score")
-        let scoreNumberElement = document.getElementById("scoreNumber")
-        scoreElement.style.display = 'grid';
+    updateVisibleElements: function () {
+
         scoreNumberElement.innerHTML = `Sikkerhedsskjold: ${this.score}/${questions.length}`;
 
+        if (this.state === states.Start) {
+            scoreElement.style.display = 'none';
+            scoreNumberElement.style.display = 'none';
+            audioButtonElement.style.display = 'none';
+        } else {
+            scoreElement.style.display = 'grid';
+            scoreNumberElement.style.display = 'block';
+            audioButtonElement.style.display = 'flex';
+        }
+
         // start by hiding all
-        document.querySelectorAll(".gamePage").forEach(gamePageElement => gamePageElement.style.display = 'none');
+        gamePageElements.forEach(gamePageElement => gamePageElement.style.display = 'none');
 
         // display only one game page depending on state
         switch (this.state) {
-            case "Question":
+            case states.Question:
                 document.getElementById("questionPage").style.display = 'grid';
                 break;
-            case "Caught":
+            case states.Caught:
                 document.getElementById("caughtPage").style.display = 'grid';
                 break;
-            case "Shield":
+            case states.Shield:
                 document.getElementById("shieldPage").style.display = 'grid';
-                this.score += 1;
                 break;
-            case "ShieldGold":
+            case states.ShieldGold:
                 document.getElementById("shieldGoldPage").style.display = 'grid';
                 break;
-            case "GameOver":
+            case states.GameOver:
                 document.getElementById("gameOverPage").style.display = 'grid';
                 break;
 
+            case states.Start:
             default:
                 document.getElementById("startPage").style.display = 'grid';
-                scoreElement.style.display = 'none';
                 break;
 
         }
@@ -202,6 +213,7 @@ let gameState = {
         buttonAnimation(button);
 
         if (wasCorrect) {
+            gameState.score += 1;
             setTimeout(function () {
                 makeSound(true);
                 gameState.setState(states.Shield);
@@ -259,27 +271,35 @@ function buttonAnimation(button) {
     }
 }
 
-//js for music button for game
-
-const audio = document.getElementById("myAudio");
-
 let isPlaying = false;
 
-function toggleAudio(button) {
-    buttonAnimation(button);
+//js for music button for game
+function toggleAudio() {
+
+    let audioButtonOnElement = document.getElementById("audioButtonOn");
+    let audioButtonOffElement = document.getElementById("audioButtonOff");
+
     if (isPlaying) {
-        audio.pause();
+        backgroundAudioElement.pause();
+        audioButtonOnElement.style.display = 'none';
+        audioButtonOffElement.style.display = 'flex';
     } else {
-        audio.play();
+        backgroundAudioElement.play();
+        audioButtonOnElement.style.display = 'flex';
+        audioButtonOffElement.style.display = 'none';
     }
     isPlaying = !isPlaying;
 }
 
+function onToggleAudioButtonClick(button) {
+    buttonAnimation(button);
+    toggleAudio();
+}
 
 function startGame(button) {
     buttonAnimation(button);
     setTimeout(function () {
         gameState.setState(states.Question);
     }, buttonDelay);
-
+    toggleAudio();
 }

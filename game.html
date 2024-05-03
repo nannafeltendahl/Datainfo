@@ -36,8 +36,9 @@
         <p id="scoreNumber"></p>
     </div>
 
-    <button class="audioButton" onclick="toggleAudio(this)" type="button">
-        <img class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+    <button id="audioButton" onclick="onToggleAudioButtonClick(this)" type="button">
+        <img id="audioButtonOn" class="audioButtonImg" src="./image/node.png" alt="lyd fra og til">
+        <img id="audioButtonOff" class="audioButtonImg" src="./image/nodeOff.png" alt="lyd fra og til">
     </button>
 
     <div id="startPage" class="gamePage verticalCenter">
