@@ -441,10 +441,6 @@ h2 {
           border-radius: 20px;
         }
 
-        .right {
-          //order: 2;
-        }
-
         .datasikkerhedText {
           @include partial.p-desktop;
           @include partial.fullSize;
@@ -516,7 +512,7 @@ h2 {
   max-width: none;
 }
 
-@media screen and (min-width: 1450px) {
+@media screen and (min-width: 750px) {
   #scoreLogo {
     width: 100px;
     height: 100px;
@@ -527,7 +523,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1451px) {
+@media screen and (max-width:751px) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -602,7 +598,7 @@ h2 {
   align-items: center;
 }
 
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   .audioButton {
     top: 150px;
   }
@@ -615,7 +611,7 @@ h2 {
 #startPage {
 
   /*........................Media query for desktop..............*/
-  @media screen and (min-width: 1451px) {
+  @media screen and (min-width: 751px) {
     .gamePageBackground {
       background-image: url("../image/tresureMap.png");
       background-size: cover;
@@ -661,7 +657,7 @@ h2 {
 
 /*........................Media query for mobile..............*/
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   #questionPage {
     #gameQuestion {
       @include partial.p-Mobil;
@@ -690,7 +686,7 @@ h2 {
 
 
 /*........................Media query for desktop..............*/
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
 
   #gameQuestion {
     @include partial.p-desktop;
@@ -725,7 +721,7 @@ h2 {
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 750px) {
     .gameImageStyling {
       width: 50%;
       display: flex;
@@ -744,7 +740,7 @@ h2 {
       text-align: left;
     }
   }
-  @media screen and (min-width: 1451px) {
+  @media screen and (min-width: 751px) {
 
     .gameImageStyling {
       width: 30%;
@@ -769,7 +765,7 @@ h2 {
 /*............................shieldGamePage.......*/
 #shieldPage {
   display: none;
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 750px) {
 
     .gameImageStyling {
       width: 50%;
@@ -784,7 +780,7 @@ h2 {
     }
   }
 
-  @media screen and (min-width: 1451px) {
+  @media screen and (min-width: 751px) {
 
     .questionP {
       @include partial.p-desktop;
@@ -810,7 +806,7 @@ h2 {
   }
 
   /*....Media query for mobile.....*/
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 750px) {
 
     .questionP {
       @include partial.p-Mobil;
@@ -840,7 +836,7 @@ h2 {
   }
 
   /*.....Media query for desktop......*/
-  @media screen and (min-width: 1451px) {
+  @media screen and (min-width: 751px) {
 
     .questionP {
       @include partial.p-desktop;
@@ -877,7 +873,7 @@ h2 {
 
   /*....Media query for mobile.....*/
 
-  @media screen and (max-width: 1450px) {
+  @media screen and (max-width: 750px) {
     .gameImageStyling {
       width: 50%;
     }
@@ -901,7 +897,7 @@ h2 {
 
 #gameOverPage {
   display: none;
-  @media screen and (min-width: 1451px) {
+  @media screen and (min-width: 751px) {
 
     .gameImageStyling {
       width: 80%;

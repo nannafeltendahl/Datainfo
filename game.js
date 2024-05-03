@@ -31,7 +31,7 @@ const states = {
     Shield: "Shield",
     ShieldGold: "ShieldGold",
     GameOver: "GameOver",
-    DefaultState: "start",
+    DefaultState: "Start",
 }
 
 const questions =

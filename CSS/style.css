@@ -658,7 +658,7 @@ h2 {
   max-width: none;
 }
 
-@media screen and (min-width: 1450px) {
+@media screen and (min-width: 750px) {
   #scoreLogo {
     width: 100px;
     height: 100px;
@@ -671,7 +671,7 @@ h2 {
     color: black;
   }
 }
-@media screen and (max-width: 1451px) {
+@media screen and (max-width: 751px) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -782,7 +782,7 @@ h2 {
   align-items: center;
 }
 
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   .audioButton {
     top: 150px;
   }
@@ -792,7 +792,7 @@ h2 {
 #startPage {
   /*........................Media query for desktop..............*/
 }
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   #startPage .gamePageBackground {
     background-image: url("../image/tresureMap.png");
     background-size: cover;
@@ -889,7 +889,7 @@ h2 {
 }
 
 /*........................Media query for mobile..............*/
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   #questionPage #gameQuestion {
     color: #0E3E86;
     font-size: 1.2rem;
@@ -917,7 +917,7 @@ h2 {
   }
 }
 /*........................Media query for desktop..............*/
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   #gameQuestion {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -980,7 +980,7 @@ h2 {
     transform: translateY(0); /* Tilbage til startpositionen */
   }
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   #caughtPage .gameImageStyling {
     width: 50%;
     display: flex;
@@ -1001,7 +1001,7 @@ h2 {
     text-align: left;
   }
 }
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   #caughtPage .gameImageStyling {
     width: 30%;
   }
@@ -1025,7 +1025,7 @@ h2 {
 #shieldPage {
   display: none;
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   #shieldPage .gameImageStyling {
     width: 50%;
     padding: 10px;
@@ -1040,7 +1040,7 @@ h2 {
     text-align: center;
   }
 }
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   #shieldPage .questionP {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -1065,7 +1065,7 @@ h2 {
   color: black;
   font-weight: bolder;
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   #shieldGoldPage .questionP {
     color: #0E3E86;
     font-size: 1.2rem;
@@ -1107,7 +1107,7 @@ h2 {
     }
   }
 }
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   #shieldGoldPage .questionP {
     color: #0E3E86;
     font-size: 1.5rem;
@@ -1156,7 +1156,7 @@ h2 {
   display: none;
   /*....Media query for mobile.....*/
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   #gameOverPage .gameImageStyling {
     width: 50%;
   }
@@ -1210,7 +1210,7 @@ h2 {
 #gameOverPage {
   display: none;
 }
-@media screen and (min-width: 1451px) {
+@media screen and (min-width: 751px) {
   #gameOverPage .gameImageStyling {
     width: 80%;
   }
