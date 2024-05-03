@@ -31,7 +31,7 @@ const states = {
     Shield: "Shield",
     ShieldGold: "ShieldGold",
     GameOver: "GameOver",
-    DefaultState: "ShieldGold",
+    DefaultState: "start",
 }
 
 const questions =
@@ -188,7 +188,7 @@ let gameState = {
 
                 this.setState(states.ShieldGold);
             } else {
-                // TODO: you got this many out of x correct, try again / restart game
+
                 this.setState(states.GameOver);
             }
         } else {
