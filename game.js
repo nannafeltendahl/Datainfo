@@ -53,7 +53,7 @@ const questions =
         {
             questionText: "Hvad er en sikker måde at opbevare dine adgangskoder på?",
             answerA: "A: Gemme dem i en tekstfil på din computer.",
-            answerB: "B: Brug af en adgangskodeadministrator til at opbevare og generere adgangskoder.",
+            answerB: "B: Brug af en adgangskode generator til at opbevare og generere adgangskoder.",
             correctAnswer: "b",
             explanation: " Konsekvensen ved adgangskoder i en tekstfil på PCen, kan være manglende kryptering og nem tilgængelighed, i tilfælde af hacking.",
         },
