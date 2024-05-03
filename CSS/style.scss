@@ -42,7 +42,7 @@ header {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   .desktop-nav {
     display: none;
     background-color: partial.$lightblueBackground;
@@ -186,7 +186,8 @@ header {
 .guideText {
   @include partial.p-Mobil;
   padding: 10px;
-  a{
+
+  a {
     color: partial.$darkblue;
   }
 }
@@ -203,13 +204,50 @@ header {
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1450px) {
-  .accordion{
+@media screen and (min-width: 751px) and (max-width: 1450px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+    background-color: partial.$lightblueBackground;
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto auto;
+      gap: 15px;
+      width: 100%;
+      list-style: none;
+      padding: 0 20px 0 20px;
+    }
+
+    .nav {
+      display: flex;
+      padding-top: 40px;
+    }
+
+    img {
+      padding: 5px 0 5px 0;
+      width: 70px;
+
+    }
+
+    a {
+      font-size: 1.5rem;
+      color: partial.$darkblue;
+      @include partial.a-hover;
+    }
+  }
+
+  .accordion {
     max-width: 50%;
   }
-  .panel{
+
+  .panel {
     max-width: 50%;
   }
+
   .articles {
     .articles-grid {
 
@@ -219,7 +257,7 @@ header {
     }
   }
 
-  .datasikkerhedText{
+  .datasikkerhedText {
     max-width: 50%;
     padding: 40px;
   }
@@ -230,8 +268,8 @@ header {
       width: 50%;
     }
   }
-
 }
+
 
 #gameRuleText {
   @include partial.p-Mobil;
@@ -410,7 +448,8 @@ h2 {
       @include partial.p-desktop;
       width: 80%;
       padding: 10px;
-      a{
+
+      a {
         color: partial.$darkblue;
       }
     }
@@ -523,7 +562,7 @@ h2 {
   }
 }
 
-@media screen and (max-width:751px) {
+@media screen and (max-width: 751px) {
   #scoreLogo {
     width: 50px;
     height: 50px;
@@ -605,7 +644,6 @@ h2 {
 }
 
 
-/*................Specific game pages styling.............*/
 /*......................startGamePage.......*/
 
 #startPage {
@@ -706,8 +744,6 @@ h2 {
 
 
 }
-
-/*....closing bracket for media query desktop........*/
 
 
 /*............................caughtGamePage.......*/

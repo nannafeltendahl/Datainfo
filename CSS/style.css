@@ -47,7 +47,7 @@ header {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 750px) {
   .desktop-nav {
     display: none;
     background-color: #EEF5FF;
@@ -280,7 +280,51 @@ header {
   width: 80%;
 }
 
-@media screen and (min-width: 700px) and (max-width: 1450px) {
+@media screen and (min-width: 751px) and (max-width: 1450px) {
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    display: block;
+    background-color: #EEF5FF;
+  }
+  .desktop-nav ul {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    gap: 15px;
+    width: 100%;
+    list-style: none;
+    padding: 0 20px 0 20px;
+  }
+  .desktop-nav .nav {
+    display: flex;
+    padding-top: 40px;
+  }
+  .desktop-nav img {
+    padding: 5px 0 5px 0;
+    width: 70px;
+  }
+  .desktop-nav a {
+    font-size: 1.5rem;
+    color: #0E3E86;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .desktop-nav a:hover {
+    color: #C59E54;
+    animation: bounce 0.5s 1 alternate;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Ingen vertikal forskydning */
+    }
+    50% {
+      transform: translateY(-5px); /* Bevæger sig 5px op */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til startpositionen */
+    }
+  }
   .accordion {
     max-width: 50%;
   }
@@ -787,7 +831,6 @@ h2 {
     top: 150px;
   }
 }
-/*................Specific game pages styling.............*/
 /*......................startGamePage.......*/
 #startPage {
   /*........................Media query for desktop..............*/
@@ -940,7 +983,6 @@ h2 {
     text-align: center;
   }
 }
-/*....closing bracket for media query desktop........*/
 /*............................caughtGamePage.......*/
 #caughtPage {
   display: none;
