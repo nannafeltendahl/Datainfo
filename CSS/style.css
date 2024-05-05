@@ -192,6 +192,7 @@ header {
   display: grid;
   grid-template-rows: 1fr;
   gap: 10px;
+  max-width: 1400px;
   height: fit-content;
 }
 .articles a {
