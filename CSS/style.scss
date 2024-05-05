@@ -192,15 +192,96 @@ header {
   }
 }
 
-.guide-section {
+.guideSection {
   display: flex;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
   padding: 40px 0 30px 0;
+  width: partial.$contentCardWidthMobile;
+}
+
+.guideGrid {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  font-size: partial.$paragraphFontSizeMobile;
+  background-color: partial.$guideBackground;
+  border-radius: 20px;
+  padding: 20px;
+  color: partial.$guideTextColor;
+}
+
+#fiveStepGuide {
+  grid-template-columns: partial.$guideEyeSize auto 1fr;
+  grid-template-rows: repeat(7, auto);
 
   img {
-    width: 80%;
+    width: partial.$guideEyeSize;
+  }
+}
+
+.fiveStepGuideGoldText {
+  font-size: partial.$headingFontSizeMobile * 1.3;
+  color: partial.$textGoldColor;
+}
+
+.fiveStepGuideNumberText {
+  padding: 15px;
+}
+
+.fiveStepGuideMainText {
+  padding-top: 20px;
+}
+
+.guideTitle {
+  grid-column: 1 / 4;
+  font-size: partial.$headingFontSizeMobile;
+}
+
+#guideTitle1 {
+  grid-row: 1;
+  img {
+    width: partial.$paragraphFontSizeMobile * partial.$guideEyeInTextScale;
+  }
+}
+
+#guideTitle2 {
+  grid-row: 2;
+}
+
+#gameGuide {
+  grid-template-columns: 0.4fr 1em 1fr;
+  grid-template-rows: repeat(7, auto);
+}
+
+@media screen and (min-width: partial.$mediaQueryWidthMobile+1) and (max-width: partial.$mediaQueryWidthDesktop) {
+  .guideSection {
+    max-width: partial.$contentCardMaxWidthTablets;
+  }
+  .guideGrid {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: partial.$mediaQueryWidthDesktop+1) {
+  .guideSection {
+    width: partial.$contentCardWidthDesktop;
+  }
+  .guideGrid{
+    padding: 40px;
+    font-size: partial.$paragraphFontSizeDesktop;
+  }
+  .guideTitle {
+    font-size: partial.$headingFontSizeDesktop;
+  }
+  #guideTitle1 {
+    img {
+      width: partial.$paragraphFontSizeDesktop * partial.$guideEyeInTextScale;
+    }
   }
 }
 
@@ -262,12 +343,9 @@ header {
     padding: 40px;
   }
 
-  .guide-section {
-
-    img {
-      width: 50%;
-    }
-  }
+  //.guideSection {
+  //    width: 50%;
+  //}
 }
 
 
@@ -453,11 +531,9 @@ h2 {
         color: partial.$darkblue;
       }
     }
-    .guide-section {
-      img {
-        width: 40%;
-      }
-    }
+    //.guideSection {
+    //  width: 40%;
+    //}
     #gameRuleText {
       @include partial.p-desktop;
       width: 80%;
@@ -545,11 +621,11 @@ h2 {
 
 /*..........General...........*/
 #gamePageMain {
-  width: 100%;
-  height: 100%;
+  @include partial.fullSize;
   max-height: 100%;
   max-width: none;
 }
+
 @media screen and (max-width: partial.$mediaQueryWidthMobile) {
   #scoreLogo {
     width: 50px;
@@ -570,7 +646,7 @@ h2 {
     display: flex;
     border-radius: 100px;
     @include partial.a-hover;
-    border:none;
+    border: none;
     margin: 15px 15px 20px 25px;
     position: absolute;
     z-index: 1000;
@@ -598,7 +674,7 @@ h2 {
     display: flex;
     border-radius: 100px;
     @include partial.a-hover;
-    border:none;
+    border: none;
     margin: 15px 15px 20px 25px;
     position: absolute;
     z-index: 1000;
@@ -607,7 +683,6 @@ h2 {
   }
 
 }
-
 
 
 #score {
@@ -623,11 +698,9 @@ h2 {
 }
 
 
-
 .gamePage {
   @include partial.gamePageOffset;
-  width: 100%;
-  height: 100%;
+  @include partial.fullSize;
   max-height: 100%;
   margin: 0 auto;
   background: linear-gradient(to bottom, #663915, #9C5E20, #B37930, #552E10);
@@ -636,8 +709,7 @@ h2 {
 
 .gamePageOverlay {
   @include partial.gamePageOffset;
-  width: 100%;
-  height: 100%;
+  @include partial.fullSize;
   overflow: hidden;
   max-height: 100%;
   margin: 0 auto;

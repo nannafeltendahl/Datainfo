@@ -1,15 +1,33 @@
-/* Variabler*/
+/* Variabler */
 $textColor: #2e2e2e;
-$bg: #fffafa;
 $lightblueBackground: #EEF5FF;
 $darkblue: #0E3E86;
 $gold: #C59E54;
 $textGoldColor: #806634;
 $buttonBackground: #552E10;
+$guideBackground: #0f326a;
+$guideTextColor: #efefef;
+
+// settings for responsiveness
 $gamePageOffsetMobile: 120px;
 $gamePageOffsetDesktop: 160px;
 $mediaQueryWidthMobile: 750px;
 $mediaQueryWidthDesktop: 1450px;
+$contentCardWidthMobile: 95%;
+$contentCardWidthTablets: 45%;
+$contentCardMaxWidthTablets: 725px;
+$contentCardWidthDesktop: 50%;
+
+
+// font sizes
+$paragraphFontSizeMobile: 1.2rem;
+$paragraphFontSizeDesktop: 1.5rem;
+$headingFontSizeMobile: 1.7rem;
+$headingFontSizeDesktop: 2.5rem;
+
+// guide settings
+$guideEyeSize: 50px;
+$guideEyeInTextScale: 1.7;
 
 @font-face {
   font-family: "OpenSans-Regular";
@@ -23,29 +41,26 @@ $mediaQueryWidthDesktop: 1450px;
 
 @mixin p-Mobil {
   color: $darkblue;
-  font-size: 1.2rem;
+  font-size: $paragraphFontSizeMobile;
   line-height: 1.5;
   margin: 0 auto;
-
 }
 
 @mixin p-desktop {
   color: $darkblue;
-  font-size: 1.5rem;
+  font-size: $paragraphFontSizeDesktop;
   line-height: 1.5;
   margin: 0 auto;
-
 }
 
 @mixin heading-mobile {
-  font-size: 1.7rem;
+  font-size: $headingFontSizeMobile;
   display: flex;
   justify-content: center;
-
 }
 
 @mixin heading-desktop {
-  font-size: 2.5rem;
+  font-size: $headingFontSizeDesktop;
   display: flex;
   justify-content: center;
 }

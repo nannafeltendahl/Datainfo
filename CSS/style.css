@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Variabler*/
+/* Variabler */
 @font-face {
   font-family: "OpenSans-Regular";
   src: url("../font/Open_Sans/OpenSans-Regular.ttf");
@@ -269,17 +269,94 @@ header {
   color: #0E3E86;
 }
 
-.guide-section {
+.guideSection {
   display: flex;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
   padding: 40px 0 30px 0;
-}
-.guide-section img {
-  width: 80%;
+  width: 95%;
 }
 
+.guideGrid {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #0f326a;
+  border-radius: 20px;
+  padding: 20px;
+  color: #efefef;
+}
+
+#fiveStepGuide {
+  grid-template-columns: 50px auto 1fr;
+  grid-template-rows: repeat(7, auto);
+}
+#fiveStepGuide img {
+  width: 50px;
+}
+
+.fiveStepGuideGoldText {
+  font-size: 2.21rem;
+  color: #806634;
+}
+
+.fiveStepGuideNumberText {
+  padding: 15px;
+}
+
+.fiveStepGuideMainText {
+  padding-top: 20px;
+}
+
+.guideTitle {
+  grid-column: 1/4;
+  font-size: 1.7rem;
+}
+
+#guideTitle1 {
+  grid-row: 1;
+}
+#guideTitle1 img {
+  width: 2.04rem;
+}
+
+#guideTitle2 {
+  grid-row: 2;
+}
+
+#gameGuide {
+  grid-template-columns: 0.4fr 1em 1fr;
+  grid-template-rows: repeat(7, auto);
+}
+
+@media screen and (min-width: 751px) and (max-width: 1450px) {
+  .guideSection {
+    max-width: 725px;
+  }
+  .guideGrid {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1451px) {
+  .guideSection {
+    width: 50%;
+  }
+  .guideGrid {
+    padding: 40px;
+    font-size: 1.5rem;
+  }
+  .guideTitle {
+    font-size: 2.5rem;
+  }
+  #guideTitle1 img {
+    width: 2.55rem;
+  }
+}
 @media screen and (min-width: 751px) and (max-width: 1450px) {
   .mobile-nav {
     display: none;
@@ -337,9 +414,6 @@ header {
   .datasikkerhedText {
     max-width: 50%;
     padding: 40px;
-  }
-  .guide-section img {
-    width: 50%;
   }
 }
 #gameRuleText {
@@ -575,9 +649,6 @@ h2 {
   }
   .guideText a {
     color: #0E3E86;
-  }
-  .guide-section img {
-    width: 40%;
   }
   #gameRuleText {
     color: #0E3E86;
