@@ -358,9 +358,6 @@ header {
     padding: 40px;
   }
 
-  //.guideSection {
-  //    width: 50%;
-  //}
 }
 
 
@@ -546,9 +543,7 @@ h2 {
         color: partial.$darkblue;
       }
     }
-    //.guideSection {
-    //  width: 40%;
-    //}
+
     #gameRuleText {
       @include partial.p-desktop;
       width: 80%;
