@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    var toggleNav = document.querySelector('.toggle-nav');
-    var desktopNav = document.querySelector('.desktop-nav');
+    let toggleNav = document.querySelector('.toggle-nav');
+    let desktopNav = document.querySelector('.desktop-nav');
 
     toggleNav.addEventListener('click', function () {
 

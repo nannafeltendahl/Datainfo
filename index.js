@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const selectedSection = document.getElementById(selectedValue);
         if (selectedSection) {
-            var selectedSectionTop = selectedSection.offsetTop;
+            let selectedSectionTop = selectedSection.offsetTop;
             window.scrollTo({
                 top: selectedSectionTop,
                 behavior: 'smooth'

@@ -313,8 +313,11 @@ header {
   padding-top: 20px;
 }
 
-.guideTitle {
+.fiveStepGuideColumnSpan {
   grid-column: 1/4;
+}
+
+.guideTitle {
   font-size: 1.7rem;
 }
 
@@ -330,8 +333,13 @@ header {
 }
 
 #gameGuide {
-  grid-template-columns: 0.4fr 1em 1fr;
+  grid-template-columns: auto;
   grid-template-rows: repeat(7, auto);
+  gap: 20px;
+}
+
+.gameGuideImage {
+  width: 140px;
 }
 
 @media screen and (min-width: 751px) and (max-width: 1450px) {
@@ -340,6 +348,9 @@ header {
   }
   .guideGrid {
     padding: 40px;
+  }
+  .gameGuideImage {
+    width: 180px;
   }
 }
 @media screen and (min-width: 1451px) {
@@ -352,6 +363,9 @@ header {
   }
   .guideTitle {
     font-size: 2.5rem;
+  }
+  .gameGuideImage {
+    width: 200px;
   }
   #guideTitle1 img {
     width: 2.55rem;
