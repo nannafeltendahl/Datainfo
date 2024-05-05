@@ -18,7 +18,6 @@ $contentCardWidthTablets: 45%;
 $contentCardMaxWidthTablets: 725px;
 $contentCardWidthDesktop: 50%;
 
-
 // font sizes
 $paragraphFontSizeMobile: 1.2rem;
 $paragraphFontSizeDesktop: 1.5rem;
@@ -28,6 +27,7 @@ $headingFontSizeDesktop: 2.5rem;
 // guide settings
 $guideEyeSize: 50px;
 $guideEyeInTextScale: 1.7;
+$fiveStepGuidePaddingTop: 20px;
 
 @font-face {
   font-family: "OpenSans-Regular";

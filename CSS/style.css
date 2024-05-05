@@ -235,7 +235,7 @@ header {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .articles .articles-grid .articles-image {
-  max-width: 50%;
+  max-width: 100%;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
@@ -284,7 +284,7 @@ header {
   justify-content: center;
   justify-items: center;
   align-content: center;
-  align-items: center;
+  align-items: start;
   font-size: 1.2rem;
   background-color: #0f326a;
   border-radius: 20px;
@@ -298,6 +298,7 @@ header {
 }
 #fiveStepGuide img {
   width: 50px;
+  padding-top: 20px;
 }
 
 .fiveStepGuideGoldText {
@@ -306,7 +307,7 @@ header {
 }
 
 .fiveStepGuideNumberText {
-  padding: 15px;
+  padding: 20px 15px 0 15px;
 }
 
 .fiveStepGuideMainText {

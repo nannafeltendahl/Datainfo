@@ -174,7 +174,7 @@ header {
 
 
     .articles-image {
-      max-width: 50%;
+      max-width: 100%;
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       border-radius: 20px;
@@ -207,7 +207,7 @@ header {
   justify-content: center;
   justify-items: center;
   align-content: center;
-  align-items: center;
+  align-items: start;
   font-size: partial.$paragraphFontSizeMobile;
   background-color: partial.$guideBackground;
   border-radius: 20px;
@@ -221,6 +221,7 @@ header {
 
   img {
     width: partial.$guideEyeSize;
+    padding-top: partial.$fiveStepGuidePaddingTop;
   }
 }
 
@@ -230,11 +231,11 @@ header {
 }
 
 .fiveStepGuideNumberText {
-  padding: 15px;
+  padding: partial.$fiveStepGuidePaddingTop 15px 0 15px;
 }
 
 .fiveStepGuideMainText {
-  padding-top: 20px;
+  padding-top: partial.$fiveStepGuidePaddingTop;
 }
 
 .fiveStepGuideColumnSpan {
